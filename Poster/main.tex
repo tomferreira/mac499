@@ -193,13 +193,13 @@ e \textit{tfidf} é uma medida para avaliação da relevância de uma palavra em
 %	METHODS
 %----------------------------------------------------------------------------------------
 
-\begin{block}{\textit{Frequent Itemset}}
-Um conceito importante para o entendimento do FIHC é o \textit{Frequent itemset}, cuja definição é: um conjunto de palavras que ocorrem numa quantidade de documentos da coleção acima de um limiar de apoio definido pelo usuário.
+\begin{block}{Conjunto de itens frequentes}
+Um conceito importante para o entendimento do FIHC é a noção de conjunto de itens frequentes de uma coleção, cuja definição é: um conjunto de palavras que ocorrem numa quantidade de documentos da coleção acima de um limiar de apoio definido pelo usuário.
 \end{block}
 
 \begin{block}{Arquitetura da biblioteca}
 
-A biblioteca abrange todos os passos de uma solução para agrupamento, desde o pré-processamento dos documentos até o processo de agrupamento em si. Além disso, foi arquitetada para trabalhar com diversos idiomas. A sua arquitetura é mostrada na figura 2.
+A biblioteca abrange todos os passos de uma solução para agrupamento, desde o pré-processamento dos documentos até os algoritmos de agrupamento propriamente ditos. Além disso, foi arquitetada para trabalhar com diversos idiomas. A sua arquitetura é mostrada na figura 2.
 
 \begin{figure}
 \includegraphics[width=0.95\linewidth]{arquitetura.png}
@@ -211,7 +211,7 @@ O pré-processamento consiste nos seguintes passos:
 \begin{itemize}
 \item Detecção de idioma: O primeiro passo para realizar o agrupamento é identificar o idioma utilizado nos documentos, pois os algoritmos dos passos seguintes necessitam desse conhecimento. %Detecta o idioma mais provável da coleção de documentos atráves de método n-grama.
 \item Tokenização: Segmenta os textos em palavras, além de remover marcações gráficas presentes neles que não representam nenhuma informação útil ao algoritmo.
-\item Limpeza: Remove da análise palavras que possuem pouca relevância no texto, como as preposições e os artigos.
+\item Limpeza: Remove da análise as palavras que possuem pouca relevância no texto, como as preposições e os artigos.
 \item \textit{Stemming}: Unifica formas variantes de palavras que possuem o mesmo significado, como as palavras ``economia'' e ``econômico''.
 \end{itemize}
 
@@ -225,7 +225,7 @@ O pré-processamento consiste nos seguintes passos:
 
 %\begin{block}{O sistema hVINA}
 
-O sistema \textit{hVINA} tem como objetivo criar uma interface amigável para que qualquer usuário possa utilizar a biblioteca, permitindo ao usuário informar uma coleção de artigos de seu interesse ou utilizar coleções pré-selecionadas pelo sistema.
+Já o sistema \textit{hVINA} tem como objetivo criar uma interface amigável para que qualquer usuário possa utilizar a biblioteca, permitindo ao usuário informar uma coleção de artigos de seu interesse ou utilizar coleções pré-selecionadas pelo sistema.
 
 
 \end{block}
@@ -257,7 +257,7 @@ A biblioteca desenvolvida é modular, permitindo acrescentar o tratamento de out
 
 O resultado obtido pela biblioteca em conjunto com o sistema \textit{hVINA} demostra a viabilidade de uma solução que tenha boa usabilidade e seja amigável a qualquer usuário, onde não haja a necessidade de treinamento do algoritmo e a configuração seja quase zero.
 
-Melhorias na escalabilidade da biblioteca tevem ser feitas nos trabalhos futuros.
+Porém, melhorias na escalabilidade da biblioteca devem ser feitas nos trabalhos futuros.
 
 
 %\begin{table}
