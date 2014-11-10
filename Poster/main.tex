@@ -152,7 +152,7 @@ Análise de agrupamento é uma classificação de padrão que emprega o processo
 \begin{block}{Algoritmos hierárquicos}
 
 Os algoritmos da área de agrupamento são divididos geralmente em duas classes: Algoritmos planos e hierárquicos.
-Os algoritmos hierárquicos são aqueles que geram uma árvore de \textit{clusters},  uma estrutura que fornece mais informação, uma vez que as relações implícitas entre os clusters ficam mais evidentes.
+Os algoritmos hierárquicos são aqueles que geram uma árvore de grupos,  uma estrutura que fornece mais informação, uma vez que as relações implícitas entre os grupos ficam mais evidentes.
 Há duas abordagens na criação da árvore, a primeira chamada de divisiva ou \textit{top-down} inicia a construção da raiz até as folhas, a segunda chamada de aglomerativa ou \textit{bottom-up} inicia a construção das folhas à raiz.
 
 \end{block}
@@ -165,14 +165,14 @@ Há duas abordagens na criação da árvore, a primeira chamada de divisiva ou \
 
 Foi implementado inicialmente na biblioteca o \textit{Frequent Itemset-based Hierarchical Clustering} (FIHC), que é um algoritmo para agrupamento hierárquico de documentos textuais \cite{Martin:2004} que utiliza o conceito de conjuntos de itens frequentes (\textit{frequent itemset}).
 
-O FIHC está na classe dos algoritmos hierárquicos aglomerativos e baseia-se no seguinte critério de similaridade para a construção da árvore de clusters:
+O FIHC está na classe dos algoritmos hierárquicos aglomerativos e baseia-se no seguinte critério de similaridade para a construção da árvore de grupos:
 
 \begin{equation}
 Sim(Ci \gets Cj) = \frac{Score(Ci \gets doc(Cj))}{N} + 1
 \label{eqn:Sim}
 \end{equation}
 
-Onde \textit{Ci} e \textit{Cj} são os clusters usados na comparação de similaridade, \textit{Score} é uma medida de relevância de um documento em um \textit{cluster};
+Onde \textit{Ci} e \textit{Cj} são os grupos usados na comparação de similaridade, \textit{Score} é uma medida de relevância de um documento em um grupo;
 
 \begin{equation}
 N = \sum_{x}tfidf(x, doc(Cj)) + \sum_{x'}tfidf(x', doc(Cj))
