@@ -5,6 +5,11 @@ A.K. Jain, M.N. Murty, and P.J. Flynn.
 \newblock {D}ata {C}lustering: A review.
 \newblock {\em ACM Computing Surveys}, 31(3):264--323, Sept 1999.
 
+\bibitem{Manning:2009}
+C.D. Manning, P.~Raghavan, and H.~Schütse.
+\newblock {\em {A}n {I}ntroduction to {I}nformation {R}etrival}.
+\newblock Cambridge University Press, 2009.
+
 \bibitem{Martin:2004}
 Benjamim C.~M. Fung, Ke~Wang, and Martin Ester.
 \newblock {H}ierarchical {D}ocument {C}lustering {U}sing {F}requent {I}temsets.
