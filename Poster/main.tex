@@ -109,7 +109,7 @@ Este trabalho tem como objetivos:
 
 \begin{block}{Introdução}
 
-Com a criação da internet e a popularização de seu uso como ferramenta de comunicação, houve uma explosão de informação que tornou muito difícil a classificação dos documentos produzidos e publicados nela de maneira manual. A área de classificação de documentos é bem interessante e possui diversas aplicações práticas como classificação de spam, identificação de idioma e análise de sentimento, porém, em especial, artigos jornalísticos têm um enorme desafio devido à grande quantidade de novos documentos criados diariamente e a diversidade de temas abordados. %, especialmente em blogs, mas que carecem de melhor organização.
+Com a criação da internet e a popularização de seu uso como ferramenta de comunicação, houve uma explosão de informação que tornou muito difícil a classificação dos documentos produzidos e publicados nela de maneira manual. A área de classificação de documentos é de grande interesse e possui diversas aplicações práticas como classificação de \textit{spam}, identificação de idioma e análise de sentimento. Em especial, a classificação de artigos jornalísticos tem um enorme desafio devido à grande quantidade de novos documentos criados diariamente e a diversidade de temas abordados. %, especialmente em blogs, mas que carecem de melhor organização.
 
 Para tal propósito serão utilizados algoritmos de aprendizagem não-supervisionadas, pois não necessitam de um conjunto de treinamento como entrada, permitindo o seu uso em conjuntos de dados bem variados, algo que é bem comum em artigos jornalísticos.
 
@@ -152,7 +152,7 @@ Análise de agrupamento é uma classificação de padrão que emprega o processo
 \begin{block}{Algoritmos hierárquicos}
 
 Os algoritmos da área de agrupamento são divididos geralmente em duas classes: Algoritmos planos e hierárquicos.
-Os algoritmos hierárquicos são aqueles que geram uma árvore de grupos. Uma estrutura que fornece mais informação, uma vez que as relações implícitas entre os grupos ficam mais evidentes \cite{Manning:2009}.
+Os algoritmos hierárquicos são aqueles que geram uma árvore de grupos (\textit{cluster}). Uma estrutura que fornece mais informação, uma vez que as relações implícitas entre os grupos ficam mais evidentes \cite{Manning:2009}.
 Há duas abordagens na criação da árvore, a primeira chamada de divisiva ou \textit{top-down} inicia a construção a partir da raiz até as folhas, a segunda chamada de aglomerativa ou \textit{bottom-up} inicia a construção das folhas à raiz.
 
 \end{block}
@@ -194,7 +194,7 @@ e \textit{tfidf} é uma medida para avaliação da relevância de uma palavra em
 %----------------------------------------------------------------------------------------
 
 \begin{block}{Conjunto de itens frequentes}
-Um conceito importante para o entendimento do FIHC é a noção de conjunto de itens frequentes de uma coleção, cuja definição é: um conjunto de palavras que ocorrem numa quantidade de documentos da coleção acima de um limiar de apoio definido pelo usuário.
+Um conceito importante para o entendimento do FIHC é a noção de conjunto de itens frequentes de uma coleção, cuja definição é: um conjunto de palavras que ocorrem numa quantidade de documentos da coleção acima de um limiar de suporte definido pelo usuário.
 \end{block}
 
 \begin{block}{Arquitetura da biblioteca}
