@@ -96,7 +96,6 @@
 
 Este trabalho tem como objetivos:
 \begin{itemize}
-\item Estudos das principais classes de algoritmos para agrupamento de documentos textuais.
 \item Criação de uma biblioteca para agrupamento de artigos jornalísticos disponíveis nos meios digitais.
 \item Proposta e implementação do sistema hVINA (\textit{Hierarchical Viewer of News Articles}) para simplificar a interação entre o usuário e a biblioteca.
 \end{itemize}
@@ -118,7 +117,7 @@ Para tal propósito serão utilizados algoritmos de aprendizagem não-supervisio
 %------------------------------------------------
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{fihc.png}
+\includegraphics[width=0.75\linewidth]{fihc.png}
 \caption{Exemplo de agrupamento feito pelo FIHC}
 \end{figure}
 
@@ -152,7 +151,7 @@ Análise de agrupamento é uma classificação de padrão que emprega o processo
 \begin{block}{Algoritmos hierárquicos}
 
 Os algoritmos da área de agrupamento são divididos geralmente em duas classes: Algoritmos planos e hierárquicos.
-Os algoritmos hierárquicos são aqueles que geram uma árvore de grupos (\textit{cluster}). Uma estrutura que fornece mais informação, uma vez que as relações implícitas entre os grupos ficam mais evidentes \cite{Manning:2009}.
+Os algoritmos hierárquicos são aqueles que geram uma árvore de grupos (\textit{clusters}). Uma estrutura que fornece mais informação, uma vez que as relações implícitas entre os grupos ficam mais evidentes \cite{Manning:2009}.
 Há duas abordagens na criação da árvore, a primeira chamada de divisiva ou \textit{top-down} inicia a construção a partir da raiz até as folhas, a segunda chamada de aglomerativa ou \textit{bottom-up} inicia a construção das folhas à raiz.
 
 \end{block}
@@ -194,15 +193,15 @@ e \textit{tfidf} é uma medida para avaliação da relevância de uma palavra em
 %----------------------------------------------------------------------------------------
 
 \begin{block}{Conjunto de itens frequentes}
-Um conceito importante para o entendimento do FIHC é a noção de conjunto de itens frequentes de uma coleção, cuja definição é: um conjunto de palavras que ocorrem numa quantidade de documentos da coleção acima de um limiar de suporte definido pelo usuário.
+Um conceito importante para o entendimento do FIHC é a noção de conjunto de itens frequentes de uma coleção, cuja definição é: um conjunto de palavras que ocorrem em uma quantidade de documentos da coleção acima de um limiar de suporte definido pelo usuário.
 \end{block}
 
 \begin{block}{Arquitetura da biblioteca}
 
-A biblioteca abrange todos os passos de uma solução para agrupamento, desde o pré-processamento dos documentos até os algoritmos de agrupamento propriamente ditos. Além disso, foi arquitetada para trabalhar com diversos idiomas. A sua arquitetura é mostrada na figura 2.
+A biblioteca abrange todos os passos de uma solução para agrupamento, desde o pré-processamento dos documentos até os algoritmos de agrupamento propriamente ditos. Além disso, foi arquitetada para trabalhar com diversos idiomas. Na sua primeira versão, a biblioteca prioriza a implementação do algoritmo de agrupamento FIHC. A sua arquitetura é mostrada na figura 2.
 
 \begin{figure}
-\includegraphics[width=0.95\linewidth]{arquitetura.png}
+\includegraphics[width=1\linewidth]{arquitetura.png}
 \caption{Arquitetura proposta para a biblioteca}
 \end{figure}
 
@@ -225,7 +224,7 @@ O pré-processamento consiste nos seguintes passos:
 
 %\begin{block}{O sistema hVINA}
 
-Já o sistema \textit{hVINA} tem como objetivo criar uma interface amigável para que qualquer usuário possa utilizar a biblioteca, permitindo ao usuário informar uma coleção de artigos de seu interesse ou utilizar coleções pré-selecionadas pelo sistema.
+Já o sistema \textit{hVINA} tem como objetivo criar uma interface amigável para que qualquer usuário possa utilizar a biblioteca, permitindo a ele informar uma coleção de artigos de seu interesse ou utilizar coleções pré-selecionadas pelo sistema.
 
 
 \end{block}
