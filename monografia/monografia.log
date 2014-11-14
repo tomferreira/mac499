@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  14 NOV 2014 13:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  14 NOV 2014 20:28
 entering extended mode
 **C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
 (C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
@@ -747,70 +747,79 @@ Overfull \hbox (32.772pt too wide) in paragraph at lines 502--503
  []
 
 [25 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/n_grama
-.png>] [26] <images/RSLP.png, id=115, 667.49374pt x 595.22375pt>
+.png>] <images/tokenizacao.png, id=112, 654.445pt x 275.0275pt>
+File: images/tokenizacao.png Graphic file (type png)
+
+<use images/tokenizacao.png>
+Package pdftex.def Info: images/tokenizacao.png used on input line 515.
+(pdftex.def)             Requested size: 392.67003pt x 165.01776pt.
+
+Overfull \hbox (2.67003pt too wide) in paragraph at lines 515--516
+ [] 
+ []
+
+[26 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/tokeniz
+acao.png>] <images/limpeza.png, id=117, 654.445pt x 275.0275pt>
+File: images/limpeza.png Graphic file (type png)
+
+<use images/limpeza.png>
+Package pdftex.def Info: images/limpeza.png used on input line 536.
+(pdftex.def)             Requested size: 392.67003pt x 165.01776pt.
+
+Overfull \hbox (2.67003pt too wide) in paragraph at lines 536--537
+ [] 
+ []
+
+[27 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/limpeza
+.png>] <images/RSLP.png, id=122, 667.49374pt x 595.22375pt>
 File: images/RSLP.png Graphic file (type png)
 
 <use images/RSLP.png>
-Package pdftex.def Info: images/RSLP.png used on input line 559.
+Package pdftex.def Info: images/RSLP.png used on input line 571.
 (pdftex.def)             Requested size: 333.74606pt x 297.61115pt.
- [27] [28 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/R
+ [28] [29 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/R
 SLP.png>]
-<images/hvina_inicial.png, id=123, 1157.32375pt x 848.16875pt>
+<images/hvina_inicial.png, id=130, 1157.32375pt x 848.16875pt>
 File: images/hvina_inicial.png Graphic file (type png)
 
 <use images/hvina_inicial.png>
-Package pdftex.def Info: images/hvina_inicial.png used on input line 587.
+Package pdftex.def Info: images/hvina_inicial.png used on input line 599.
 (pdftex.def)             Requested size: 347.1998pt x 254.45258pt.
 
-<images/hvina_configuracao.png, id=124, 813.0375pt x 429.605pt>
+<images/hvina_configuracao.png, id=131, 813.0375pt x 429.605pt>
 File: images/hvina_configuracao.png Graphic file (type png)
 
 <use images/hvina_configuracao.png>
-Package pdftex.def Info: images/hvina_configuracao.png used on input line 597.
+Package pdftex.def Info: images/hvina_configuracao.png used on input line 609.
 (pdftex.def)             Requested size: 365.8635pt x 193.32045pt.
- [29 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hvina_
+ [30 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hvina_
 inicial.png>]
-<images/hvina_clustering.png, id=129, 1027.84pt x 747.79375pt>
+<images/hvina_clustering.png, id=136, 1027.84pt x 747.79375pt>
 File: images/hvina_clustering.png Graphic file (type png)
 
 <use images/hvina_clustering.png>
-Package pdftex.def Info: images/hvina_clustering.png used on input line 605.
+Package pdftex.def Info: images/hvina_clustering.png used on input line 617.
 (pdftex.def)             Requested size: 359.74939pt x 261.73172pt.
- [30 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hvina_
+ [31 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hvina_
 configuracao.png> <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/
-images/hvina_clustering.png>] [31]
-Underfull \vbox (badness 10000) detected at line 655
+images/hvina_clustering.png>] [32]
+Underfull \vbox (badness 10000) detected at line 667
  []
 
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 703--707
-[]\T1/cmr/m/n/12 T. M. Breuel. \T1/cmr/m/it/12 High per-for-mance do-cu-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 703--707
-\T1/cmr/m/it/12 ment layout analy-sis\T1/cmr/m/n/12 . [On-line]. Avai-la-ble:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 703--707
-\T1/cmr/m/n/12 http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.1303
- []
-
-[33]
+[33] [34]
 (C:\Users\CirilloR\Documents\FACULDADE\TCC\mac499\monografia\monografia.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3652 strings out of 493921
- 47469 string characters out of 3144867
- 112759 words of memory out of 3000000
- 6859 multiletter control sequences out of 15000+200000
+ 3666 strings out of 493921
+ 47747 string characters out of 3144867
+ 112789 words of memory out of 3000000
+ 6871 multiletter control sequences out of 15000+200000
  17492 words of font info for 43 fonts, out of 3000000 for 9000
  855 hyphenation exceptions out of 8191
- 27i,17n,24p,1027b,300s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,17n,24p,1062b,300s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
 00\ecbi1440.pk> <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
 appen\ec\dpi600\ecrm1000.pk> <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\
@@ -831,9 +840,9 @@ blic/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 fonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb>
-Output written on monografia.pdf (33 pages, 709105 bytes).
+Output written on monografia.pdf (34 pages, 751605 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
+ 582 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

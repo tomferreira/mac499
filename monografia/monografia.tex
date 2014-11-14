@@ -49,7 +49,7 @@ A ideia não é separar os artigos jornalísticos em grupos muito generalistas c
 
 % [Talvez explicar a diferença entre classificação e agrupamento: Livro sistemas inteligentes, pag 318]
 
-Segundo Martin Ester \textit{et al.} [7], existem alguns desafios da área de agrupamento de documentos como: alta dimensionalidade da coleção, onde cada palavra distinta na coleção constitui uma dimensão, e quanto maior a dimensão, maior o desafio para a construção de um algoritmo escalável e eficiente; grande volume de dados; alta precisão e consistência, dependendo do tipo de documentos, alguns algoritmos apresentam resultados muito abaixo do esperado; e descrição mais significativa dos grupos, pois facilita a utilização pelos usuários.
+Segundo Martin Ester \textit{et al.} \cite{Ester03}, existem alguns desafios da área de agrupamento de documentos como: alta dimensionalidade da coleção, onde cada palavra distinta na coleção constitui uma dimensão, e quanto maior a dimensão, maior o desafio para a construção de um algoritmo escalável e eficiente; grande volume de dados; alta precisão e consistência, dependendo do tipo de documentos, alguns algoritmos apresentam resultados muito abaixo do esperado; e descrição mais significativa dos grupos, pois facilita a utilização pelos usuários.
 
 % [Agrupamento é uma das mais antigas atividades mentais humanas, usada para tratar uma quantidade enorme de informações que recebemos todos os dias [1].]
 
@@ -77,7 +77,7 @@ A representação de um agrupamento de documentos é geralmente feita através d
 
 %Na seção \ref{sec:arquitetura} é explicada a arquitetura de um sistema para análise e leitura de tablóides que seja robusto e expansível a vários tipos de tablóides. A seção \ref{sec:segmentacao} descreve a etapa de segmentação de uma página de um tablóide. A seção \ref{sec:detect_ocr} descreve a etapa de detecção de textos e uso de um programa de OCR. Na seção \ref{sec:resultados} são apresentados os resultados obtidos e na seção \ref{sec:conclusoes} são explicitadas as conclusões finais do trabalho, assim como uma avaliação do cumprimento dos objetivos propostos. Na seção \ref{sec:subj} é apresentada uma análise subjetiva do curso do Bacharelado em Ciência da Computação.
 
-No capítulo 2 é apresentado os fundamentos da área de reconhecimento de padrão e mais especificamente de análise de agrupamento. No capítulo 3 é discutido em detalhe o algoritmo FIHC, escolhido para ser implementado na biblioteca e sistema propostos no 4o capítulo para o agrupamento de artigos jornalísticos. No capítulo 5 é feito a avaliação do sistema na coleção de artigos do jornalista José de Paiva Netto e também da coleção da Reuters. E por fim, no capítulo 6 são apresentadas as conclusões desse trabalho.
+Na seção \ref{sec:fundamentos} é apresentado os fundamentos da área de reconhecimento de padrão e mais especificamente de análise de agrupamento. Na seção \ref{sec:fihc} é discutido em detalhe o algoritmo FIHC, escolhido para ser implementado na biblioteca e sistema hVINA propostos na seção \ref{sec:arquitetura_biblioteca} para o agrupamento de artigos jornalísticos. Na seção 5 são apresentados os resultados obtidos com essas ferramentas. Na seção 6 são apresentadas as conclusões finais do trabalho. E por fim, na seção 7 é apresentada uma análise subjetiva do curso do Bacharelado em Ciência da Computação.
 
 \newpage
 \section {Fundamentos}
@@ -87,14 +87,14 @@ Antes de apresentar e discutir sobre a biblioteca desenvolvida e o sistema propo
 \subsection{Reconhecimento de padrão}
 \label{sec:reconhecimento_padrao}
 
-Segundo Theodoridis e Koutroumbas  [1], reconhecimento de padrão é uma área da ciência cujo objetivo é a classificação de objetos dentro de um número de categorias ou classes. Esses objetos de estudo variam de acordo com cada aplicação, podem ser imagens, sinais em forma de ondas (como voz, luz, rádio) ou qualquer tipo de medida que necessite ser classificada. As implicações práticas desses estudos permeiam todas as áreas de atuação humana, principalmente numa sociedade pós-industrial, onde a necessidade de automação das diversas atividades é essencial.  Sua aplicação vai desde sistemas que utilizam visão computacional, passando por reconhecimento de caracteres até sistemas para auxílio à domada de decisão.
+Segundo Theodoridis e Koutroumbas  \cite{Koutroumbas06}, reconhecimento de padrão é uma área da ciência cujo objetivo é a classificação de objetos dentro de um número de categorias ou classes. Esses objetos de estudo variam de acordo com cada aplicação, podem ser imagens, sinais em forma de ondas (como voz, luz, rádio) ou qualquer tipo de medida que necessite ser classificada. As implicações práticas desses estudos permeiam todas as áreas de atuação humana, principalmente numa sociedade pós-industrial, onde a necessidade de automação das diversas atividades é essencial.  Sua aplicação vai desde sistemas que utilizam visão computacional, passando por reconhecimento de caracteres até sistemas para auxílio à domada de decisão.
 
 \subsubsection{Formas de processo de aprendizagem}
 \label{sec:formas_processo_aprendizagem}
 
 Na área de reconhecimento de padrão os algoritmos utilizam técnicas de aprendizagem computacional para a realização de alguma tarefa e eles são geralmente classificados de acordo a necessidade de intervenção humana durante alguma fase de aprendizagem do algoritmo. São elas: aprendizagem supervisionada,  aprendizagem não-supervisionada e aprendizagem semi-supervisionada.
 
-A classificação supervisionada consiste na utilização de um conjunto de dados previamente classificados (ou anotados), que servirá na construção de um modelo para a classificação de novos objetos. Ou seja, algoritmos que utilizam esse conjunto de dados fazem uso de um conhecimento a priori, originado de uma fonte externa. Esse conjunto de dados inicial é denominado de conjunto de treinamento (\textit{training set}). Porém, em muitos casos a criação de um conjunto de treinamento é inviável devido à natureza do problema [pegar exemplos: não se conhece previamente todas as classes]. Para esses tipos, é então empregado a classificação não-supervisionada, que não faz uso de um conjunto de treinamento, pois o próprio algoritmo busca descobrir similaridades intrínsecas nos objetos e agrupa aqueles objetos mais similares. [1, 2, 3]
+A classificação supervisionada consiste na utilização de um conjunto de dados previamente classificados (ou anotados), que servirá na construção de um modelo para a classificação de novos objetos. Ou seja, algoritmos que utilizam esse conjunto de dados fazem uso de um conhecimento a priori, originado de uma fonte externa. Esse conjunto de dados inicial é denominado de conjunto de treinamento (\textit{training set}). Porém, em muitos casos a criação de um conjunto de treinamento é inviável devido à natureza do problema [pegar exemplos: não se conhece previamente todas as classes]. Para esses tipos, é então empregado a classificação não-supervisionada, que não faz uso de um conjunto de treinamento, pois o próprio algoritmo busca descobrir similaridades intrínsecas nos objetos e agrupa aqueles objetos mais similares. \cite{Koutroumbas06, Jain99, Manning09}
 
 Por fim, a classificação semi-supervisiona emprega técnicas da classificação supervisionada e não-supervisionada, geralmente com um conjunto pequeno de treinamento.
 
@@ -105,7 +105,7 @@ No contexto de reconhecimento de padrão, é comum chamar a classificação supe
 \subsection{Análise de agrupamento}
 \label{sec:analise_agrupamento}
 
-Análise de agrupamento é uma classificação de padrão que emprega o processo de aprendizagem não-supervisionada e tem como objetivo o particionamento de objetos em grupos cujo membros sejam similares entre si e diferentes dos membros de outros grupos [2]. Porém, também tem os objetivos secundários de evitar grupos muito pequenos ou muito grandes e encontrar grupos que façam sentido ao usuário. Segundo Theodoridis e Koutroumbas [1], a análise de agrupamento é largamente utilizada na resolução de diversos problemas, e pode ser encontrada em outras áreas por nomenclaturas diferentes, como taxonomia numérica em biologia, e tipologia na área das ciências sociais.
+Análise de agrupamento é uma classificação de padrão que emprega o processo de aprendizagem não-supervisionada e tem como objetivo o particionamento de objetos em grupos cujo membros sejam similares entre si e diferentes dos membros de outros grupos \cite{Jain99}. Porém, também tem os objetivos secundários de evitar grupos muito pequenos ou muito grandes e encontrar grupos que façam sentido ao usuário. Segundo Theodoridis e Koutroumbas \cite{Koutroumbas06}, a análise de agrupamento é largamente utilizada na resolução de diversos problemas, e pode ser encontrada em outras áreas por nomenclaturas diferentes, como taxonomia numérica em biologia, e tipologia na área das ciências sociais.
 
 Um grande problema enfrentado na análise de agrupamento é a dimensionalidade ou variáveis dos dados envolvidos, sejam eles observações de estrelas no céu, observações de organismos vivos na natureza ou documentos textuais disponíveis na internet, e uma técnica bastante utiliza para tentar solucionar tal problema é a redução dimensional através da extração de características, que envolve em sintetizar os dados em características mais relevantes para o problema principal sem perda de informação.
 
@@ -119,12 +119,12 @@ Em especial, quando se fala em documentos textuais, o processo de redução dime
 \subsection{Tipos de algoritmo de agrupamento}
 \label{sec:tipos_algoritmo_agrupamento}
 
-Um algoritmo de agrupamento objetiva encontrar as classes naturais das observações, baseados em alguma similaridade. Existem diversos algoritmos para agrupamento desenvolvidos [1, 2], porém neste capítulo serão citadas duas categorias de algoritmos mais empregados nesse processo. Uma explicação com aspectos mais detalhados desses métodos pode ser encontrada em [1, 2].
+Um algoritmo de agrupamento objetiva encontrar as classes naturais das observações, baseados em alguma similaridade. Existem diversos algoritmos para agrupamento desenvolvidos \cite{Koutroumbas06, Jain99}, porém neste capítulo serão citadas duas categorias de algoritmos mais empregados nesse processo. Uma explicação com aspectos mais detalhados desses métodos pode ser encontrada em \cite{Koutroumbas06, Jain99}.
 
 \subsubsection{Agrupamento plano}
 \label{sec:agrupamento_plano}
 
-Agrupamento plano é a categoria de algoritmos cujo os grupos resultantes são dados num único nível, onde nenhum grupo tem relação com outro. O principal algoritmo dessa categoria é o \textit{k-means} [3].
+Agrupamento plano é a categoria de algoritmos cujo os grupos resultantes são dados num único nível, onde nenhum grupo tem relação com outro. O principal algoritmo dessa categoria é o \textit{k-means} \cite{Manning09}.
 
 Antes de falar do \textit{k-means} é preciso relembrar um ponto essencial ao entendimento desse algoritmo, que é a definição de centroide. Na geometria, o centroide é o ponto central de uma figura. Dessa forma, dado um grupo, se ligarmos com um segmento de linha as observações mais distantes podemos visualizar uma figura geométrica, e o centroide desse grupo seria a observação mais próxima ao centro dessa figura.
 
@@ -149,7 +149,7 @@ Há duas propriedades importantes do \textit{k-means}:
     \label{fig:passos_kmeans}
 \end{figure}
 
-Um cuidado especial na utilização desse algoritmo é na escolha do número de grupos desejado. Uma escolha inadequada poderá resultar em um mau agrupamento, unindo duas classes naturais em um único grupo ou dividindo uma classe natural em dois grupos, porém algumas técnicas tem sido desenvolvidas para resolver esse problema [2, 3, ?]. (colocar mais referências a artigos para solução desse problema) Um exemplo de problema que pode ocorrer está ilustrado pela figura \ref{fig:problema_kmeans}.
+Um cuidado especial na utilização desse algoritmo é na escolha do número de grupos desejado. Uma escolha inadequada poderá resultar em um mau agrupamento, unindo duas classes naturais em um único grupo ou dividindo uma classe natural em dois grupos, porém algumas técnicas tem sido desenvolvidas para resolver esse problema \cite{Jain99, Manning09} [?]. (colocar mais referências a artigos para solução desse problema) Um exemplo de problema que pode ocorrer está ilustrado pela figura \ref{fig:problema_kmeans}.
 
 \begin{figure}[H]
     \begin{center}
@@ -159,12 +159,12 @@ Um cuidado especial na utilização desse algoritmo é na escolha do número de 
     \label{fig:problema_kmeans}
 \end{figure}
 
-Conforme John Wang [9], o algoritmo \textit{k-means} não é adequado para descobrir grupos de tamanhos que variam muito, um cenário comum em agrupamento de documentos. Além disso, é sensível a ruídos que pode ter uma grande influência sobre a escolha do centroide de um grupo, que por sua vez diminui a precisão do agrupamento. Todavia algoritmos como o \textit{k-medoids} [9] foram propostos para resolver o problema do ruído.
+Conforme John Wang \cite{Wang09}, o algoritmo \textit{k-means} não é adequado para descobrir grupos de tamanhos que variam muito, um cenário comum em agrupamento de documentos. Além disso, é sensível a ruídos que pode ter uma grande influência sobre a escolha do centroide de um grupo, que por sua vez diminui a precisão do agrupamento. Todavia algoritmos como o \textit{k-medoids} \cite{Wang09} foram propostos para resolver o problema do ruído.
 
 \subsubsection{Agrupamento hierárquico}
 \label{sec:agrupamento_hierarquico}
 
-Agrupamento plano geralmente é mais simples e fácil de implementar, porém existem certos tipos de problemas em que a visualização de um agrupamento de um único plano não é suficientemente útil, além disso, como visto no tópico anterior, esse tipo de agrupamento tem dois problemas que são a escolha do número de grupo na entrada e o fato de não serem determinísticos [3]. Dessa forma, algoritmos que criassem agrupamentos com vários níveis e que tivessem como requisito opcional a entrada do número de grupos foram desenvolvidos. Esses algoritmos criam uma árvore hierárquica de grupos, uma estrutura que gera mais informação, uma vez que as relações implícitas entre os grupos ficam mais evidentes.
+Agrupamento plano geralmente é mais simples e fácil de implementar, porém existem certos tipos de problemas em que a visualização de um agrupamento de um único plano não é suficientemente útil, além disso, como visto no tópico anterior, esse tipo de agrupamento tem dois problemas que são a escolha do número de grupo na entrada e o fato de não serem determinísticos \cite{Manning09}. Dessa forma, algoritmos que criassem agrupamentos com vários níveis e que tivessem como requisito opcional a entrada do número de grupos foram desenvolvidos. Esses algoritmos criam uma árvore hierárquica de grupos, uma estrutura que gera mais informação, uma vez que as relações implícitas entre os grupos ficam mais evidentes.
 
 Existem duas abordagens no funcionamento de um algoritmo hierárquico que são:
 
@@ -178,7 +178,7 @@ Existem duas abordagens no funcionamento de um algoritmo hierárquico que são:
     \begin{center}
         \includegraphics[scale=0.5]{hierarchical_algorithm.png}
     \end{center}
-    \caption{Exemplo de um algoritmo hierárquico aglomerativo, retirado de [8], onde o critério de similaridade utilizado é a distância euclidiana.}
+    \caption{Exemplo de um algoritmo hierárquico aglomerativo, retirado de \cite{Segaran08}, onde o critério de similaridade utilizado é a distância euclidiana.}
     \label{fig:hierarchical_algorithm}
 \end{figure}
 
@@ -210,7 +210,7 @@ Já a cobertura mede a fração de documentos que foram classificados corretamen
 
 Por exemplo, dado o conjunto de documentos \{1, 2, 3, 4, 5, 6\}, onde $N_{1}$ = \{1, 3, 5\} fazem parte de uma classe natural, ou seja, são similares; e $N_{2}$ = \{2, 4, 6\} fazem parte de outra classe natural. Dado um grupo C = \{1, 3, 4, 5\} a precisão de C em relação a $N_{1}$ é P = 3/4 e a cobertura é R = 3/3 = 1, ou seja, nem todos os documentos de C são similares entre si, apesar de que todos os documentos de $N_{1}$ foram agrupados corretamente em C.
 
-Porém, a utilização de duas medidas para avaliação e comparação de algoritmos torna difícil determinar se um algoritmo é superior a outro ou não. Pois é melhor um algoritmo com alta precisão e baixa cobertura, ou vice-versa? A resposta para essa pergunta depende do contexto onde é aplicado o agrupamento. Segundo Manning et al, na maioria das vezes é mais aceitável o erro de tipo I, pois separar documentos similares em grupos distintos é geralmente pior do que juntar documentos não similares num mesmo grupo [7].
+Porém, a utilização de duas medidas para avaliação e comparação de algoritmos torna difícil determinar se um algoritmo é superior a outro ou não. Pois é melhor um algoritmo com alta precisão e baixa cobertura, ou vice-versa? A resposta para essa pergunta depende do contexto onde é aplicado o agrupamento. Segundo Manning et al, na maioria das vezes é mais aceitável o erro de tipo I, pois separar documentos similares em grupos distintos é geralmente pior do que juntar documentos não similares num mesmo grupo \cite{Ester03}.
 
 Dado isto, um critério para avaliação bastante utilizado é a medida F (\textit{F-measure}), pois avalia o agrupamento utilizando a média harmônica ponderada da precisão e da cobertura. A medida F é dada por:
 
@@ -221,13 +221,13 @@ Um valor para $\beta$ bastante utilizado é $\beta$ = 1, pois tanto a precisão 
 
 \begin{equation} F_{1} = 2 \times \frac{P \times R} {P + R} \end{equation}
 
-Já definindo $\beta$ > 1, a precisão será mais enfatizada em relação à cobertura. Note que para a medida F, o algoritmo não basta ter apenas boa precisão ou apenas boa cobertura, mas sim ambas características, o que a torna um dos critérios mais utilizados para a análise. Porém, ela não é o único critério de avaliação existente. Dentro da área de estudo sobre avaliação de agrupamentos existem critérios internos e externos e a medida F se enquadra na segunda categoria, pois avalia o agrupamento a partir de uma classificação de referência [7].
+Já definindo $\beta$ > 1, a precisão será mais enfatizada em relação à cobertura. Note que para a medida F, o algoritmo não basta ter apenas boa precisão ou apenas boa cobertura, mas sim ambas características, o que a torna um dos critérios mais utilizados para a análise. Porém, ela não é o único critério de avaliação existente. Dentro da área de estudo sobre avaliação de agrupamentos existem critérios internos e externos e a medida F se enquadra na segunda categoria, pois avalia o agrupamento a partir de uma classificação de referência \cite{Ester03}.
 
 \newpage
 \section {FIHC}
 \label {sec:fihc}
 
-\textit{Frequent Itemset-based Hierarchical Clustering} (FIHC) é um algoritmo para agrupamento hierárquico de documentos proposto por Martin Ester \textit{et al.} [7] e que utiliza o conceito de conjuntos de itens frequentes (do inglês \textit{frequent itemset}).
+\textit{Frequent Itemset-based Hierarchical Clustering} (FIHC) é um algoritmo para agrupamento hierárquico de documentos proposto por Martin Ester \textit{et al.} \cite{Ester03} e que utiliza o conceito de conjuntos de itens frequentes (do inglês \textit{frequent itemset}).
 
 Segundo Martin Ester \textit{et al.}, a ideia utilizada para o critério de agrupamento dos documentos é que existe algum conjunto de itens frequentes para cada grupo (tópico) no conjunto de documentos, e diferentes grupos compartilham poucos conjuntos de itens frequentes.
 
@@ -235,7 +235,7 @@ Segundo os autores, o algoritmo tenta resolver alguns desafios da área como: al
 
 Um ponto de interesse é que, diferentemente dos algoritmos mais comuns para agrupamento hierárquico, no FIHC a parametrização do número de grupos desejado é opcional, assim o usuário não precisa ter nenhum conhecimento prévio da coleção de documentos.
 
-O algoritmo utiliza a abordagem aglomerativa, descrita na seção 2.4.2, porém ao invés de construir a árvore baseando-se na similaridade entre as observações (documentos) ele a faz baseando-se nos grupos [7]. Possui dois passos principais, que é a construção dos grupos e posteriormente a criação da árvore hierárquica, entretanto antes de apresentá-los é necessário introduzir algumas definições.
+O algoritmo utiliza a abordagem aglomerativa, descrita na seção 2.4.2, porém ao invés de construir a árvore baseando-se na similaridade entre as observações (documentos) ele a faz baseando-se nos grupos \cite{Ester03}. Possui dois passos principais, que é a construção dos grupos e posteriormente a criação da árvore hierárquica, entretanto antes de apresentá-los é necessário introduzir algumas definições.
 
 \subsection {O que é conjunto de itens frequentes}
 \label {sec:conjunto_itens_frequentes}
@@ -267,11 +267,11 @@ No caso do algoritmo FIHC, conjuntos de itens frequentes são também denominado
 \subsubsection {Algoritmo Apriori}
 \label {sec:algoritmo_apriori}
 
-A extração dos conjuntos de itens frequentes é uma das técnicas mais utilizadas para caracterização de dados com objetivo de resumir os atributos gerais mais relevantes de um conjunto de dados. O exemplo mostrado na seção anterior é uma forma de encontrar os conjuntos de itens frequentes, porém esse método não é eficiente quando precisa ser utilizado em uma coleção grande de documentos. Um dos algoritmos mais populares para tal propósito, seja em um banco de dados ou em documentos textuais, é o algoritmo Apriori [14].
+A extração dos conjuntos de itens frequentes é uma das técnicas mais utilizadas para caracterização de dados com objetivo de resumir os atributos gerais mais relevantes de um conjunto de dados. O exemplo mostrado na seção anterior é uma forma de encontrar os conjuntos de itens frequentes, porém esse método não é eficiente quando precisa ser utilizado em uma coleção grande de documentos. Um dos algoritmos mais populares para tal propósito, seja em um banco de dados ou em documentos textuais, é o algoritmo Apriori \cite{Agrawal94}.
 
-O algoritmo utiliza a propriedade de anti-monotonicidade [10], onde se um conjunto de itens não é frequente, então todos os seus superconjuntos também não serão.
+O algoritmo utiliza a propriedade de anti-monotonicidade \cite{Rajaraman11}, onde se um conjunto de itens não é frequente, então todos os seus superconjuntos também não serão.
 
-Ele inicia a busca a partir de uma coleção de conjunto de itens frequentes com cardinalidade \emph{k} = 1, chamado de $F_{1}$ . A partir daí todos os conjuntos de cardinalidades maiores são obtidos a partir de uma coleção de candidatos C. O algoritmo para quando não encontrar mais nenhum conjunto de itens frequentes. A figura ? mostra o algoritmo:
+Ele inicia a busca a partir de uma coleção de conjunto de itens frequentes com cardinalidade \emph{k} = 1, chamado de $F_{1}$ . A partir daí todos os conjuntos de cardinalidades maiores são obtidos a partir de uma coleção de candidatos C. O algoritmo para quando não encontrar mais nenhum conjunto de itens frequentes. % A figura ? mostra o algoritmo:
 
 \begin{algorithm}
 \caption{Algoritmo Apriori para extração de conjuntos de itens frequentes em documentos textuais}
@@ -314,7 +314,7 @@ Além disso, \textit{cluster support} de um item em $C$ é definido como a porce
 Tf-idf é uma medida estatística usada para avaliar o quão importante uma palavra é para um documento em relação a uma coleção de documentos. (wikipedia)  A ideia é que se uma palavra é muito comum em diferentes documentos da coleção, então provavelmente ela tem pouca relevância, como por exemplo, a conjunção aditiva “e”. A importância aumenta proporcionalmente ao número de vezes que uma palavra aparece no documento, mas é compensado pela frequência da palavra no corpus. O tf-idf é dado pelo produto de duas medidas: a frequência do termo e a frequência inversa do documento, dado por:
 
 \begin{equation} tf-idf(t, d) = tf(t, d) \times \log \frac{N} {df(t)} \end{equation}
-onde $tf(t,d)$ é a razão entre o número de vezes que o termo $t$ aparece no documento $d$ e a quantidade de termos em $d$; $N$ é a quantidade de documentos na coleção e $df(t)$ é a quantidade de documentos da coleção que possui o termo $t$. Existem diversas variantes dessa medida como visto em [3].
+onde $tf(t,d)$ é a razão entre o número de vezes que o termo $t$ aparece no documento $d$ e a quantidade de termos em $d$; $N$ é a quantidade de documentos na coleção e $df(t)$ é a quantidade de documentos da coleção que possui o termo $t$. Existem diversas variantes dessa medida como visto em \cite{Manning09}.
 
 \subsection {Construção dos grupos}
 \label {sec:construcao_grupos}
@@ -367,7 +367,7 @@ Conjunto global de itens frequentes & \textit{Global support} \\ \hline
 \subsubsection {Disjunção dos grupos sobrepostos}
 \label {sec:disjuncao_grupos_sobrepostos}
 
-A disjunção é um processo importante, pois garante que ao final do algoritmo cada documento pertença somente ao grupo que melhor o descreva. Para cada documento D, é listado todos os grupos no qual ele pertence, e após isso é calculado para cada um desses grupo C uma medida que indicará a “relevância” de D em relação a C. Essa medida tem o nome de Score e é proposto em [7].
+A disjunção é um processo importante, pois garante que ao final do algoritmo cada documento pertença somente ao grupo que melhor o descreva. Para cada documento D, é listado todos os grupos no qual ele pertence, e após isso é calculado para cada um desses grupo C uma medida que indicará a “relevância” de D em relação a C. Essa medida tem o nome de Score e é proposto em \cite{Ester03}.
 
 Após os cálculos da medida Score de D para cada grupo C, é mantido o documento somente no grupo que maximizou essa medida. Esse cálculo de relevância de um grupo inicial $C_{i}$ para um documento $D_{j}$ é definido por:
 
@@ -397,7 +397,7 @@ C(universo, inteligência)	& artigo.1, artigo.4 e artigo.9 & (universo/cs = 100\
 \label{table:grupos}
 \end{table}
 
-O primeiro termo da função $Score(C_{i} \gets D_{j})$ recompensa $C_{i}$ se o \textit{global frequent item} $x$ em $D_{j}$ é também um \textit{cluster frequent item} de $C_{i}$ e o segundo termo penaliza $C_{i}$ se o \textit{global frequent item} $x’$ em $D_{j}$ não é um \textit{cluster frequent item} de $C_{i}$. De acordo com Martin Ester \textit{et al.} [7], intuitivamente, um grupo $C_{i}$ é “bom” para um documento $D_{j}$ se há muitos \textit{global frequent items} em $D_{j}$ que aparecem em “muitos” documentos em $C_{i}$. Se há mais de um grupo que maximiza a medida $Score(C_{i} \gets D_{j})$, então é escolhido o grupo com maior número de itens em seu conjunto de itens frequentes gerador.
+O primeiro termo da função $Score(C_{i} \gets D_{j})$ recompensa $C_{i}$ se o \textit{global frequent item} $x$ em $D_{j}$ é também um \textit{cluster frequent item} de $C_{i}$ e o segundo termo penaliza $C_{i}$ se o \textit{global frequent item} $x’$ em $D_{j}$ não é um \textit{cluster frequent item} de $C_{i}$. De acordo com Martin Ester \textit{et al.} \cite{Ester03}, intuitivamente, um grupo $C_{i}$ é “bom” para um documento $D_{j}$ se há muitos \textit{global frequent items} em $D_{j}$ que aparecem em “muitos” documentos em $C_{i}$. Se há mais de um grupo que maximiza a medida $Score(C_{i} \gets D_{j})$, então é escolhido o grupo com maior número de itens em seu conjunto de itens frequentes gerador.
 
 Seguindo o exemplo da tabela \ref{table:grupos}, note que o documento artigo.3 pertence aos grupos C(mercado), C(crise), C(Grécia) e C(mercado, crise). Para se decidir em qual desses grupos o artigo deve permanecer, são calculados os seguintes $Score$:
 
@@ -438,7 +438,7 @@ C(universo, inteligência)	& artigo.1, artigo.4 e artigo.9 & (universo/cs = 100\
 
 Uma vez computado os grupos iniciais, podemos visualizar cada um deles como um tópico ou subtópico na coleção de documentos. Agora é necessário criar a árvore, colocando os tópicos mais generalistas no topo e os mais específicos abaixo. Essa árvore tem como objetivos cria uma estrutura para a navegação entre os documentos e também facilitar a poda dos grupos muito específicos.
 
-Os grupos são inicialmente aninhados na árvore de acordo com a quantidade de itens em seu conjunto global gerador. Dessa forma, aqueles que possuem somente um item, estão no primeiro nível da árvore, e assim por diante. A raiz (nível 0) da árvore é por definição um grupo vazio e sem nenhum item em seu conjunto global de itens frequentes. Como dito no início desse capítulo, o FIHC utiliza a abordagem aglomerativa para a criação da hierarquia, ou seja, para cada grupo C no nível \emph{k} é escolhido um pai dentre os potenciais grupos do nível \emph{k-1}, cujo o conjunto global seja subconjunto dos conjuntos globais de itens frequentes de C. Se houver mais de um potencial pai no nível \emph{k-1}, então é escolhido aquele grupo que maximiza uma medida de ???, similar ao processo descrito na seção \ref{sec:disjuncao_grupos_sobrepostos}. Isso é melhor detalhado em [7].
+Os grupos são inicialmente aninhados na árvore de acordo com a quantidade de itens em seu conjunto global gerador. Dessa forma, aqueles que possuem somente um item, estão no primeiro nível da árvore, e assim por diante. A raiz (nível 0) da árvore é por definição um grupo vazio e sem nenhum item em seu conjunto global de itens frequentes. Como dito no início desse capítulo, o FIHC utiliza a abordagem aglomerativa para a criação da hierarquia, ou seja, para cada grupo C no nível \emph{k} é escolhido um pai dentre os potenciais grupos do nível \emph{k-1}, cujo o conjunto global seja subconjunto dos conjuntos globais de itens frequentes de C. Se houver mais de um potencial pai no nível \emph{k-1}, então é escolhido aquele grupo que maximiza uma medida de ???, similar ao processo descrito na seção \ref{sec:disjuncao_grupos_sobrepostos}. Isso é melhor detalhado em \cite{Ester03}.
 
 Uma vez escolhido um grupo pai para cada grupo da coleção, é necessário verificar se é possível unificar os grupos similares ou com tópicos muito específicos, garantindo uma hierarquia mais natural para a navegação e melhorando a acurácia do algoritmo. Isso é feito de duas formas: 1) através do processo de poda dos grupos filhos e 2) unificação dos grupos similares do nível 1.
 
@@ -501,16 +501,22 @@ A tarefa de encontrar o idioma de um documento é em si própria um problema na 
     \begin{center}
         \includegraphics[scale=0.4]{n_grama.png}
     \end{center}
-    \caption{Esquema do método n-grama, retirado de [11]. O perfil à esquerda representa o modelo n-grama do idioma inglês, obtido a partir de um conjunto de textos para treinamento, o perfil à direita representa os n-gramas mais frequentes de um documento de exemplo e a última coluna indica a distância entre a posição desses n-grama em relação ao perfil do idioma.}
+    \caption{Esquema do método n-grama, retirado de \cite{Trenkle94}. O perfil à esquerda representa o modelo n-grama do idioma inglês, obtido a partir de um conjunto de textos para treinamento, o perfil à direita representa os n-gramas mais frequentes de um documento de exemplo e a última coluna indica a distância entre a posição desses n-grama em relação ao perfil do idioma.}
     \label{fig:metodo_n_grama}
 \end{figure}
 
 \subsection {Tokenização}
 \label {sec:tokenizacao}
 
-Como um dos pontos centrais do algoritmo FIHC é a utilização dos conjuntos de itens frequentes da coleção de documentos, uma ação importante para que a biblioteca funcione com boa acurácia é estabelecer um processo que encontre nos textos todos os termos que o compõe. Isso se dá pelo processo de tokenização ou segmentação de texto. De acordo com Manning \textit{et al.} [3], tokenização é o processo de quebra do documento em partes, chamados de \textit{tokens}. A definição de \textit{token} varia de acordo com o contexto do problema, e na prática pode ser palavras, frases ou símbolos. No caso deste trabalho, os \textit{tokens} são encontrados à medida que um espaço em branco ou uma marcação gráfica aparece entre eles, exceto o hífen. É necessário falar também que neste trabalho as palavras \textit{token}, termo e item se equivalem. Veja o esquema ? para um exemplo ilustrativo desse processo:
+Como um dos pontos centrais do algoritmo FIHC é a utilização dos conjuntos de itens frequentes da coleção de documentos, uma ação importante para que a biblioteca funcione com boa acurácia é estabelecer um processo que encontre nos textos todos os termos que o compõe. Isso se dá pelo processo de tokenização ou segmentação de texto. De acordo com Manning \textit{et al.} \cite{Manning09}, tokenização é o processo de quebra do documento em partes, chamados de \textit{tokens}. A definição de \textit{token} varia de acordo com o contexto do problema, e na prática pode ser palavras, frases ou símbolos. No caso deste trabalho, os \textit{tokens} são encontrados à medida que um espaço em branco ou uma marcação gráfica aparece entre eles, exceto o hífen. É necessário falar também que neste trabalho as palavras \textit{token}, termo e item se equivalem. Veja a figura \ref{fig:tokenizacao} para um exemplo ilustrativo desse processo:
 
-[Inserir exemplo]
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.6]{tokenizacao.png}
+    \end{center}
+    \caption{}
+    \label{fig:tokenizacao}
+\end{figure}
 
 Um bom algoritmo para extração dos tokens deve levar em consideração o idioma do texto, pois em geral o processo de tokenização é difícil, devido a construções de palavras de podem surgir durante o processo, como as contrações de palavras inglesas, como \textit{“we’ve many time (...)”}, ou as palavras compostas em português como “latino-americano”. 
 
@@ -523,14 +529,20 @@ Um atributo requerido para um sistema de agrupamento de documentos é a escolha 
 
 No caso deste trabalho é feito também a eliminação das marcações gráficas que não fazem parte de uma palavra propriamente dita.
 
-Continuando com o exemplo da figura ?, com a remoção dos \textit{stopwords} o resultado seria da seguinte forma:
+Continuando com o exemplo da figura \ref{fig:limpeza}, com a remoção dos \textit{stopwords} o resultado seria da seguinte forma:
 
-[Inserir exemplo]
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.6]{limpeza.png}
+    \end{center}
+    \caption{}
+    \label{fig:limpeza}
+\end{figure}
 
 \subsection {\textit{Stemming}}
 \label {sec:stemming}
 
-\textit{Stemming} é o processo de unificar as formas variantes de uma palavra em uma representação comum, chamado de \textit{stem} [4]. Por exemplo, as palavras “corredor”, “corrida” e “correria” podem ser reduzidas para a representação “corr”.
+\textit{Stemming} é o processo de unificar as formas variantes de uma palavra em uma representação comum, chamado de \textit{stem} \cite{Orengo01}. Por exemplo, as palavras “corredor”, “corrida” e “correria” podem ser reduzidas para a representação “corr”.
 
 Esse processo é essencial para um sistema de agrupamento, pois, assim como o processo de limpeza, tem o objetivo de aumentar a eficiência do algoritmo de agrupamento.
 
@@ -548,17 +560,17 @@ Geralmente os diversos algoritmos de \textit{stemming} são analisados através 
 \subsubsection {O algoritmo RSLP}
 \label {sec:algoritmo_RSLP}
 
-A maioria dos algoritmos para \textit{stemming} baseia-se no método de remoção de afixos (sufixos e prefixos), definidos a partir de um conjunto de regras predefinidas. Caso a palavra contenha o prefixo ou sufixo definido por alguma regra, ele é removido [5].
+A maioria dos algoritmos para \textit{stemming} baseia-se no método de remoção de afixos (sufixos e prefixos), definidos a partir de um conjunto de regras predefinidas. Caso a palavra contenha o prefixo ou sufixo definido por alguma regra, ele é removido \cite{Alexandre07}.
 
 O problema desse tipo de método é que esses algoritmos são muito dependentes da linguagem para os quais foram criados, assim é difícil a criação de um algoritmo universal.
 
-No caso da língua inglesa, o algoritmo mais usado é o de Porter [citacao], já no caso da língua portuguesa o algoritmo escolhido para este estudo é o Removedor de Sufixos da Língua Portuguesa (RSLP), devido ao seu bom desempenho [4].
+No caso da língua inglesa, o algoritmo mais usado é o de Porter [citacao], já no caso da língua portuguesa o algoritmo escolhido para este estudo é o Removedor de Sufixos da Língua Portuguesa (RSLP), devido ao seu bom desempenho \cite{Orengo01}.
 
 \begin{figure}[H]
     \begin{center}
         \includegraphics[scale=0.5]{RSLP.png}
     \end{center}
-    \caption{Sequência de passos do algoritmo RSLP, retirado de [4].}
+    \caption{Sequência de passos do algoritmo RSLP, retirado de \cite{Orengo01}.}
     \label{fig:rslp}
 \end{figure}
 
@@ -673,59 +685,125 @@ Conjunto de itens & \textit{Global support} \\ \hline
 \newpage
 
 \begin{thebibliography}{9}
-\bibitem{Ma e Zhang03}
-    Y. Ma, H. Zhang.
-    \emph{Contrast-based image attention analysis by using fuzzy growing}.
-    Proceedings of the Eleventh ACM international Conference on Multimedia
-    Berkeley, CA, USA.
-    2003.
 
-\bibitem{Itti e Koch03}
-    L. Itti, C. Koch.
-    \emph{A saliency-based search mechanism for overt and covert shifts of visual attention}
-    Vision Research, Volume 40, Issues 10-12, Pages 1489-1506,
-    ISSN 0042-6989, DOI: 10.1016/S0042-6989(99)00163-7.
-    2000.
+\bibitem{Koutroumbas06}
+    Sergios Theodoridis, Konstantinos Koutroumbas.
+    \emph{Pattern Recognition}.
+    Elsevier; 3 edition,
+    2006.
+    
+\bibitem{Jain99}
+    Jain, A.K., Murty, M.N., Flynn, P.J.
+    \emph{Data Clustering: A Review}.
+    ACM Computing Surveys 31 (3), 264–322,
+    1999.
+    
+\bibitem{Manning09}
+    Manning, Christopher D.; Raghavan, Prabhakar; Schütze, Hinrich.
+    \emph{An Introduction to Information Retrieval}.
+    Cambridge: Cambridge University Press, 569p,
+    2009.
+    
+\bibitem{Orengo01}
+    Viviane Orengo, Cristian Huyck.
+    \emph{A Stemming Algorithm for the Portuguese Language}.
+    Proceedings of the Eighth International Symposium on String Processing and Information Retrieval,
+    2001.
 
-\bibitem{Liu.et.al07}
-    H. Liu, S. Jiang, Q. Huang, C. Xu, W. Gao
-    \emph{Region-based visual attention analysis with its application in image browsing on small displays}.
-    In Proceedings of the 15th international Conference on Multimedia  (Augsburg, Germany, September 25 - 29, 2007).
+\bibitem{Alexandre07}
+    Alexandre Ramos Coelho.
+    \emph{Stemming para a lingua portuguesa: Estudo, análise e melhoria do algoritmo RSLP}.
     2007.
+    
+\bibitem{Ester03}
+    Benjamim C. M. Fung, Ke Wang, Martin Ester.
+    \emph{Hierarchical Document Clustering Using Frequent Itemsets}.
+    2003.
+    
+\bibitem{Segaran08}
+    Toby Segaran.
+    \emph{Programming collective intelligence : building smart Web 2.0 applications}.
+    O’Reilly, 1 edition,
+    2008.
+    
+\bibitem{Wang09}
+    John Wang.
+    \emph{Encyclopedia of Data Warehousing and Mining}.
+    IGI Global Snippet, 2 edition,
+    2009.
+    
+\bibitem{Rajaraman11}
+    Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman.
+    \emph{Mining of Massive Datasets}.
+    Cambridge University Press, 2 edition,
+    2011.
+    
+\bibitem{Trenkle94}
+    William B. Cavnar, John M. Trenkle.
+    \emph{N-Gram-Based Text Categorization}.
+    In Proceedings of SDAIR-94, 3rd Annual Symposium on Document Analysis and Information Retrieval,
+    1994.
+    
+\bibitem{Agrawal94}
+    R. Agrawal and R. Srikant.
+    \emph{Fast algorithms for mining association rules in large databases}.
+    Proceedings of the 20th International Conference on Very Large Data Bases, VLDB, pages 487-499, Santiago, Chile,
+    September, 1994.
 
-\bibitem{survey10}
-    S. Frintrop, E. Rome, H. I. Christensen.
-    \emph{Computational visual attention systems and their cognitive foundations: A survey}.
-    ACM Trans. Appl. Percept. 7, 1 (Jan. 2010), 1-39.
-    2010.
 
-\bibitem{breuel03}
-    T. M. Breuel.
-    \emph{High performance document layout analysis}.
-    [Online]. Available: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.1303
-    2003
+%\bibitem{Ma e Zhang03}
+%    Y. Ma, H. Zhang.
+%    \emph{Contrast-based image attention analysis by using fuzzy growing}.
+%    Proceedings of the Eleventh ACM international Conference on Multimedia
+%    Berkeley, CA, USA.
+%    2003.
 
-\bibitem{GOF}
-    E. Gamma, R. Helm, R. Johnson, J. Vlissides.
-    \emph{Design Patterns: Elements of Reusable Objected-Oriented Software}.
-    Addison-Weskey Professional; 1 edition,
-    November 10th, 1994
+%\bibitem{Itti e Koch03}
+%   L. Itti, C. Koch.
+%    \emph{A saliency-based search mechanism for overt and covert shifts of visual attention}
+%    Vision Research, Volume 40, Issues 10-12, Pages 1489-1506,
+%    ISSN 0042-6989, DOI: 10.1016/S0042-6989(99)00163-7.
+%    2000.
 
-\bibitem{morfologia}
-    E.R. Dougherty, R.A. Lotufo.
-    \emph{Hands-on Morphological Image Processing}.
-    SPIE press,
-    2003
+%\bibitem{Liu.et.al07}
+%    H. Liu, S. Jiang, Q. Huang, C. Xu, W. Gao
+%    \emph{Region-based visual attention analysis with its application in image browsing on small displays}.
+%    In Proceedings of the 15th international Conference on Multimedia  (Augsburg, Germany, September 25 - 29, 2007).
+%    2007.
 
-\bibitem{tesseract}
-    \emph{Tesseract OCR}
-    http://code.google.com/p/tesseract-ocr/
+%\bibitem{survey10}
+%    S. Frintrop, E. Rome, H. I. Christensen.
+%    \emph{Computational visual attention systems and their cognitive foundations: A survey}.
+%    ACM Trans. Appl. Percept. 7, 1 (Jan. 2010), 1-39.
+%    2010.
 
-\bibitem{duda}
-    R. O. Duda, P. E. Hart, D. Stork.
-    \emph{Pattern Classification}.
-    Wiley-Interscience; 2nd edition,
-    October 2000.
+%\bibitem{breuel03}
+%    T. M. Breuel.
+%    \emph{High performance document layout analysis}.
+%    [Online]. Available: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.1303
+%    2003
+
+%\bibitem{GOF}
+%    E. Gamma, R. Helm, R. Johnson, J. Vlissides.
+%    \emph{Design Patterns: Elements of Reusable Objected-Oriented Software}.
+%    Addison-Weskey Professional; 1 edition,
+%    November 10th, 1994
+
+%\bibitem{morfologia}
+%    E.R. Dougherty, R.A. Lotufo.
+%    \emph{Hands-on Morphological Image Processing}.
+%    SPIE press,
+%    2003
+
+%\bibitem{tesseract}
+%    \emph{Tesseract OCR}
+%    http://code.google.com/p/tesseract-ocr/
+
+%\bibitem{duda}
+%    R. O. Duda, P. E. Hart, D. Stork.
+%    \emph{Pattern Classification}.
+%    Wiley-Interscience; 2nd edition,
+%    October 2000.
 
 \end{thebibliography}
 \end{document}
