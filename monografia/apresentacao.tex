@@ -1,0 +1,323 @@
+\documentclass{beamer}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{verbatim}
+\mode<presentation>{\usetheme[darktitle,framenumber,compress]{UniversiteitAntwerpen}} 
+\title{Análise e conversão de tabloides de promoções}
+\author{Igor dos Santos Montagner \\ Orientador: Prof. Dr. Roberto Marcondes Cesar Junior }
+\graphicspath{{imgs/}}
+
+\AtBeginSection[]
+{
+   \begin{frame}
+       \frametitle{Agenda}
+       \tableofcontents[currentsection]
+   \end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Problema}
+
+\begin{frame}
+\frametitle{Problema}
+Apesar do desenvolvimento dos meios eletrônicos a quantidade de papel usada ainda é grande; \pause
+\begin{figure}[!ht]
+    \includegraphics[scale=0.5]{papel1.jpg}
+\end{figure}   
+\end{frame}
+
+\begin{frame}
+\frametitle{Problema}
+\begin{center}muito GRANDE; \end{center}
+\begin{figure}[!ht]
+    \includegraphics[scale=0.25]{papel2.jpg}
+\end{figure}   
+\end{frame}
+
+\begin{frame}
+\frametitle{Problema}
+
+\begin{itemize}
+
+\item Existe uma necessidade de buscar, indexar e armazenar documentos e informações de forma eficiente; \pause
+
+\item Em um mercado concorrido e em busca de rapidez em suas operações, a conversão manual das informações contidas em papel está longe de ser ideal;
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Problema}
+
+\begin{itemize}
+
+\item No mercado de consumo de varejo, a rapidez na análise da concorrência pode ser um diferencial; \pause
+
+\item Isto pode ser feito usando as informações presentes nos tabloides promocionais distribuídos nos estabelecimentos comerciais.
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Problema}
+    Porém existem muitos formatos de tabloides.
+    \begin{figure}[!ht]
+    \begin{center}
+        \includegraphics[scale=0.4]{tabloides.png}
+    \end{center}
+    \end{figure}
+\end{frame}
+
+\subsection{Objetivo final}
+
+\begin{frame}
+    \frametitle{Objetivos}
+    Os objetivos do trabalho são construir um sistema que:
+    \pause
+    \begin{itemize}
+        \item produza uma listagem com os preços de cada produto encontrado nas páginas de um tabloide;
+        \pause
+        \item torne viável a análise de tabloides de diferentes estabelecimentos comerciais.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Objetivos}
+    
+    \begin{columns}[c]
+        \column{100pt} {
+            \includegraphics[scale=0.18]{seg-final-o.png}
+        }
+        \column{3pt} {
+            $\rightarrow$
+        }
+        \column{200pt} {
+            Coca Cola normal ou PET 600ml ... 1,79
+            
+            Sorvete Nestlé vários sabores - 2L ... 11, 80
+            
+            $\dots$
+            
+            $\dots$
+        }
+    \end{columns} 
+
+\end{frame}
+
+\section{Solução proposta}
+
+\begin{frame}
+    \frametitle{Solução proposta}
+    Foi fixado somente um formato de tabloide:
+    \begin{figure}[!ht]
+    \begin{center}
+        \includegraphics[scale=0.18]{seg-final-o.png}
+    \end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solução proposta}
+    Para poder lidar com a constante modificação de \emph{layout} que ocorre nos tabloides, o trabalho de análise foi dividido nas seguintes etapas:
+    \pause
+    \begin{figure}[!ht]
+    \begin{center}
+        \includegraphics[scale=0.4]{flow-H.png}
+    \end{center}
+    \end{figure}
+    \pause
+    Esta divisão permite adicionar suporte a um novo tipo de tabloide sobrescrevendo as etapas que falham se usado um analisador para outro tipo.
+\end{frame}
+
+
+
+\subsection{Atenção visual e mapa de saliências}
+
+\begin{frame}
+\frametitle{Atenção visual e mapa de saliências}
+	\begin{itemize}
+	    \item É natural que um leitor, ao observar uma imagem, examine algumas partes primeiramente e com maior atenção que outras. \pause 
+	    \item Em tabloides promocionais este fato é mais relevante, já que não existe uma ordem natural de leitura. \pause
+	    \item Este fenômeno, chamado de \emph{atenção seletiva}, é descrito em \cite{survey10}, juntamente com sistemas de computação que o utilizam para analisar imagens.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Atenção visual e mapa de saliências}
+No trabalho \cite{Ma e Zhang03}, o contraste é usado como medida principal de atenção.
+
+\begin{figure}[!ht]
+    \begin{center}
+        \includegraphics[scale=.5]{fig1.png}
+    \end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Atenção visual e mapa de saliências}
+Um \emph{mapa de saliências} é usado para medir a atenção visual em uma imagem. O contraste entre um pixel e sua vizinhança foi usado para a criação do mapa.
+
+
+\begin{figure}[!ht]
+    \begin{center}
+        \includegraphics[scale=.15]{msf.png}
+    \end{center}
+\end{figure}
+\end{frame}
+
+
+\subsection{Segmentação do background}
+
+\begin{frame}
+\frametitle{Segmentação do \emph{background}}
+O mapa de saliências da imagem é calculado e tudo o que não for foco de atenção na imagem será considerado como \emph{background}. 
+    
+\begin{figure}[!ht]
+    \subfigure{\includegraphics[scale=.15]{ms-orig.png} } \pause
+    \subfigure{\includegraphics[scale=.15]{msf.png}} \pause
+    \subfigure{\includegraphics[scale=.15]{ms-fundo.png}}
+\end{figure}
+
+\end{frame}
+
+\subsection{Detecção e recorte de produtos}
+
+\begin{frame}
+\frametitle{Detecção e recorte de produtos}
+
+O tamanho de cada região não pertencente ao \emph{background} é usado para identificar produtos. \pause O recorte é feito a partir da detecção das linhas divisórias de produtos. \pause 
+            
+\begin{figure}[!ht]
+    \subfigure{\includegraphics[scale=.15]{linhas-o1.png} } \pause
+    \subfigure{\includegraphics[scale=.15]{linhas-l1.png} } \pause
+    \subfigure{\includegraphics[scale=.15]{recorte-seg.png} }
+\end{figure}
+
+
+\end{frame}
+
+\subsection{Detecção de textos e OCR }
+\begin{frame}
+\frametitle{Detecção de textos e OCR}
+    \begin{itemize}
+    \item A detecção de textos dentro de um recorte foi feita usando \emph{classificação supervisionada} com o classificador \emph{k-Vizinhos mais próximos}. \pause
+    
+    
+    \item O conjunto de treinamento consistiu de 192 exemplos gerados a partir de 10 recortes de imagens. 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de textos e OCR}
+        
+    Foram extraídas 5 características:\pause
+    \begin{itemize}
+        \item largura\pause
+        \item altura\pause
+        \item aspecto\pause
+        \item média da região no mapa de saliências\pause
+        \item desvio padrão da região no mapa de saliências
+    \end{itemize}\pause
+     e usadas 3 classes: \emph{nome}, \emph{preço} e \emph{``qualquer outra coisa''}.
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de textos e OCR}
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[scale=0.5]{knn.png}
+        \caption{Ilustração do processo de classificação com $k=5$. A classificação de {\bf x} como preto é feita segundo a classe mais comum entre os 5 vizinhos mais próximos \label{fig:knn}}
+    \end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de textos e OCR}
+    \begin{figure}[!h]
+            \subfigure{\includegraphics[scale=0.15]{class-rec.png}}
+            \subfigure{\includegraphics[scale=0.15]{class-regioes.png}}
+            \subfigure{\includegraphics[scale=0.15]{class-final.png}}
+            \caption{Recorte de um produto, as regiões a serem classificadas e o resultado final da detecção de nomes de produtos (em vermelho) e preços (em azul)}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de textos e OCR}
+    A leitura dos caracteres foi feita usando o \emph{Tesseract OCR}.  \pause
+    \begin{itemize} \item Cada região de texto é pré-processada antes da leitura dos caracteres para melhorar o reconhecimento. \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Detecção de textos e OCR}
+    \begin{table}[!h]
+        \begin{center}
+            \begin{tabular} {r c l}	
+                \subfigure{\includegraphics[scale=.2]{textos-1.png}} &
+                \subfigure{\includegraphics[scale=.2]{textos-2.png}} &
+                \subfigure{\includegraphics[scale=.2]{textos-2-r.png}} \\
+                \subfigure{\includegraphics[scale=.2]{textos-3.png}} &
+                \subfigure{\includegraphics[scale=.2]{textos-4.png}} &
+                \subfigure{\includegraphics[scale=.2]{textos-4-r.png}} \\
+                \subfigure{\includegraphics[scale=.2]{textos-5.png}}&
+                \subfigure{\includegraphics[scale=.2]{textos-6.png}}&
+                \subfigure{\includegraphics[scale=.2]{textos-6-r.png}}
+                
+            \end{tabular}
+        \end{center}
+    \end{table}
+    
+\end{frame}
+
+\section{Conclusões}
+\begin{frame}
+\frametitle{Conclusões}
+    O trabalho mostrou a viabilidade da construção de um sistema analisador de tabloides promocionais e, com as etapas definidas é possível expandir o programa para outros \emph{layouts}. A teoria de \emph{atenção visual} foi essencial para a realização do trabalho e o mapa de saliências baseado em contrastes foi usado em todas as etapas do trabalho.
+\end{frame}
+
+\section{Agradecimentos}
+
+\begin{frame}
+\frametitle{Agradecimentos}
+    Agradeço à Diretoria de Inovação do Ibope Media pelo apoio ao trabalho e a Celina Takemura pela ajuda nas soluções do trabalho e na elaboração do texto.
+\end{frame}
+
+\section{Referências}
+\begin{frame}
+    \frametitle{Referências}
+    \begin{thebibliography}{9}
+        \bibitem{survey10}
+            S. Frintrop, E. Rome, H. I. Christensen. 
+            \emph{Computational visual attention systems and their cognitive foundations: A survey}. 
+            ACM Trans. Appl. Percept. 7, 1 (Jan. 2010), 1-39.
+            2010.
+	\bibitem{Ma e Zhang03}  
+            Y. Ma, H. Zhang.
+            \emph{Contrast-based image attention analysis by using fuzzy growing}.
+            Proceedings of the Eleventh ACM international Conference on Multimedia
+            Berkeley, CA, USA.
+            2003.
+        \bibitem{Liu.et.al07}
+            H. Liu, S. Jiang, Q. Huang, C. Xu, W. Gao
+            \emph{Region-based visual attention analysis with its application in image browsing on small displays}. 
+            In Proceedings of the 15th international Conference on Multimedia  (Augsburg, Germany, September 25 - 29, 2007).
+            2007.
+            
+    \end{thebibliography}
+\end{frame}
+
+\end{document}
+
