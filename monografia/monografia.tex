@@ -6,6 +6,8 @@
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 \usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
 \usepackage{subfigure}
 \usepackage{multirow}
 \usepackage{multicol}
@@ -43,13 +45,13 @@ O motivo de se utilizar algoritmos não-supervisionados vem da necessidade de en
 
 Ao contrário da classificação supervisionada, a classificação não-supervisionada não necessita de um conjunto de treinamento como entrada, permitindo o seu uso em conjuntos de dados bem variados, algo que é bem comum em artigos jornalísticos.
 
-A ideia não é separar os artigos jornalísticos em grupos muito generalistas comumente usados em jornais ou portais de notícias, como por exemplo as seções: Brasil, Mundo, Economia e Esportes. Mas sim, encontrar grupos mais intrínsecos que representem com mais acurácia a informação passada por esses artigos …..
+A ideia não é separar os artigos jornalísticos em grupos muito generalistas comumente usados em jornais ou portais de notícias, como por exemplo as seções: Brasil, Mundo, Economia e Esportes. Mas sim, encontrar grupos mais intrínsecos que representem com mais acurácia a informação passada por esses artigos.
 
-[Talvez explicar a diferença entre classificação e agrupamento: Livro sistemas inteligentes, pag 318]
+% [Talvez explicar a diferença entre classificação e agrupamento: Livro sistemas inteligentes, pag 318]
 
 Segundo Martin Ester \textit{et al.} [7], existem alguns desafios da área de agrupamento de documentos como: alta dimensionalidade da coleção, onde cada palavra distinta na coleção constitui uma dimensão, e quanto maior a dimensão, maior o desafio para a construção de um algoritmo escalável e eficiente; grande volume de dados; alta precisão e consistência, dependendo do tipo de documentos, alguns algoritmos apresentam resultados muito abaixo do esperado; e descrição mais significativa dos grupos, pois facilita a utilização pelos usuários.
 
-[Agrupamento é uma das mais antigas atividades mentais humanas, usada para tratar uma quantidade enorme de informações que recebemos todos os dias [1].]
+% [Agrupamento é uma das mais antigas atividades mentais humanas, usada para tratar uma quantidade enorme de informações que recebemos todos os dias [1].]
 
 \subsection{Objetivos}
 
@@ -63,9 +65,9 @@ O trabalho de classificação não-supervisionada dos artigos jornalísticos foi
 
 A representação de um agrupamento de documentos é geralmente feita através de um dendrograma, como na figura \ref{fig:resultado}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{center}
-        \includegraphics[scale=0.4]{resultado.png}
+        \includegraphics[scale=0.5]{resultado.png}
     \end{center}
     \caption{Esquema do resultado esperado}
     \label{fig:resultado}
@@ -98,7 +100,7 @@ Por fim, a classificação semi-supervisiona emprega técnicas da classificaçã
 
 No contexto de reconhecimento de padrão, é comum chamar a classificação supervisionada de apenas classificação e a classificação não-supervisionada de análise de agrupamento, ou simplesmente agrupamento (do inglês \textit{clustering}). A figura ? mostra o esquema das formas de aprendizagem.
 
-[Seria muito bom se colocasse um esquema dessas formas de processo de aprendizagem]
+%[Seria muito bom se colocasse um esquema dessas formas de processo de aprendizagem]
 
 \subsection{Análise de agrupamento}
 \label{sec:analise_agrupamento}
@@ -139,17 +141,17 @@ Há duas propriedades importantes do \textit{k-means}:
 \item Nenhum objeto pertence a mais que um grupo.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{center}
-        \includegraphics[scale=0.5]{k_means_algorithm.png}
+        \includegraphics[scale=0.65]{k_means_algorithm.png}
     \end{center}
     \caption{Sequência de passos do algoritmo k-means, retirado de [13]}
     \label{fig:passos_kmeans}
 \end{figure}
 
-Um cuidado especial na utilização desse algoritmo é na escolha do número de grupos desejado. Uma escolha inadequada poderá resultar em um mau agrupamento, unindo duas classes naturais em um único grupo ou dividindo uma classe natural em dois grupos,  [falar do fato de não ser deterministico] porém algumas técnicas tem sido desenvolvidas para resolver esse problema [2, 3, ?]. (colocar mais referências a artigos para solução desse problema) Um exemplo de problema que pode ocorrer está ilustrado pela figura \ref{fig:problema_kmeans}.
+Um cuidado especial na utilização desse algoritmo é na escolha do número de grupos desejado. Uma escolha inadequada poderá resultar em um mau agrupamento, unindo duas classes naturais em um único grupo ou dividindo uma classe natural em dois grupos, porém algumas técnicas tem sido desenvolvidas para resolver esse problema [2, 3, ?]. (colocar mais referências a artigos para solução desse problema) Um exemplo de problema que pode ocorrer está ilustrado pela figura \ref{fig:problema_kmeans}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{center}
         \includegraphics[scale=0.8]{cluster_1.png}
     \end{center}
@@ -172,7 +174,7 @@ Existem duas abordagens no funcionamento de um algoritmo hierárquico que são:
 \item Abordagem divisiva: Gera a árvore de grupo da raiz às folhas (top-down), utilizando em cada nível da árvore um algoritmo de agrupamento plano para a divisão dos grupos em nós filhos.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{center}
         \includegraphics[scale=0.5]{hierarchical_algorithm.png}
     \end{center}
@@ -183,9 +185,20 @@ Existem duas abordagens no funcionamento de um algoritmo hierárquico que são:
 \subsection{Critério de avaliação}
 \label{sec:criterio_avaliação}
 
-Existem 2 tipos de erros que podem ocorrer no processo de agrupamento. O primeiro, chamado de falso positivo (FP) ou erro tipo I, ocorre quando o algoritmo associa dois documentos não similares a um mesmo grupo, e o segundo, chamado de falso negativo (FN) ou erro tipo II, ocorre quando o algoritmo associa dois documentos similares a grupos distintos. Um critério de avaliação justo tem de levar em conta as ocorrências desses dois erros. A tabela ? a seguir, mostra a matriz de contingência entre os documentos e grupos.
+Existem 2 tipos de erros que podem ocorrer no processo de agrupamento. O primeiro, chamado de falso positivo (FP) ou erro tipo I, ocorre quando o algoritmo associa dois documentos não similares a um mesmo grupo, e o segundo, chamado de falso negativo (FN) ou erro tipo II, ocorre quando o algoritmo associa dois documentos similares a grupos distintos. Um critério de avaliação justo tem de levar em conta as ocorrências desses dois erros. A tabela \ref{table:matrix_contingencia} a seguir, mostra a matriz de contingência entre os documentos e grupos.
 
-[Inserir tabela de contigencia]
+\begin{table}[h]
+\centering
+\begin{tabular}{ | p{3cm} | p{4cm} | p{4cm} | }
+\hline
+& Mesmo grupo & Diferentes grupos                                                                   \\ \hline
+Documentos similares	& Verdadeiro positivo (VP) & Falso negativo (FN) ou Erro tipo II \\ \hline
+Documentos não similares	&  Falso positivo (FP) ou Erro tipo I & Verdadeiro negativo (VN) \\
+\hline
+\end{tabular}
+\caption{Matriz de contingência}
+\label{table:matrix_contingencia}
+\end{table}
 
 Duas medidas importantes na área de reconhecimento de padrão e também na estatística, são a precisão e cobertura do resultado observado. O primeiro, no contexto de reconhecimento de padrão, mede a fração de documentos que estão classificados corretamente no grupo e é dado pela seguinte fórmula:
 
@@ -254,11 +267,11 @@ No caso do algoritmo FIHC, conjuntos de itens frequentes são também denominado
 \subsubsection {Algoritmo Apriori}
 \label {sec:algoritmo_apriori}
 
-A extração dos conjuntos de itens frequentes é uma das técnicas mais utilizadas para caracterização de dados com objetivo de resumir os atributos gerais mais relevantes de um conjunto de dados. O exemplo mostrado na seção anterior é uma forma de encontrar os conjuntos de itens frequentes, porém esse método não é eficiente quando é utilizado em uma coleção grande de documentos. Um dos algoritmos mais populares para tal propósito, seja em um banco de dados ou em documentos textuais, é o algoritmo Apriori. (wikipedia?)
+A extração dos conjuntos de itens frequentes é uma das técnicas mais utilizadas para caracterização de dados com objetivo de resumir os atributos gerais mais relevantes de um conjunto de dados. O exemplo mostrado na seção anterior é uma forma de encontrar os conjuntos de itens frequentes, porém esse método não é eficiente quando precisa ser utilizado em uma coleção grande de documentos. Um dos algoritmos mais populares para tal propósito, seja em um banco de dados ou em documentos textuais, é o algoritmo Apriori [14].
 
-A algoritmo utiliza a propriedade de anti-monotonicidade [10], onde se um conjunto de itens não é frequente, então todos os seus superconjuntos também não serão.
+O algoritmo utiliza a propriedade de anti-monotonicidade [10], onde se um conjunto de itens não é frequente, então todos os seus superconjuntos também não serão.
 
-Ele inicia a busca a partir de uma coleção de conjunto de itens frequentes com cardinalidade k = 1, chamado de $F_{1}$ . A partir daí todos os conjuntos de cardinalidades maiores são obtidos a partir de uma coleção de candidatos C. O algoritmo para quando não encontrar mais nenhum conjunto de itens frequentes. A figura ? mostra o algoritmo:
+Ele inicia a busca a partir de uma coleção de conjunto de itens frequentes com cardinalidade \emph{k} = 1, chamado de $F_{1}$ . A partir daí todos os conjuntos de cardinalidades maiores são obtidos a partir de uma coleção de candidatos C. O algoritmo para quando não encontrar mais nenhum conjunto de itens frequentes. A figura ? mostra o algoritmo:
 
 \begin{algorithm}
 \caption{Algoritmo Apriori para extração de conjuntos de itens frequentes em documentos textuais}
@@ -291,14 +304,14 @@ Ele inicia a busca a partir de uma coleção de conjunto de itens frequentes com
 \subsection {O que é \textit{cluster frequent item} e \textit{cluster support}}
 \label {sec:cluster_frequent_item_e_cluster_support}
 
-Dado o grupo $C_{i}$, um elemento de um conjunto global de itens frequentes é denominado de \textit{cluster frequent item} de $C_{i}$ se este elemento está contido em um número mínimo de documentos de $C_{i}$, definido como \textit{minimum cluster support}.
+Dado o grupo $C$, um elemento de um conjunto global de itens frequentes é denominado de \textit{cluster frequent item} de $C$ se este elemento está contido em um número mínimo de documentos de $C$, definido como \textit{minimum cluster support}.
 
-Além disso, \textit{cluster support} de um item em $C_{i}$ é definido como a porcentagem de documentos de $C_{i}$ que contém o item.
+Além disso, \textit{cluster support} de um item em $C$ é definido como a porcentagem de documentos de $C$ que contém o item.
 
 \subsection {O que é tf-idf}
 \label {sec:tf_idf}
 
-Tf-idf é uma medida estatística usada para avaliar o quão importante uma palavra é para um documento em relação a uma coleção de documentos. (wikipedia)  A ideia é que se uma palavra é tão comum em diferentes documentos da coleção, então provavelmente ela tem pouca relevância, por exemplo, a conjunção aditiva “e”. A importância aumenta proporcionalmente ao número de vezes que uma palavra aparece no documento, mas é compensado pela frequência da palavra no corpus. O tf-idf é dado pelo produto de duas medidas: a frequência do termo e a frequência inversa do documento, dado por:
+Tf-idf é uma medida estatística usada para avaliar o quão importante uma palavra é para um documento em relação a uma coleção de documentos. (wikipedia)  A ideia é que se uma palavra é muito comum em diferentes documentos da coleção, então provavelmente ela tem pouca relevância, como por exemplo, a conjunção aditiva “e”. A importância aumenta proporcionalmente ao número de vezes que uma palavra aparece no documento, mas é compensado pela frequência da palavra no corpus. O tf-idf é dado pelo produto de duas medidas: a frequência do termo e a frequência inversa do documento, dado por:
 
 \begin{equation} tf-idf(t, d) = tf(t, d) \times \log \frac{N} {df(t)} \end{equation}
 onde $tf(t,d)$ é a razão entre o número de vezes que o termo $t$ aparece no documento $d$ e a quantidade de termos em $d$; $N$ é a quantidade de documentos na coleção e $df(t)$ é a quantidade de documentos da coleção que possui o termo $t$. Existem diversas variantes dessa medida como visto em [3].
@@ -306,15 +319,50 @@ onde $tf(t,d)$ é a razão entre o número de vezes que o termo $t$ aparece no d
 \subsection {Construção dos grupos}
 \label {sec:construcao_grupos}
 
-Apresentado alguns conceitos relacionados ao FIHC, vamos ao algoritmo propriamente dito. Como já dito, o primeiro passo do algoritmo é construir os grupos, e isso é feito em duas etapas. Primeiramente, os grupos iniciais são construídos a partir dos conjuntos globais de itens frequentes extraídos da coleção e então é feito o processo de disjunção desses grupos para que no final um documento pertença somente a um único grupo.
+Apresentado alguns conceitos relacionados ao FIHC, vamos ao algoritmo propriamente dito. Como já mencionado, o primeiro passo do algoritmo é construir os grupos, e isso é feito em duas etapas. Primeiramente, os grupos iniciais são construídos a partir dos conjuntos globais de itens frequentes extraídos da coleção pelo algoritmo Apriori e então é feito o processo de disjunção desses grupos para que ao final, um documento pertença somente a um único grupo.
 
-Na criação dos grupos iniciais, para cada conjunto global de itens frequentes é criado um grupo que inicialmente incluirá todos os documentos que contêm o conjunto de itens em seu corpo. Logo cada grupo possuirá um conjunto de itens frequentes gerador. 
+Na criação dos grupos iniciais, para cada conjunto global de itens frequentes é criado um grupo que inicialmente incluirá todos os documentos que contêm o conjunto de itens em seu corpo. Logo, podemos considerar que cada grupo possuirá um conjunto de itens frequentes gerador. 
 
 Note que esses grupos podem não ser disjuntos, pois um documento pode conter vários conjuntos de itens frequentes.
 
-[Inserir tabela 1]
+\begin{table}[h]
+\centering
+\begin{tabular}{ | l | l | l | l | l | l | }
+\hline
+Documento & mercado & crise & universo & Grécia & inteligência \\ \hline
+artigo.1     & 0 & 0 & 3 & 0 & 2 \\ \hline
+artigo.2     & 2 & 0 & 0 & 1 & 0 \\ \hline
+artigo.3     & 1 & 4 & 0 & 3 & 0 \\ \hline
+artigo.4     & 0 & 0 & 4 & 0 & 1 \\ \hline
+artigo.5     & 0 & 1 & 0 & 0 & 2 \\ \hline
+artigo.6     & 3 & 2 & 0 & 0 & 0 \\ \hline
+artigo.7     & 1 & 0 & 0 & 2 & 2 \\ \hline
+artigo.8     & 0 & 1 & 0 & 0 & 0 \\ \hline
+artigo.9     & 0 & 0 & 2 & 0 & 1 \\ \hline
+artigo.10   & 0 & 0 & 3 & 0 & 0 \\
+\hline
+\end{tabular}
+\caption{Exemplo de uma coleção de documentos e os respectivos valores tf-idf de cada palavra em relação a cada documento}
+\label{table:exemplo_docs}
+\end{table}
 
-[Inserir tabela 2]
+\begin{table}[h]
+\centering
+\begin{tabular}{ | l | l | }
+\hline
+Conjunto global de itens frequentes & \textit{Global support} \\ \hline
+\{mercado\}                         & 40\% \\ \hline
+\{crise\}                               & 40\% \\ \hline
+\{universo\}                         & 40\% \\ \hline
+\{Grécia\}                             & 30\% \\ \hline
+\{inteligência\}                     & 50\% \\ \hline
+\{mercado, Grécia\}             & 30\% \\ \hline
+\{universo, inteligência\}     & 30\% \\
+\hline
+\end{tabular}
+\caption{Conjuto global de itens frequentes da coleção de exemplo da tabela \ref{table:exemplo_docs}. O \textit{minimum global support} é definido como 30\%. A relação completa dos conjuntos de itens da coleção pode ser encontrada no anexo A.}
+\label{table:conjunto_itens_frequentes}
+\end{table}
 
 \subsubsection {Disjunção dos grupos sobrepostos}
 \label {sec:disjuncao_grupos_sobrepostos}
@@ -331,11 +379,29 @@ Após os cálculos da medida Score de D para cada grupo C, é mantido o document
 \end{equation}
 onde $x$ representa um \textit{global frequent item} que está contido em $D_{j}$ e também é um \textit{cluster frequent item} de $C_{i}$; $x’$ representa um \textit{global frequent item} que está contido em $D_{j}$, mas que não é um \textit{cluster frequent item} de $C_{i}$; $tf-idf(x, D_{j})$ e $tf-idf(x’, D_{j})$ são as medidas tf-idf dos itens $x$ e $x’$ em $D_{j}$; $cluster\_support(x)$ é o \textit{cluster support} de $x$ e $global\_support(x’)$ é o \textit{global support} de $x’$.
 
-[Inserir tabela 3]
+\begin{table}[h]
+\centering
+\begin{tabular}{ | l | p{4cm} | p{4.5cm} | }
+\hline
+Grupo & Documentos do grupo & \textit{Cluster frequent items} e \textit{cluster support} \\ \hline
+C(mercado)			& artigo.2, artigo.3, artigo.6 e artigo.7 & (mercado/cs = 100\%), (Grécia/cs = 75\%), (crise/cs = 50\%) \\ \hline
+C(crise)                         	& artigo.3, artigo.5, artigo.6 e artigo.8 & (crise/cs = 100\%), (mercado/cs = 100\%)  \\ \hline
+C(universo)			& artigo.1, artigo.4, artigo.9 e artigo.10 & (universo/cs = 100\%), (inteligência/cs = 75\%)  \\ \hline
+C(Grécia)			& artigo.2, artigo.3 e artigo.7 & (Grécia/cs = 100\%), (mercado/cs = 100\%)  \\ \hline
+C(inteligência)		& artigo.1, artigo.4, artigo.5, artigo.7 e artigo.9 & (inteligência/cs = 100\%), (universo/cs = 60\%)  \\ \hline
+C(mercado, Grécia)		& artigo.2, artigo.3 e artigo.7 & (mercado/cs = 100\%), (Grécia/cs = 100\%)  \\ \hline
+C(universo, inteligência)	& artigo.1, artigo.4 e artigo.9 & (universo/cs = 100\%), (inteligência/cs = 100\%)  \\
+\hline
+\end{tabular}
+\caption{Grupos criados a partir dos conjuntos globais de itens frequentes da tabela \ref{table:conjunto_itens_frequentes}, onde o \textit{minimum cluster support} = 50\%.}
+\label{table:grupos}
+\end{table}
 
 O primeiro termo da função $Score(C_{i} \gets D_{j})$ recompensa $C_{i}$ se o \textit{global frequent item} $x$ em $D_{j}$ é também um \textit{cluster frequent item} de $C_{i}$ e o segundo termo penaliza $C_{i}$ se o \textit{global frequent item} $x’$ em $D_{j}$ não é um \textit{cluster frequent item} de $C_{i}$. De acordo com Martin Ester \textit{et al.} [7], intuitivamente, um grupo $C_{i}$ é “bom” para um documento $D_{j}$ se há muitos \textit{global frequent items} em $D_{j}$ que aparecem em “muitos” documentos em $C_{i}$. Se há mais de um grupo que maximiza a medida $Score(C_{i} \gets D_{j})$, então é escolhido o grupo com maior número de itens em seu conjunto de itens frequentes gerador.
 
-Seguindo o exemplo da tabela ?, note que o documento artigo.3 pertence aos grupos C(mercado), C(crise), C(Grécia) e C(mercado, crise). Para se decidir em qual desses grupos o artigo deve permanecer, são calculados os seguintes $Score$:
+Seguindo o exemplo da tabela \ref{table:grupos}, note que o documento artigo.3 pertence aos grupos C(mercado), C(crise), C(Grécia) e C(mercado, crise). Para se decidir em qual desses grupos o artigo deve permanecer, são calculados os seguintes $Score$:
+
+\begin{flushleft}
 
 $Score(C(mercado) \gets artigo.3) = 1 * 1 + 4 * 0,5 + 3 * 0,75 = 5,25$
 
@@ -345,16 +411,34 @@ $Score(C(Grécia) \gets artigo.3) = 1 * 1 + 3 * 1 - 4 * 0,4 = 2,4$
 
 $Score(C(mercado, Grécia) \gets artigo.3) = 1 * 1 + 3 * 1 - 4 * 0,4 = 2,4$
 
-Logo, o documento artigo.3 seria mantido apenas no grupo C(mercado).
+\end{flushleft}
 
-[Inserir tabela 4]
+Desta maneira, o documento artigo.3 seria mantido apenas no grupo C(mercado).
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ | l | p{4cm} | p{4.5cm} | }
+\hline
+Grupo & Documentos do grupo & \textit{Cluster frequent items} e \textit{cluster support} \\ \hline
+C(mercado)			& artigo.3 e artigo.6 & (mercado/cs = 100\%), (Grécia/cs = 75\%), (crise/cs = 50\%) \\ \hline
+C(crise)                         	& artigo.8 & (crise/cs = 100\%), (mercado/cs = 100\%)  \\ \hline
+C(universo)			& artigo.10 & (universo/cs = 100\%), (inteligência/cs = 75\%)  \\ \hline
+C(Grécia)			& & nenhum  \\ \hline
+C(inteligência)		& artigo.5 & (inteligência/cs = 100\%), (universo/cs = 60\%)  \\ \hline
+C(mercado, Grécia)		& artigo.2 e artigo.7 & (mercado/cs = 100\%), (Grécia/cs = 100\%)  \\ \hline
+C(universo, inteligência)	& artigo.1, artigo.4 e artigo.9 & (universo/cs = 100\%), (inteligência/cs = 100\%)  \\
+\hline
+\end{tabular}
+\caption{Grupos disjuntos}
+\label{table:grupos_disjuntos}
+\end{table}
 
 \subsection {Criação da árvore de grupos}
 \label {sec:criacao_arvore_grupos}
 
 Uma vez computado os grupos iniciais, podemos visualizar cada um deles como um tópico ou subtópico na coleção de documentos. Agora é necessário criar a árvore, colocando os tópicos mais generalistas no topo e os mais específicos abaixo. Essa árvore tem como objetivos cria uma estrutura para a navegação entre os documentos e também facilitar a poda dos grupos muito específicos.
 
-Os grupos são inicialmente aninhados na árvore de acordo com a quantidade de itens em seu conjunto global gerador. Dessa forma, aqueles que possuem somente um item, estão no primeiro nível da árvore, e assim por diante. A raiz (nível 0) da árvore é por definição um grupo vazio e sem nenhum item em seu conjunto global de itens frequentes. Como dito no início desse capítulo, o FIHC utiliza a abordagem aglomerativa para a criação da hierarquia, ou seja, para cada grupo C no nível \emph{k} é escolhido um pai dentre os potenciais grupos do nível \emph{k-1}, cujo o conjunto global seja subconjunto dos conjuntos globais de itens frequentes de C. Se houver mais de um potencial pai no nível \emph{k-1}, então é escolhido aquele grupo que maximiza uma medida de ???, similar ao processo descrito na seção 3.4.1. Isso é melhor detalhado em [7].
+Os grupos são inicialmente aninhados na árvore de acordo com a quantidade de itens em seu conjunto global gerador. Dessa forma, aqueles que possuem somente um item, estão no primeiro nível da árvore, e assim por diante. A raiz (nível 0) da árvore é por definição um grupo vazio e sem nenhum item em seu conjunto global de itens frequentes. Como dito no início desse capítulo, o FIHC utiliza a abordagem aglomerativa para a criação da hierarquia, ou seja, para cada grupo C no nível \emph{k} é escolhido um pai dentre os potenciais grupos do nível \emph{k-1}, cujo o conjunto global seja subconjunto dos conjuntos globais de itens frequentes de C. Se houver mais de um potencial pai no nível \emph{k-1}, então é escolhido aquele grupo que maximiza uma medida de ???, similar ao processo descrito na seção \ref{sec:disjuncao_grupos_sobrepostos}. Isso é melhor detalhado em [7].
 
 Uma vez escolhido um grupo pai para cada grupo da coleção, é necessário verificar se é possível unificar os grupos similares ou com tópicos muito específicos, garantindo uma hierarquia mais natural para a navegação e melhorando a acurácia do algoritmo. Isso é feito de duas formas: 1) através do processo de poda dos grupos filhos e 2) unificação dos grupos similares do nível 1.
 
@@ -379,6 +463,212 @@ Uma etapa importante no processo de agrupamento é a de rotulagem dos grupos, po
 No caso do FIHC, a própria abordagem de criação dos grupos a partir dos conjuntos globais de itens frequentes da coleção e posterior escolha dos \textit{cluster frequent items} torna natural pensar que esses conjuntos de palavras também são bons candidatos para dar nome aos próprios grupos. 
 
 [Exemplo]
+
+\newpage
+
+\section {Arquitetura da biblioteca e sistema hVINA}
+\label {sec:arquitetura_biblioteca}
+
+A biblioteca proposta neste trabalho tem como objetivo tratar todo os passos de uma solução para agrupamento, desde o pré-processamento dos documentos até a implementação do algoritmo de agrupamento de fato. Inicialmente foi implementado o algoritmo FIHC, porém sua arquitetura é modular e permite a substituição por outros algoritmos.
+
+Já o sistema tem como objetivo apresentar o agrupamento dos artigos jornalísticos que forma simples e intuitiva para os usuários, onde as configurações dos parâmetros do algoritmo FIHC seja pouco necessária por eles, uma vez que a crescente utilização da internet como meio de divulgação de artigos pelos jornais e revistas torna necessário um mecanismo automático e não-supervisionado para extração e organização do conhecimento, buscando encontrar entre os artigos relacionamentos a princípio escondidos. A figura \ref{fig:arquitetura_biblioteca} mostra o processo para o agrupamento dos artigos.
+
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[scale=0.35]{arquitetura.png}
+    \end{center}
+    \caption{Sequência de passos da biblioteca proposta.}
+    \label{fig:arquitetura_biblioteca}
+\end{figure}
+
+A biblioteca detecta e trata artigos em inglês e português, porém permite a extensão de outros idiomas, bastando escolher um algoritmo para tokenização e criar uma lista de \textit{stopwords} específicos do idioma. Além disso, a biblioteca é modular, permitindo a troca dos algoritmos utilizados em cada processo de forma simples e sem a necessidade de uma mudança geral no sistema.
+
+Os processos de detecção de idioma, tokenização, remoção dos \textit{stopwords} e \textit{stemming} utilizam técnicas e algoritmos já bem conhecidos e empregados na área de reconhecimento de padrões. 
+
+O sistema hVINA foi desenvolvido utilizando o \textit{framework} Rails [?] e outras tecnologias Web, como a marcação HTML, Javascript e CSS3. Todo o código-fonte segue junto a esta monografia.
+
+\subsection {Detecção de idioma}
+\label {sec:deteccao_idioma}
+
+O processo de detecção do idioma da coleção de documentos é parte essencial em um sistema de agrupamento, uma vez que algoritmos empregados nos passos seguintes, como o de tokenização e remoção dos \textit{stopwords}, requerem o conhecimento do idioma utilizado nos documentos.
+
+\subsubsection {Método de n-grama}
+\label {sec:metodo_ n_grama}
+
+A tarefa de encontrar o idioma de um documento é em si própria um problema na área de reconhecimento de padrão, visto que é preciso classificar o documento em um conjunto de classes (idiomas). Um algoritmo bastante conhecido para essa tarefa baseia-se nas frequências dos n-gramas do documento. Esse algoritmo utiliza o processo de aprendizagem supervisionado, pois cria o modelo dos n-gramas mais frequentes de cada idioma a partir de um conjunto de textos de treinamento.
+
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[scale=0.4]{n_grama.png}
+    \end{center}
+    \caption{Esquema do método n-grama, retirado de [11]. O perfil à esquerda representa o modelo n-grama do idioma inglês, obtido a partir de um conjunto de textos para treinamento, o perfil à direita representa os n-gramas mais frequentes de um documento de exemplo e a última coluna indica a distância entre a posição desses n-grama em relação ao perfil do idioma.}
+    \label{fig:metodo_n_grama}
+\end{figure}
+
+\subsection {Tokenização}
+\label {sec:tokenizacao}
+
+Como um dos pontos centrais do algoritmo FIHC é a utilização dos conjuntos de itens frequentes da coleção de documentos, uma ação importante para que a biblioteca funcione com boa acurácia é estabelecer um processo que encontre nos textos todos os termos que o compõe. Isso se dá pelo processo de tokenização ou segmentação de texto. De acordo com Manning \textit{et al.} [3], tokenização é o processo de quebra do documento em partes, chamados de \textit{tokens}. A definição de \textit{token} varia de acordo com o contexto do problema, e na prática pode ser palavras, frases ou símbolos. No caso deste trabalho, os \textit{tokens} são encontrados à medida que um espaço em branco ou uma marcação gráfica aparece entre eles, exceto o hífen. É necessário falar também que neste trabalho as palavras \textit{token}, termo e item se equivalem. Veja o esquema ? para um exemplo ilustrativo desse processo:
+
+[Inserir exemplo]
+
+Um bom algoritmo para extração dos tokens deve levar em consideração o idioma do texto, pois em geral o processo de tokenização é difícil, devido a construções de palavras de podem surgir durante o processo, como as contrações de palavras inglesas, como \textit{“we’ve many time (...)”}, ou as palavras compostas em português como “latino-americano”. 
+
+O algoritmo de tokenização implementado inicialmente na biblioteca é o \textit{Treebank tokenizer} [12], porém a extensão para outros algoritmos de tokenização é possível devido à modularidade da biblioteca.
+
+\subsection {Limpeza}
+\label {sec:limpeza}
+
+Um atributo requerido para um sistema de agrupamento de documentos é a escolha de grupos (tópicos) significativos, porém nem sempre o algoritmo de agrupamento sozinho é capaz de determinar a representatividade de uma determinada palavra no momento da construção dos grupos. Por esse motivo, é usado a técnica de limpeza para eliminação das palavras que são extremamente comuns no idioma desses documentos. Essas palavras são chamadas de \textit{stopwords}. Uma estratégia simples para determinar a lista delas é ordená-las pela frequência que aparecem na coleção, porém geralmente essa lista é composta pelas palavras de classes gramaticais como preposição, artigo, advérbio, numeral, pronome e pontuações em geral.
+
+No caso deste trabalho é feito também a eliminação das marcações gráficas que não fazem parte de uma palavra propriamente dita.
+
+Continuando com o exemplo da figura ?, com a remoção dos \textit{stopwords} o resultado seria da seguinte forma:
+
+[Inserir exemplo]
+
+\subsection {\textit{Stemming}}
+\label {sec:stemming}
+
+\textit{Stemming} é o processo de unificar as formas variantes de uma palavra em uma representação comum, chamado de \textit{stem} [4]. Por exemplo, as palavras “corredor”, “corrida” e “correria” podem ser reduzidas para a representação “corr”.
+
+Esse processo é essencial para um sistema de agrupamento, pois, assim como o processo de limpeza, tem o objetivo de aumentar a eficiência do algoritmo de agrupamento.
+
+\subsubsection {Tipos de erros}
+\label {sec:tipos_erros}
+
+Geralmente os diversos algoritmos de \textit{stemming} são analisados através de dois tipos de erros:
+
+\begin{itemize}
+\item \textit{Overstemming}: quando é retirado da palavra um sufixo grande o suficiente para que palavras com significados diferentes sejam unificadas numa única representação. Por exemplo, quando as palavras “escritor” e “escrutínio” são reduzidas para “escr”.
+
+\item \textit{Understemming}: quando é retirado da palavra um sufixo suficientemente pequeno para que palavras com o mesmo significado sejam separadas em representações distintas. Por exemplo, quando as palavras “alimentar” e “alimentação” são reduzidas para “alimenta” e “alimentaç”, respectivamente.
+\end{itemize}
+
+\subsubsection {O algoritmo RSLP}
+\label {sec:algoritmo_RSLP}
+
+A maioria dos algoritmos para \textit{stemming} baseia-se no método de remoção de afixos (sufixos e prefixos), definidos a partir de um conjunto de regras predefinidas. Caso a palavra contenha o prefixo ou sufixo definido por alguma regra, ele é removido [5].
+
+O problema desse tipo de método é que esses algoritmos são muito dependentes da linguagem para os quais foram criados, assim é difícil a criação de um algoritmo universal.
+
+No caso da língua inglesa, o algoritmo mais usado é o de Porter [citacao], já no caso da língua portuguesa o algoritmo escolhido para este estudo é o Removedor de Sufixos da Língua Portuguesa (RSLP), devido ao seu bom desempenho [4].
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.5]{RSLP.png}
+    \end{center}
+    \caption{Sequência de passos do algoritmo RSLP, retirado de [4].}
+    \label{fig:rslp}
+\end{figure}
+
+Um exemplo de regra utilizada no algoritmo RSLP é:
+
+\begin{equation}
+  \text{“is”, 2, “il”, \{ “lápis", “cais”, “mais”, “crúcis”, “pois”, “dois”, “leis” \}}
+\end{equation}
+
+Essa regra é utilizada para redução de plural nos casos onde a palavra termina com o sufixo “is”. Assim “is” é o sufixo a ser substituído, 2 é o tamanho mínimo para o \textit{stem} final, “il” é o novo valor do sufixo, e as palavras “lápis”, “cais”, “mais”, “crúcis”, “pois”, “dois” e “leis” são as exceções da regra. 
+
+\subsection {Agrupamento}
+\label {sec:agrupamento}
+
+Até então os processos discorridos neste capítulo fazem parte da etapa de pré-processamento da coleção de documentos. Aqui começa de fato o processo principal da biblioteca, que é o de agrupar os artigos jornalísticos. Como visto na seção 2.4.2, existem diversos algoritmos para agrupamento hierárquico desenvolvidos na área de análise de agrupamento. 
+
+No primeiro momento foi implementado o algoritmo FIHC, estudado no capítulo 3. Porém será visto na próxima seção que a implementação de outros algoritmos é simples.
+
+\subsection {Interface gráfica}
+\label {sec:interface_grafica}
+
+Com o intuito de demostrar a utilização da biblioteca, esse trabalho também inclui a criação do sistema hVINA, acrônimo para \textit{Hierarchical Viewer of News Articles}. Com esse sistema é possível avaliar a viabilidade da biblioteca de agrupamento de artigos jornalísticos com alguns dos maiores portais de publicações do meio digital. A interface inicial do sistema está ilustrado pela figura \ref{fig:hvina_inicial} de onde é possível escolher alguma das publicações pré-selecionadas, ou então importar uma coleção de artigos jornalísticos de interesse do usuário.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.3]{hvina_inicial.png}
+    \end{center}
+    \caption{Tela inicial do sistema hVINA}
+    \label{fig:hvina_inicial}
+\end{figure}
+
+O hVINA também permite a configuração do algoritmo de agrupamento, no caso em especial o FIHC, de forma simples.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.45]{hvina_configuracao.png}
+    \end{center}
+    \caption{Tela de configuração do algoritmo de agrupamento.}
+    \label{fig:hvina_configuracao}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.35]{hvina_clustering.png}
+    \end{center}
+    \caption{Tela para visualização do agrupamento.}
+    \label{fig:hvina_clustering}
+\end{figure}
+
+\section {Resultados}
+\label {sec:resultados}
+
+\subsection {A biblioteca}
+\label {sec:a_biblioteca}
+
+\subsection {O sistema hVINA}
+\label {sec:o_sistema_hvina}
+
+\section {Conclusão}
+\label {sec:conclusao}
+
+\subsection {Considerações finais}
+\label {sec:consideracoes_finais}
+
+\subsection {Trabalhos futuros}
+\label {sec:trabalhos_futuros}
+
+\newpage
+
+\section {Anexo A}
+\label {sec:anexo_A}
+
+\begin{longtable}{ | l | l | }
+\hline
+Conjunto de itens & \textit{Global support} \\ \hline
+\{mercado\}				& 40\% \\ \hline
+\{crise\}				& 40\% \\ \hline
+\{universo\}				& 40\% \\ \hline
+\{Grécia\}				& 30\% \\ \hline
+\{inteligência\}			& 50\% \\ \hline
+\{mercado, crise\}			& 20\% \\ \hline
+\{mercado, universo\}		& 0\% \\ \hline
+\{mercado, Grécia\}		& 30\% \\ \hline
+\{mercado, inteligência\}		& 10\% \\ \hline
+\{crise, universo\}			& 0\% \\ \hline
+\{crise, Grécia\}			& 10\% \\ \hline
+\{crise, inteligência\}		& 10\% \\ \hline
+\{universo, Grécia\}		& 0\% \\ \hline
+\{universo, inteligência\}		& 30\% \\ \hline
+\{Grécia, inteligência\}		& 10\% \\ \hline
+\{mercado, crise, universo\}		& 0\% \\ \hline
+\{mercado, crise, Grécia\}			& 10\% \\ \hline
+\{mercado, crise, inteligência\}		& 0\% \\ \hline
+\{mercado, universo, Grécia\}		& 0\% \\ \hline
+\{mercado, universo, inteligência\}	& 0\% \\ \hline
+\{mercado, Grécia, inteligência\}		& 10\% \\ \hline
+\{crise, universo, Grécia\}			& 0\% \\ \hline
+\{crise, universo, inteligência\}		& 0\% \\ \hline
+\{crise, Grécia, inteligência\}		& 0\% \\ \hline
+\{universo, Grécia, inteligência\}		& 0\% \\ \hline
+\{mercado, crise, universo, Grécia\}			& 0\% \\ \hline
+\{mercado, crise, universo, inteligência\}		& 0\% \\ \hline
+\{mercado, crise, Grécia, inteligência\}			& 0\% \\ \hline
+\{mercado, universo, Grécia, inteligência\}		& 0\% \\ \hline
+\{crise, universo, Grécia, inteligência\}			& 0\% \\ \hline
+\{mercado, crise, universo, Grécia, inteligência\}	& 0\% \\
+\hline
+\caption{Relação completa dos conjuntos de itens da coleção de documentos da tabela \ref{table:exemplo_docs}}
+\label{table:colecao_artigos}
+\end{longtable}
 
 \newpage
 

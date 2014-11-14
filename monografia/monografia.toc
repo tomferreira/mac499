@@ -1,23 +1,40 @@
 \select@language {brazilian}
-\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{4}
-\contentsline {subsection}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{4}
-\contentsline {subsection}{\numberline {1.2}Objetivos}{5}
+\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{5}
+\contentsline {subsection}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{5}
+\contentsline {subsection}{\numberline {1.2}Objetivos}{6}
 \contentsline {subsection}{\numberline {1.3}Organiza\IeC {\c c}\IeC {\~a}o do trabalho}{6}
-\contentsline {section}{\numberline {2}Fundamentos}{7}
-\contentsline {subsection}{\numberline {2.1}Reconhecimento de padr\IeC {\~a}o}{7}
-\contentsline {subsubsection}{\numberline {2.1.1}Formas de processo de aprendizagem}{7}
-\contentsline {subsection}{\numberline {2.2}An\IeC {\'a}lise de agrupamento}{8}
-\contentsline {subsection}{\numberline {2.3}Agrupamento de documentos textuais}{8}
-\contentsline {subsection}{\numberline {2.4}Tipos de algoritmo de agrupamento}{9}
-\contentsline {subsubsection}{\numberline {2.4.1}Agrupamento plano}{9}
-\contentsline {subsubsection}{\numberline {2.4.2}Agrupamento hier\IeC {\'a}rquico}{10}
-\contentsline {subsection}{\numberline {2.5}Crit\IeC {\'e}rio de avalia\IeC {\c c}\IeC {\~a}o}{11}
-\contentsline {section}{\numberline {3}FIHC}{14}
-\contentsline {subsection}{\numberline {3.1}O que \IeC {\'e} conjunto de itens frequentes}{14}
-\contentsline {subsubsection}{\numberline {3.1.1}Algoritmo Apriori}{15}
-\contentsline {subsection}{\numberline {3.2}O que \IeC {\'e} \textit {cluster frequent item} e \textit {cluster support}}{16}
-\contentsline {subsection}{\numberline {3.3}O que \IeC {\'e} tf-idf}{16}
-\contentsline {subsection}{\numberline {3.4}Constru\IeC {\c c}\IeC {\~a}o dos grupos}{17}
-\contentsline {subsubsection}{\numberline {3.4.1}Disjun\IeC {\c c}\IeC {\~a}o dos grupos sobrepostos}{17}
-\contentsline {subsection}{\numberline {3.5}Cria\IeC {\c c}\IeC {\~a}o da \IeC {\'a}rvore de grupos}{18}
-\contentsline {subsection}{\numberline {3.6}Rotulagem do grupo}{19}
+\contentsline {section}{\numberline {2}Fundamentos}{8}
+\contentsline {subsection}{\numberline {2.1}Reconhecimento de padr\IeC {\~a}o}{8}
+\contentsline {subsubsection}{\numberline {2.1.1}Formas de processo de aprendizagem}{8}
+\contentsline {subsection}{\numberline {2.2}An\IeC {\'a}lise de agrupamento}{9}
+\contentsline {subsection}{\numberline {2.3}Agrupamento de documentos textuais}{9}
+\contentsline {subsection}{\numberline {2.4}Tipos de algoritmo de agrupamento}{10}
+\contentsline {subsubsection}{\numberline {2.4.1}Agrupamento plano}{10}
+\contentsline {subsubsection}{\numberline {2.4.2}Agrupamento hier\IeC {\'a}rquico}{12}
+\contentsline {subsection}{\numberline {2.5}Crit\IeC {\'e}rio de avalia\IeC {\c c}\IeC {\~a}o}{13}
+\contentsline {section}{\numberline {3}FIHC}{16}
+\contentsline {subsection}{\numberline {3.1}O que \IeC {\'e} conjunto de itens frequentes}{16}
+\contentsline {subsubsection}{\numberline {3.1.1}Algoritmo Apriori}{17}
+\contentsline {subsection}{\numberline {3.2}O que \IeC {\'e} \textit {cluster frequent item} e \textit {cluster support}}{18}
+\contentsline {subsection}{\numberline {3.3}O que \IeC {\'e} tf-idf}{18}
+\contentsline {subsection}{\numberline {3.4}Constru\IeC {\c c}\IeC {\~a}o dos grupos}{19}
+\contentsline {subsubsection}{\numberline {3.4.1}Disjun\IeC {\c c}\IeC {\~a}o dos grupos sobrepostos}{19}
+\contentsline {subsection}{\numberline {3.5}Cria\IeC {\c c}\IeC {\~a}o da \IeC {\'a}rvore de grupos}{21}
+\contentsline {subsection}{\numberline {3.6}Rotulagem do grupo}{23}
+\contentsline {section}{\numberline {4}Arquitetura da biblioteca e sistema hVINA}{24}
+\contentsline {subsection}{\numberline {4.1}Detec\IeC {\c c}\IeC {\~a}o de idioma}{24}
+\contentsline {subsubsection}{\numberline {4.1.1}M\IeC {\'e}todo de n-grama}{25}
+\contentsline {subsection}{\numberline {4.2}Tokeniza\IeC {\c c}\IeC {\~a}o}{25}
+\contentsline {subsection}{\numberline {4.3}Limpeza}{26}
+\contentsline {subsection}{\numberline {4.4}\textit {Stemming}}{27}
+\contentsline {subsubsection}{\numberline {4.4.1}Tipos de erros}{27}
+\contentsline {subsubsection}{\numberline {4.4.2}O algoritmo RSLP}{27}
+\contentsline {subsection}{\numberline {4.5}Agrupamento}{28}
+\contentsline {subsection}{\numberline {4.6}Interface gr\IeC {\'a}fica}{29}
+\contentsline {section}{\numberline {5}Resultados}{31}
+\contentsline {subsection}{\numberline {5.1}A biblioteca}{31}
+\contentsline {subsection}{\numberline {5.2}O sistema hVINA}{31}
+\contentsline {section}{\numberline {6}Conclus\IeC {\~a}o}{31}
+\contentsline {subsection}{\numberline {6.1}Considera\IeC {\c c}\IeC {\~o}es finais}{31}
+\contentsline {subsection}{\numberline {6.2}Trabalhos futuros}{31}
+\contentsline {section}{\numberline {7}Anexo A}{32}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  14 NOV 2014 08:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  14 NOV 2014 13:49
 entering extended mode
 **C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
 (C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
@@ -401,55 +401,69 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen113
 \Gin@req@width=\dimen114
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count110
+\LTcapwidth=\dimen115
+\LT@head=\box30
+\LT@firsthead=\box31
+\LT@foot=\box32
+\LT@lastfoot=\box33
+\LT@cols=\count111
+\LT@rows=\count112
+\c@LT@tables=\count113
+\c@LT@chunks=\count114
+\LT@p@ftn=\toks25
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip49
-\subfigcapskip=\skip50
-\subfigcaptopadj=\dimen115
-\subfigbottomskip=\skip51
-\subfigcapmargin=\dimen116
-\subfiglabelskip=\skip52
-\c@subfigure=\count110
-\c@lofdepth=\count111
-\c@subtable=\count112
-\c@lotdepth=\count113
+\subfigtopskip=\skip53
+\subfigcapskip=\skip54
+\subfigcaptopadj=\dimen116
+\subfigbottomskip=\skip55
+\subfigcapmargin=\dimen117
+\subfiglabelskip=\skip56
+\c@subfigure=\count115
+\c@lofdepth=\count116
+\c@subtable=\count117
+\c@lotdepth=\count118
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
-\subfig@top=\skip53
-\subfig@bottom=\skip54
+\subfig@top=\skip57
+\subfig@bottom=\skip58
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen117
+\bigstrutjot=\dimen118
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
-\c@tracingmulticols=\count114
-\mult@box=\box30
-\multicol@leftmargin=\dimen118
-\c@unbalance=\count115
-\c@collectmore=\count116
-\doublecol@number=\count117
-\multicoltolerance=\count118
-\multicolpretolerance=\count119
-\full@width=\dimen119
-\page@free=\dimen120
-\premulticols=\dimen121
-\postmulticols=\dimen122
-\multicolsep=\skip55
-\multicolbaselineskip=\skip56
-\partial@page=\box31
-\last@line=\box32
-\mult@rightbox=\box33
-\mult@grightbox=\box34
-\mult@gfirstbox=\box35
-\mult@firstbox=\box36
-\@tempa=\box37
-\@tempa=\box38
-\@tempa=\box39
-\@tempa=\box40
+\c@tracingmulticols=\count119
+\mult@box=\box34
+\multicol@leftmargin=\dimen119
+\c@unbalance=\count120
+\c@collectmore=\count121
+\doublecol@number=\count122
+\multicoltolerance=\count123
+\multicolpretolerance=\count124
+\full@width=\dimen120
+\page@free=\dimen121
+\premulticols=\dimen122
+\postmulticols=\dimen123
+\multicolsep=\skip59
+\multicolbaselineskip=\skip60
+\partial@page=\box35
+\last@line=\box36
+\mult@rightbox=\box37
+\mult@grightbox=\box38
+\mult@gfirstbox=\box39
+\mult@firstbox=\box40
 \@tempa=\box41
 \@tempa=\box42
 \@tempa=\box43
@@ -463,209 +477,363 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \@tempa=\box51
 \@tempa=\box52
 \@tempa=\box53
-\c@columnbadness=\count120
-\c@finalcolumnbadness=\count121
-\last@try=\dimen123
-\multicolovershoot=\dimen124
-\multicolundershoot=\dimen125
-\mult@nat@firstbox=\box54
-\colbreak@box=\box55
-\multicol@sort@counter=\count122
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\c@columnbadness=\count125
+\c@finalcolumnbadness=\count126
+\last@try=\dimen124
+\multicolovershoot=\dimen125
+\multicolundershoot=\dimen126
+\mult@nat@firstbox=\box58
+\colbreak@box=\box59
+\multicol@sort@counter=\count127
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks25
-\verbatim@line=\toks26
+\every@verbatim=\toks26
+\verbatim@line=\toks27
 \verbatim@in@stream=\read1
 )
-(C:\Users\CirilloR\Documents\FACULDADE\TCC\mac499\monografia\monografia.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+(C:\Users\CirilloR\Documents\FACULDADE\TCC\mac499\monografia\monografia.aux
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+LaTeX Warning: Label `table:colecao_artigos' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count123
-\scratchdimen=\dimen126
-\scratchbox=\box56
-\nofMPsegments=\count124
-\nofMParguments=\count125
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count126
-\MPscratchDim=\dimen127
-\MPnumerator=\count127
-\makeMPintoPDFobject=\count128
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count128
+\scratchdimen=\dimen127
+\scratchbox=\box60
+\nofMPsegments=\count129
+\nofMParguments=\count130
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count131
+\MPscratchDim=\dimen128
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
+\everyMPtoPDFconversion=\toks29
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(C:\Users\CirilloR\Documents\FACULDADE\TCC\mac499\monografia\monografia.toc)
+(C:\Users\CirilloR\Documents\FACULDADE\TCC\mac499\monografia\monografia.toc
+[3])
 \tf@toc=\write3
-
-[3]
-Overfull \hbox (24.86917pt too wide) in paragraph at lines 44--45
+ [4]
+Overfull \hbox (24.86917pt too wide) in paragraph at lines 46--47
 []\T1/cmr/m/n/12 Ao con-trá-rio da clas-si-fi-ca-ção su-per-vi-si-o-nada, a cla
 s-si-fi-ca-ção não-supervisionada
  []
 
-[4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 60.
+[5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 62.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
 
-<images/resultado.png, id=21, 792.9625pt x 451.6875pt>
+<images/resultado.png, id=24, 792.9625pt x 451.6875pt>
 File: images/resultado.png Graphic file (type png)
 
 <use images/resultado.png>
-Package pdftex.def Info: images/resultado.png used on input line 68.
-(pdftex.def)             Requested size: 317.17938pt x 180.67178pt.
- [5 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/resulta
-do.png>] [6] [7]
-Overfull \hbox (2.48447pt too wide) in paragraph at lines 99--100
+Package pdftex.def Info: images/resultado.png used on input line 70.
+(pdftex.def)             Requested size: 396.48027pt x 225.84319pt.
+
+Overfull \hbox (6.48027pt too wide) in paragraph at lines 70--71
+ [] 
+ []
+
+[6 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/resultad
+o.png>] [7] [8]
+Overfull \hbox (2.48447pt too wide) in paragraph at lines 101--102
 \T1/cmr/m/n/12 ção su-per-vi-si-o-nada de ape-nas clas-si-fi-ca-ção e a clas-si
 -fi-ca-ção não-supervisionada
  []
 
-[8] <images/k_means_algorithm.png, id=38, 579.66562pt x 550.30594pt>
+[9] <images/k_means_algorithm.png, id=41, 579.66562pt x 550.30594pt>
 File: images/k_means_algorithm.png Graphic file (type png)
 
 <use images/k_means_algorithm.png>
-Package pdftex.def Info: images/k_means_algorithm.png used on input line 144.
-(pdftex.def)             Requested size: 289.83209pt x 275.1523pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/cluster_1.png, id=39, 515.11595pt x 196.05159pt>
+Package pdftex.def Info: images/k_means_algorithm.png used on input line 146.
+(pdftex.def)             Requested size: 376.77818pt x 357.69463pt.
+ [10]
+<images/cluster_1.png, id=45, 515.11595pt x 196.05159pt>
 File: images/cluster_1.png Graphic file (type png)
 
 <use images/cluster_1.png>
-Package pdftex.def Info: images/cluster_1.png used on input line 154.
+Package pdftex.def Info: images/cluster_1.png used on input line 156.
 (pdftex.def)             Requested size: 412.0933pt x 156.84148pt.
 
-Overfull \hbox (22.0933pt too wide) in paragraph at lines 154--155
+Overfull \hbox (22.0933pt too wide) in paragraph at lines 156--157
  [] 
  []
 
-[9]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[10 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/k_means
-_algorithm.png>]
-<images/hierarchical_algorithm.png, id=47, 772.8875pt x 220.825pt>
+[11 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/k_means
+_algorithm.png>] [12 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monograf
+ia/images/cluster_1.png>]
+<images/hierarchical_algorithm.png, id=54, 772.8875pt x 220.825pt>
 File: images/hierarchical_algorithm.png Graphic file (type png)
 
 <use images/hierarchical_algorithm.png>
 Package pdftex.def Info: images/hierarchical_algorithm.png used on input line 1
-77.
+79.
 (pdftex.def)             Requested size: 386.4428pt x 110.41222pt.
 
+Underfull \hbox (badness 3525) in paragraph at lines 195--195
+[]\T1/cmr/m/n/12 Documentos si-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
+[]\T1/cmr/m/n/12 Verdadeiro po-si-tivo
+ []
+
+
+Underfull \hbox (badness 2189) in paragraph at lines 195--195
+[]\T1/cmr/m/n/12 Falso ne-ga-tivo (FN)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+[]\T1/cmr/m/n/12 Verdadeiro ne-ga-tivo
+ []
+
+[13 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hierarc
+hical_algorithm.png>] [14] [15]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/cluster
-_1.png>] [12 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/image
-s/hierarchical_algorithm.png>] [13]
+[16] [17] [18]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-[14] [15] [16]
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 332.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 332.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 332.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 332.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 332.
-
-[17]
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 336.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 344.
-
-Missing character: There is no é in font cmr12!
-
-LaTeX Warning: Command \' invalid in math mode on input line 346.
-
-Missing character: There is no é in font cmr12!
-[18]
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 372.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 372.
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 413--417
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 380.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 380.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 380.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 380.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 380.
+
+
+Underfull \hbox (badness 3209) in paragraph at lines 387--387
+[]\T1/cmr/m/n/12 (mercado/cs = 100%),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
+\T1/cmr/m/n/12 (Gré-cia/cs = 75%),
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 389--389
+[]\T1/cmr/m/n/12 (universo/cs = 100%),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+[]\T1/cmr/m/n/12 (Grécia/cs = 100%),
+ []
+
+
+Underfull \hbox (badness 3209) in paragraph at lines 392--392
+[]\T1/cmr/m/n/12 (mercado/cs = 100%),
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 393--394
+[]\T1/cmr/m/n/12 (universo/cs = 100%),
+ []
+
+
+Overfull \hbox (12.89003pt too wide) in paragraph at lines 384--396
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 400.
+
+[20]
+
+LaTeX Warning: Command \' invalid in math mode on input line 410.
+
+Missing character: There is no é in font cmr12!
+
+LaTeX Warning: Command \' invalid in math mode on input line 412.
+
+Missing character: There is no é in font cmr12!
+
+Underfull \hbox (badness 3209) in paragraph at lines 423--423
+[]\T1/cmr/m/n/12 (mercado/cs = 100%),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
+\T1/cmr/m/n/12 (Gré-cia/cs = 75%),
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 425--425
+[]\T1/cmr/m/n/12 (universo/cs = 100%),
+ []
+
+
+Underfull \hbox (badness 3209) in paragraph at lines 428--428
+[]\T1/cmr/m/n/12 (mercado/cs = 100%),
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 429--430
+[]\T1/cmr/m/n/12 (universo/cs = 100%),
+ []
+
+
+Overfull \hbox (12.89003pt too wide) in paragraph at lines 420--432
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21] [22]
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 456.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 456.
+
+[23] <images/arquitetura.png, id=101, 1017.8025pt x 176.66pt>
+File: images/arquitetura.png Graphic file (type png)
+
+<use images/arquitetura.png>
+Package pdftex.def Info: images/arquitetura.png used on input line 478.
+(pdftex.def)             Requested size: 356.23622pt x 61.83192pt.
+ [24 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/arquit
+etura.png>]
+<images/n_grama.png, id=106, 1056.94875pt x 550.055pt>
+File: images/n_grama.png Graphic file (type png)
+
+<use images/n_grama.png>
+Package pdftex.def Info: images/n_grama.png used on input line 502.
+(pdftex.def)             Requested size: 422.772pt x 220.0181pt.
+
+Overfull \hbox (32.772pt too wide) in paragraph at lines 502--503
+ [] 
+ []
+
+[25 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/n_grama
+.png>] [26] <images/RSLP.png, id=115, 667.49374pt x 595.22375pt>
+File: images/RSLP.png Graphic file (type png)
+
+<use images/RSLP.png>
+Package pdftex.def Info: images/RSLP.png used on input line 559.
+(pdftex.def)             Requested size: 333.74606pt x 297.61115pt.
+ [27] [28 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/R
+SLP.png>]
+<images/hvina_inicial.png, id=123, 1157.32375pt x 848.16875pt>
+File: images/hvina_inicial.png Graphic file (type png)
+
+<use images/hvina_inicial.png>
+Package pdftex.def Info: images/hvina_inicial.png used on input line 587.
+(pdftex.def)             Requested size: 347.1998pt x 254.45258pt.
+
+<images/hvina_configuracao.png, id=124, 813.0375pt x 429.605pt>
+File: images/hvina_configuracao.png Graphic file (type png)
+
+<use images/hvina_configuracao.png>
+Package pdftex.def Info: images/hvina_configuracao.png used on input line 597.
+(pdftex.def)             Requested size: 365.8635pt x 193.32045pt.
+ [29 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hvina_
+inicial.png>]
+<images/hvina_clustering.png, id=129, 1027.84pt x 747.79375pt>
+File: images/hvina_clustering.png Graphic file (type png)
+
+<use images/hvina_clustering.png>
+Package pdftex.def Info: images/hvina_clustering.png used on input line 605.
+(pdftex.def)             Requested size: 359.74939pt x 261.73172pt.
+ [30 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hvina_
+configuracao.png> <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/
+images/hvina_clustering.png>] [31]
+Underfull \vbox (badness 10000) detected at line 655
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 703--707
 []\T1/cmr/m/n/12 T. M. Breuel. \T1/cmr/m/it/12 High per-for-mance do-cu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--417
+Underfull \hbox (badness 10000) in paragraph at lines 703--707
 \T1/cmr/m/it/12 ment layout analy-sis\T1/cmr/m/n/12 . [On-line]. Avai-la-ble:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--417
+Underfull \hbox (badness 10000) in paragraph at lines 703--707
 \T1/cmr/m/n/12 http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.1303
  []
 
-[20]
-(C:\Users\CirilloR\Documents\FACULDADE\TCC\mac499\monografia\monografia.aux) ) 
+[33]
+(C:\Users\CirilloR\Documents\FACULDADE\TCC\mac499\monografia\monografia.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3502 strings out of 493921
- 45104 string characters out of 3144867
- 106712 words of memory out of 3000000
- 6718 multiletter control sequences out of 15000+200000
+ 3652 strings out of 493921
+ 47469 string characters out of 3144867
+ 112759 words of memory out of 3000000
+ 6859 multiletter control sequences out of 15000+200000
  17492 words of font info for 43 fonts, out of 3000000 for 9000
  855 hyphenation exceptions out of 8191
- 27i,17n,24p,957b,302s stack positions out of 5000i,500n,10000p,200000b,50000s
- 
-<C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecbi1440.pk> <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecrm1000.pk> <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\CirilloR\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\CirilloR\AppData\
-Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Ciri
-lloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <
-C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-crm1200.pk> <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecrm1440.pk> <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy8.pfb>
-Output written on monografia.pdf (20 pages, 347886 bytes).
+ 27i,17n,24p,1027b,300s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecbi1440.pk> <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecrm1000.pk> <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\CirilloR\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\CirilloR\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\C
+irilloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
+> <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecrm1200.pk> <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\ecrm1440.pk> <C:\Users\CirilloR\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb>
+Output written on monografia.pdf (33 pages, 709105 bytes).
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
+ 569 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
