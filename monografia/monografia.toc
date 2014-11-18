@@ -33,8 +33,8 @@
 \contentsline {subsection}{\numberline {4.6}Interface gr\IeC {\'a}fica}{30}
 \contentsline {section}{\numberline {5}Resultados}{32}
 \contentsline {subsection}{\numberline {5.1}A biblioteca}{32}
-\contentsline {subsection}{\numberline {5.2}O sistema hVINA}{32}
-\contentsline {section}{\numberline {6}Conclus\IeC {\~a}o}{32}
-\contentsline {subsection}{\numberline {6.1}Considera\IeC {\c c}\IeC {\~o}es finais}{32}
-\contentsline {subsection}{\numberline {6.2}Trabalhos futuros}{32}
-\contentsline {section}{\numberline {7}Anexo A}{33}
+\contentsline {subsection}{\numberline {5.2}O sistema hVINA}{33}
+\contentsline {section}{\numberline {6}Conclus\IeC {\~a}o}{34}
+\contentsline {subsection}{\numberline {6.1}Considera\IeC {\c c}\IeC {\~o}es finais}{34}
+\contentsline {subsection}{\numberline {6.2}Trabalhos futuros}{34}
+\contentsline {section}{\numberline {7}Anexo A}{35}

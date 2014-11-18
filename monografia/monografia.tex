@@ -98,7 +98,10 @@ A classificação supervisionada consiste na utilização de um conjunto de dado
 
 Por fim, a classificação semi-supervisiona emprega técnicas da classificação supervisionada e não-supervisionada, geralmente com um conjunto pequeno de treinamento.
 
-No contexto de reconhecimento de padrão, é comum chamar a classificação supervisionada de apenas classificação e a classificação não-supervisionada de análise de agrupamento, ou simplesmente agrupamento (do inglês \textit{clustering}). A figura ? mostra o esquema das formas de aprendizagem.
+No contexto de reconhecimento de padrão, é comum chamar a classificação supervisionada de apenas classificação e a classificação não-supervisionada de análise de agrupamento, ou simplesmente agrupamento (do inglês \textit{clustering}). 
+
+%% TODO: Colocar a figura
+%A figura ? mostra o esquema das formas de aprendizagem.
 
 %[Seria muito bom se colocasse um esquema dessas formas de processo de aprendizagem]
 
@@ -145,11 +148,11 @@ Há duas propriedades importantes do \textit{k-means}:
     \begin{center}
         \includegraphics[scale=0.65]{k_means_algorithm.png}
     \end{center}
-    \caption{Sequência de passos do algoritmo k-means, retirado de [13]}
+    \caption{Sequência de passos do algoritmo k-means, retirado de \cite{experiment_clustering}}
     \label{fig:passos_kmeans}
 \end{figure}
 
-Um cuidado especial na utilização desse algoritmo é na escolha do número de grupos desejado. Uma escolha inadequada poderá resultar em um mau agrupamento, unindo duas classes naturais em um único grupo ou dividindo uma classe natural em dois grupos, porém algumas técnicas tem sido desenvolvidas para resolver esse problema \cite{Jain99, Manning09} [?]. (colocar mais referências a artigos para solução desse problema) Um exemplo de problema que pode ocorrer está ilustrado pela figura \ref{fig:problema_kmeans}.
+Um cuidado especial na utilização desse algoritmo é na escolha do número de grupos desejado. Uma escolha inadequada poderá resultar em um mau agrupamento, unindo duas classes naturais em um único grupo ou dividindo uma classe natural em dois grupos, porém algumas técnicas tem sido desenvolvidas para resolver esse problema \cite{Jain99, Manning09}. (colocar mais referências a artigos para solução desse problema) Um exemplo de problema que pode ocorrer está ilustrado pela figura \ref{fig:problema_kmeans}.
 
 \begin{figure}[H]
     \begin{center}
@@ -438,7 +441,7 @@ C(universo, inteligência)	& artigo.1, artigo.4 e artigo.9 & (universo/cs = 100\
 
 Uma vez computado os grupos iniciais, podemos visualizar cada um deles como um tópico ou subtópico na coleção de documentos. Agora é necessário criar a árvore, colocando os tópicos mais generalistas no topo e os mais específicos abaixo. Essa árvore tem como objetivos cria uma estrutura para a navegação entre os documentos e também facilitar a poda dos grupos muito específicos.
 
-Os grupos são inicialmente aninhados na árvore de acordo com a quantidade de itens em seu conjunto global gerador. Dessa forma, aqueles que possuem somente um item, estão no primeiro nível da árvore, e assim por diante. A raiz (nível 0) da árvore é por definição um grupo vazio e sem nenhum item em seu conjunto global de itens frequentes. Como dito no início desse capítulo, o FIHC utiliza a abordagem aglomerativa para a criação da hierarquia, ou seja, para cada grupo C no nível \emph{k} é escolhido um pai dentre os potenciais grupos do nível \emph{k-1}, cujo o conjunto global seja subconjunto dos conjuntos globais de itens frequentes de C. Se houver mais de um potencial pai no nível \emph{k-1}, então é escolhido aquele grupo que maximiza uma medida de ???, similar ao processo descrito na seção \ref{sec:disjuncao_grupos_sobrepostos}. Isso é melhor detalhado em \cite{Ester03}.
+Os grupos são inicialmente aninhados na árvore de acordo com a quantidade de itens em seu conjunto global gerador. Dessa forma, aqueles que possuem somente um item, estão no primeiro nível da árvore, e assim por diante. A raiz (nível 0) da árvore é por definição um grupo vazio e sem nenhum item em seu conjunto global de itens frequentes. Como dito no início desse capítulo, o FIHC utiliza a abordagem aglomerativa para a criação da hierarquia, ou seja, para cada grupo C no nível \emph{k} é escolhido um pai dentre os potenciais grupos do nível \emph{k-1}, cujo o conjunto global seja subconjunto dos conjuntos globais de itens frequentes de C. Se houver mais de um potencial pai no nível \emph{k-1}, então é escolhido aquele grupo que maximiza a medida \emph{Score}, similar ao processo descrito na seção \ref{sec:disjuncao_grupos_sobrepostos}. Isso é melhor detalhado em \cite{Ester03}.
 
 Uma vez escolhido um grupo pai para cada grupo da coleção, é necessário verificar se é possível unificar os grupos similares ou com tópicos muito específicos, garantindo uma hierarquia mais natural para a navegação e melhorando a acurácia do algoritmo. Isso é feito de duas formas: 1) através do processo de poda dos grupos filhos e 2) unificação dos grupos similares do nível 1.
 
@@ -462,7 +465,8 @@ Uma etapa importante no processo de agrupamento é a de rotulagem dos grupos, po
 
 No caso do FIHC, a própria abordagem de criação dos grupos a partir dos conjuntos globais de itens frequentes da coleção e posterior escolha dos \textit{cluster frequent items} torna natural pensar que esses conjuntos de palavras também são bons candidatos para dar nome aos próprios grupos. 
 
-[Exemplo]
+% TODO: Colocar exemplo
+%[Exemplo]
 
 \newpage
 
@@ -485,7 +489,7 @@ A biblioteca detecta e trata artigos em inglês e português, porém permite a e
 
 Os processos de detecção de idioma, tokenização, remoção dos \textit{stopwords} e \textit{stemming} utilizam técnicas e algoritmos já bem conhecidos e empregados na área de reconhecimento de padrões. 
 
-O sistema hVINA foi desenvolvido utilizando o \textit{framework} Rails [?] e outras tecnologias Web, como a marcação HTML, Javascript e CSS3. Todo o código-fonte segue junto a esta monografia.
+O sistema hVINA foi desenvolvido utilizando o \textit{framework} Rails \cite{rails} e outras tecnologias Web, como a marcação HTML, Javascript e CSS3. Todo o código-fonte segue junto a esta monografia.
 
 \subsection {Detecção de idioma}
 \label {sec:deteccao_idioma}
@@ -514,13 +518,13 @@ Como um dos pontos centrais do algoritmo FIHC é a utilização dos conjuntos de
     \begin{center}
         \includegraphics[scale=0.6]{tokenizacao.png}
     \end{center}
-    \caption{}
+    \caption{Exemplo do processo de tokenização em um  trecho de artigo.}
     \label{fig:tokenizacao}
 \end{figure}
 
 Um bom algoritmo para extração dos tokens deve levar em consideração o idioma do texto, pois em geral o processo de tokenização é difícil, devido a construções de palavras de podem surgir durante o processo, como as contrações de palavras inglesas, como \textit{“we’ve many time (...)”}, ou as palavras compostas em português como “latino-americano”. 
 
-O algoritmo de tokenização implementado inicialmente na biblioteca é o \textit{Treebank tokenizer} [12], porém a extensão para outros algoritmos de tokenização é possível devido à modularidade da biblioteca.
+O algoritmo de tokenização implementado inicialmente na biblioteca é o \textit{Treebank tokenizer} \cite{treebank}, porém a extensão para outros algoritmos de tokenização é possível devido à modularidade da biblioteca.
 
 \subsection {Limpeza}
 \label {sec:limpeza}
@@ -535,7 +539,7 @@ Continuando com o exemplo da figura \ref{fig:limpeza}, com a remoção dos \text
     \begin{center}
         \includegraphics[scale=0.6]{limpeza.png}
     \end{center}
-    \caption{}
+    \caption{Exemplo do processo de limpeza no conjunto de palavras resultante na figura \ref{fig:tokenizacao}.}
     \label{fig:limpeza}
 \end{figure}
 
@@ -626,11 +630,63 @@ O hVINA também permite a configuração do algoritmo de agrupamento, no caso em
 \subsection {A biblioteca}
 \label {sec:a_biblioteca}
 
+A biblioteca foi desenhada utilizando alguns padrões de projeto, dentre eles o \emph{Strategy Pattern} para encapsular os algoritmos de agrupamentos em classes independentes e o \emph{Template Method Pattern} para auxiliar na definição das classes desses algoritmos numa estrutura comum, permitindo que novos algoritmos sejam implementados ou substituídos sem a necessidade de alteração na estrutura da biblioteca.
+
+Desde sua concepção, ela teve como requisito ser modular, o que permitirá a inclusão de outros algoritmos de agrupamento de forma simples e sem a necessidade de alteração dos módulos e classes principais da biblioteca. O projeto está disponível no repositório online Github, no endereço https://github.com/tomferreira/hierarchical\_clustering.
+
+A biblioteca foi desenvolvida em Ruby e segue a especificação do \emph{RubyGem} e por esse motivo pode ser facilmente reutilizada em outros projetos Ruby. Sua principal classe é a HierarchicalClustering, de onde é controlado o fluxo de dados entre os passos da biblioteca. A figura \ref{fig:exemplo_biblioteca} ilustra a utilização da biblioteca, adotando o algoritmo FIHC para o agrupamento e imprimindo o resultado num formato aceito pelo sistema hVINA.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.6]{exemplo_biblioteca.png}
+    \end{center}
+    \caption{Exemplo de utilização da biblioteca com o algoritmo FIHC.}
+    \label{fig:exemplo_biblioteca}
+\end{figure}
+
+Outro ponto importante é que a coleção dos artigos deve seguir um padrão e conter alguns dados obrigatórios como o título, conteúdo e URL do artigo. Cada artigo deve estar separado em arquivo diferentes e os dados dispostos no formato JSON como mostrado no exemplo da figura \ref{fig:exemplo_artigo}.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.6]{exemplo_artigo.png}
+    \end{center}
+    \caption{Exemplo de um documento aceito pela biblioteca.}
+    \label{fig:exemplo_artigo}
+\end{figure}
+
+A formatação do resultado do agrupamento também pode ser estendida, bastando criar uma classe que deverá herdar a classe Clustering::Fihc::OutputManager e informá-la ao algoritmo utilizado. A figura \ref{fig:exemplo_formatacao} ilustra um exemplo.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[scale=0.6]{exemplo_formatacao.png}
+    \end{center}
+    \caption{Exemplo de extensão da formatação do resultado de um agrupamento.}
+    \label{fig:exemplo_formatacao}
+\end{figure}
+
 \subsection {O sistema hVINA}
 \label {sec:o_sistema_hvina}
 
+Apesar do intuito inicial do sistema hVINA era ser um protótipo para a demonstração prática da biblioteca desenvolvida, ele é totalmente funcional e pode ter mais funcionalidade acrescentadas. 
+
+O sistema foi desenvolvido em Ruby juntamente com o \emph{framework} Rails, e seu código-fonte também está disponível no repositório Github, no endereço https://github.com/tomferreira/hVINA.
+
+%Falar mais
+
+\newpage
+
 \section {Conclusão}
 \label {sec:conclusao}
+
+Esse trabalho discutiu a análise de agrupamento de documentos textuais aplicado em coleções de artigos jornalísticos, além de estudar algumas classes de algoritmos que podem ser usadas para tal propósito.
+
+O objetivo principal era fazer essa análise a partir da criação de uma biblioteca que abrangesse todas as etapas de uma solução para agrupamento de artigos, desde o pré-processamento da coleção até a execução do algoritmo de agrupamento em si, tendo como requisito o fato de que não fosse necessário nenhum conhecimento prévio da coleção.
+
+Inicialmente foi implementado na biblioteca o algoritmo de agrupamento \emph{Frequent Itemset-based Hierarchical Clustering} (FIHC), visto que o agrupamento hierárquico é uma forma mais natural para a navagação nos grupos (tópicos) e permite reconhecer relações implícitas entre esses grupos.
+
+Além da biblioteca, foi desenvolvido o sistema \emph{Hirarchical Viewer of News Articles} (hVINA) para ser uma interface gráfica da biblioteca, permitindo a escolha da coleção e a visualização do agrupamento resultante de forma intuitiva aos usuários finais.
+
+O resultado obtido pela biblioteca em conjunto com o sistema hVINA demostra a viabilidade de uma solução que tenha boa usabilidade e seja amigável a qualquer usuário, onde não haja a necessidade de treinamento do algoritmo e a sua configuração seja quase zero.
 
 \subsection {Considerações finais}
 \label {sec:consideracoes_finais}
@@ -750,60 +806,14 @@ Conjunto de itens & \textit{Global support} \\ \hline
     Proceedings of the 20th International Conference on Very Large Data Bases, VLDB, pages 487-499, Santiago, Chile,
     September, 1994.
 
+\bibitem{treebank}
+    http://www.nltk.org/\_modules/nltk/tokenize/treebank.html
 
-%\bibitem{Ma e Zhang03}
-%    Y. Ma, H. Zhang.
-%    \emph{Contrast-based image attention analysis by using fuzzy growing}.
-%    Proceedings of the Eleventh ACM international Conference on Multimedia
-%    Berkeley, CA, USA.
-%    2003.
+\bibitem{experiment_clustering}
+    http://www.dormantroot.com/2014/02/my-experiment-with-clustering.html
 
-%\bibitem{Itti e Koch03}
-%   L. Itti, C. Koch.
-%    \emph{A saliency-based search mechanism for overt and covert shifts of visual attention}
-%    Vision Research, Volume 40, Issues 10-12, Pages 1489-1506,
-%    ISSN 0042-6989, DOI: 10.1016/S0042-6989(99)00163-7.
-%    2000.
-
-%\bibitem{Liu.et.al07}
-%    H. Liu, S. Jiang, Q. Huang, C. Xu, W. Gao
-%    \emph{Region-based visual attention analysis with its application in image browsing on small displays}.
-%    In Proceedings of the 15th international Conference on Multimedia  (Augsburg, Germany, September 25 - 29, 2007).
-%    2007.
-
-%\bibitem{survey10}
-%    S. Frintrop, E. Rome, H. I. Christensen.
-%    \emph{Computational visual attention systems and their cognitive foundations: A survey}.
-%    ACM Trans. Appl. Percept. 7, 1 (Jan. 2010), 1-39.
-%    2010.
-
-%\bibitem{breuel03}
-%    T. M. Breuel.
-%    \emph{High performance document layout analysis}.
-%    [Online]. Available: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.1303
-%    2003
-
-%\bibitem{GOF}
-%    E. Gamma, R. Helm, R. Johnson, J. Vlissides.
-%    \emph{Design Patterns: Elements of Reusable Objected-Oriented Software}.
-%    Addison-Weskey Professional; 1 edition,
-%    November 10th, 1994
-
-%\bibitem{morfologia}
-%    E.R. Dougherty, R.A. Lotufo.
-%    \emph{Hands-on Morphological Image Processing}.
-%    SPIE press,
-%    2003
-
-%\bibitem{tesseract}
-%    \emph{Tesseract OCR}
-%    http://code.google.com/p/tesseract-ocr/
-
-%\bibitem{duda}
-%    R. O. Duda, P. E. Hart, D. Stork.
-%    \emph{Pattern Classification}.
-%    Wiley-Interscience; 2nd edition,
-%    October 2000.
+\bibitem{rails}
+    http://rubyonrails.org/
 
 \end{thebibliography}
 \end{document}
