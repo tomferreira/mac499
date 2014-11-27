@@ -34,22 +34,22 @@ A tarefa de classificar e agrupar documentos textuais remonta desde a antiguidad
 
 Porém com a criação da internet e a popularização de seu uso como ferramenta de comunicação, houve uma explosão de informação que tornou praticamente impossível a classificação desses novos tipos de documentos de maneira manual.
 
-A área de classificação de documentos é bem interessante e possui diversas aplicações práticas como classificação de spam, identificação do idioma utilizado e análise de sentimento, porém, em especial, artigos jornalísticos têm um enorme desafio devido à grande quantidade de novos documentos criados diariamente e a diversidade de temas abordados, especialmente em blogs, mas que carecem de melhor organização.
+A área de classificação de documentos é de grande interesse e possui diversas aplicações práticas como classificação de \textit{spam}, identificação do idioma utilizado e análise de sentimento. Em especial, a classificação de artigos jornalísticos oferece um enorme desafio devido à grande quantidade de novos documentos criados diariamente e a diversidade de temas abordados, especialmente em blogs, mas que carecem de melhor organização.
 
 \subsection{Motivação}
 \label{sec:motivacao}
 
-A motivação desse trabalho vem da insatisfação com a falta de tempo para uma leitura mais crítica e ciente de um contexto maior devido a enorme quantidade de notícias que estamos sujeitos a receber todos os dias e da organização simplória feita pelos grandes portais de notícias.
+A motivação desse trabalho vem da insatisfação com a falta de tempo para uma leitura mais crítica e ciente de um contexto maior devido à enorme quantidade de notícias que estamos sujeitos a receber todos os dias e da organização simplória feita pelos grandes portais de notícias.
 
 O motivo de se utilizar algoritmos não-supervisionados vem da necessidade de encontrar relações implícitas entre os artigos e também da diversidade e quantidade de artigos disponíveis para classificação, uma vez que fica quase que impossível criar manualmente um conjunto de treinamento para subsídio de um algoritmo supervisionado.
 
 Ao contrário da classificação supervisionada, a classificação não-supervisionada não necessita de um conjunto de treinamento como entrada, permitindo o seu uso em conjuntos de dados bem variados, algo que é bem comum em artigos jornalísticos.
 
-A ideia não é separar os artigos jornalísticos em grupos muito generalistas comumente usados em jornais ou portais de notícias, como por exemplo as seções: Brasil, Mundo, Economia e Esportes. Mas sim, encontrar grupos mais intrínsecos que representem com mais acurácia a informação passada por esses artigos.
+A ideia não é separar os artigos jornalísticos em grupos muito generalistas comumente usados em jornais ou portais de notícias, como por exemplo as seções: Brasil, Mundo, Economia e Esportes; mas encontrar grupos mais intrínsecos que representem com mais acurácia a informação passada por esses artigos.
 
 % [Talvez explicar a diferença entre classificação e agrupamento: Livro sistemas inteligentes, pag 318]
 
-Segundo Martin Ester \textit{et al.} \cite{Ester03}, existem alguns desafios da área de agrupamento de documentos como: alta dimensionalidade da coleção, onde cada palavra distinta na coleção constitui uma dimensão, e quanto maior a dimensão, maior o desafio para a construção de um algoritmo escalável e eficiente; grande volume de dados; alta precisão e consistência, dependendo do tipo de documentos, alguns algoritmos apresentam resultados muito abaixo do esperado; e descrição mais significativa dos grupos, pois facilita a utilização pelos usuários.
+Segundo Martin Ester \textit{et al.} \cite{Ester03}, existem alguns desafios da área de agrupamento de documentos como: alta dimensionalidade da coleção, onde cada palavra distinta na coleção constitui uma dimensão e quanto maior a dimensão, maior o desafio para a construção de um algoritmo escalável e eficiente; grande volume de dados; busca de alta precisão e consistência, pois dependendo do tipo de documentos, alguns algoritmos apresentam resultados muito abaixo do esperado; e descrição mais significativa dos grupos, pois facilita a utilização pelos usuários.
 
 % [Agrupamento é uma das mais antigas atividades mentais humanas, usada para tratar uma quantidade enorme de informações que recebemos todos os dias [1].]
 
@@ -63,7 +63,7 @@ O trabalho de classificação não-supervisionada dos artigos jornalísticos foi
 \item Proposta e implementação do sistema hVINA (\textit{Hierarchical Viewer of News Articles}) para análise de agrupamento de artigos jornalísticos.
 \end{itemize}
 
-A representação de um agrupamento de documentos é geralmente feita através de um dendrograma, como na figura \ref{fig:resultado}.
+A representação hierárquica de um agrupamento de documentos é geralmente feita através de um dendrograma, como na figura \ref{fig:resultado}.
 
 \begin{figure}[H]
     \begin{center}
@@ -87,7 +87,7 @@ Antes de apresentar e discutir sobre a biblioteca desenvolvida e o sistema propo
 \subsection{Reconhecimento de padrão}
 \label{sec:reconhecimento_padrao}
 
-Segundo Theodoridis e Koutroumbas  \cite{Koutroumbas06}, reconhecimento de padrão é uma área da ciência cujo objetivo é a classificação de objetos dentro de um número de categorias ou classes. Esses objetos de estudo variam de acordo com cada aplicação, podem ser imagens, sinais em forma de ondas (como voz, luz, rádio) ou qualquer tipo de medida que necessite ser classificada. As implicações práticas desses estudos permeiam todas as áreas de atuação humana, principalmente numa sociedade pós-industrial, onde a necessidade de automação das diversas atividades é essencial.  Sua aplicação vai desde sistemas que utilizam visão computacional, passando por reconhecimento de caracteres até sistemas para auxílio à domada de decisão.
+Segundo Theodoridis e Koutroumbas  \cite{Koutroumbas06}, reconhecimento de padrão é uma área da ciência cujo objetivo é a classificação de objetos dentro de um número de categorias ou classes. Esses objetos de estudo variam de acordo com cada aplicação, podem ser imagens, sinais em forma de ondas (como voz, luz, rádio) ou qualquer tipo de medida que necessite ser classificada. As implicações práticas desses estudos permeiam todas as áreas de atuação humana, principalmente numa sociedade pós-industrial, onde a necessidade de automação das diversas atividades é essencial.  Sua aplicação vai desde sistemas que utilizam visão computacional, passando por reconhecimento de caracteres até sistemas para auxílio à tomada de decisão.
 
 \subsubsection{Formas de processo de aprendizagem}
 \label{sec:formas_processo_aprendizagem}
@@ -110,7 +110,7 @@ No contexto de reconhecimento de padrão, é comum chamar a classificação supe
 
 Análise de agrupamento é uma classificação de padrão que emprega o processo de aprendizagem não-supervisionada e tem como objetivo o particionamento de objetos em grupos cujo membros sejam similares entre si e diferentes dos membros de outros grupos \cite{Jain99}. Porém, também tem os objetivos secundários de evitar grupos muito pequenos ou muito grandes e encontrar grupos que façam sentido ao usuário. Segundo Theodoridis e Koutroumbas \cite{Koutroumbas06}, a análise de agrupamento é largamente utilizada na resolução de diversos problemas, e pode ser encontrada em outras áreas por nomenclaturas diferentes, como taxonomia numérica em biologia, e tipologia na área das ciências sociais.
 
-Um grande problema enfrentado na análise de agrupamento é a dimensionalidade ou variáveis dos dados envolvidos, sejam eles observações de estrelas no céu, observações de organismos vivos na natureza ou documentos textuais disponíveis na internet, e uma técnica bastante utiliza para tentar solucionar tal problema é a redução dimensional através da extração de características, que envolve em sintetizar os dados em características mais relevantes para o problema principal sem perda de informação.
+Um grande problema enfrentado na análise de agrupamento é a dimensionalidade ou variáveis dos dados envolvidos, sejam eles observações de estrelas no céu, observações de organismos vivos na natureza ou documentos textuais disponíveis na internet, e uma técnica bastante utiliza para tentar solucionar tal problema é a redução dimensional através da extração ou seleção de características, que envolve em sintetizar os dados em características mais relevantes para o problema principal, tentando minimizar a perda de informação.
 
 \subsection{Agrupamento de documentos textuais}
 \label{sec:agrupamento_doc_textual}
@@ -131,11 +131,11 @@ Agrupamento plano é a categoria de algoritmos cujo os grupos resultantes são d
 
 Antes de falar do \textit{k-means} é preciso relembrar um ponto essencial ao entendimento desse algoritmo, que é a definição de centroide. Na geometria, o centroide é o ponto central de uma figura. Dessa forma, dado um grupo, se ligarmos com um segmento de linha as observações mais distantes podemos visualizar uma figura geométrica, e o centroide desse grupo seria a observação mais próxima ao centro dessa figura.
 
-[Inserir algoritmo k-means]
+%%[Inserir algoritmo k-means]
 
 Em termos gerais, o objetivo do \textit{k-means} é dividir n observações em \textit{k} grupos, minimizando a média das distâncias euclidianas quadráticas entre as observações e os respectivos centroides dos grupos, ou seja, cada observação é associada ao grupo cujo o centroide está mais próximo. 
 
-O algoritmo inicia com uma escolha aleatória dos \textit{k} centroides e a cada iteração é feito um refinamento na escolha desses centroides até que não haja mais reescolha dos centroides ou até que se atinja um número predefinido de iterações. A figura \ref{fig:passos_kmeans} exemplifica a sequência descrita acima.
+O algoritmo inicia com uma escolha aleatória dos \textit{k} centroides e a cada iteração é feito um refinamento na escolha desses centroides até que não haja mais variação na escolha dos centroides ou até que se atinja um número predefinido de iterações. A figura \ref{fig:passos_kmeans} exemplifica a sequência descrita acima.
 
 Há duas propriedades importantes do \textit{k-means}:
 
@@ -203,7 +203,7 @@ Documentos não similares	&  Falso positivo (FP) ou Erro tipo I & Verdadeiro neg
 \label{table:matrix_contingencia}
 \end{table}
 
-Duas medidas importantes na área de reconhecimento de padrão e também na estatística, são a precisão e cobertura do resultado observado. O primeiro, no contexto de reconhecimento de padrão, mede a fração de documentos que estão classificados corretamente no grupo e é dado pela seguinte fórmula:
+Duas medidas importantes na área de reconhecimento de padrão e também na estatística, são a precisão e cobertura do resultado observado. A precisão mede a fração de documentos que estão classificados corretamente no grupo e é dado pela seguinte fórmula:
 
 \begin{equation} P = \frac{TP} {TP + FP} \end{equation}
 
@@ -243,11 +243,9 @@ O algoritmo utiliza a abordagem aglomerativa, descrita na seção 2.4.2, porém 
 \subsection {O que é conjunto de itens frequentes}
 \label {sec:conjunto_itens_frequentes}
 
-Por definição, conjunto de itens é o conjunto de palavras que ocorrem em conjunto na coleção de documentos. Logo conjunto de itens frequentes é o conjunto de palavras que ocorrem numa quantidade de documentos acima de um limiar de suporte definido. 
+Por definição, conjunto de itens é o conjunto de palavras que ocorrem em conjunto na coleção de documentos. Logo conjunto de itens frequentes é o conjunto de palavras que ocorrem numa quantidade de documentos acima de um limiar de suporte definido. Em outras palavras, suponha que \emph{l} seja o limiar de suporte e que F seja um conjunto de palavras. O suporte (\textit{support} em inglês) de F é a proporção de documentos no qual F é um subconjunto das palavras desses documentos. Assim, dizemos que F é um conjunto de itens frequentes se o seu suporte é \emph{l} ou superior. A tabela \ref{table:colecao_artigos} ilustra um exemplo:
 
-Em outras palavras, assumindo que \emph{l} é o limiar de suporte. Se F é um conjunto de palavras, o apoio (\textit{support} em inglês) de F é a proporção de documentos no qual F é um subconjunto das palavras desses documentos. Assim, dizemos que F é um conjunto de itens frequentes se o seu valor de apoio é \emph{l} ou superior. A tabela \ref{table:colecao_artigos} ilustra um exemplo:
-
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{ | l | p{10cm} | }
 \hline
@@ -263,7 +261,7 @@ doc.5     &  \{Crise, está, prejudicando, saúde, mental, dos, gregos\} \\
 \label{table:colecao_artigos}
 \end{table}
 
-No exemplo acima, a palavra “Grécia” aparece nos documentos, (2), (3) e (4), assim seu suporte é 3; a palavra “crise” aparece em (3) e (5), logo seu suporte é 2; a palavra “de” ocorre em todos os documentos, exceto em (4) e (5), assim seu suporte é 3; a palavra “europeia” ocorre em (1), (3) e (4), logo seu suporte é 3. Todas as outras palavras ocorrem apenas em um único documento. Logo se for definido o limiar de suporte \emph{l} = 2, teremos como conjuntos de itens frequentes os conjuntos \{Grécia\}, \{crise\}, \{de\} e \{europeia\}. Além disso, as duplas \{Grécia, europeia\}, \{Grécia, de\} e \{europeia, de\} ocorrem em 2 documentos, logo também são conjuntos de itens frequentes.
+No exemplo, a palavra “Grécia” aparece nos documentos, (2), (3) e (4), assim seu suporte é 3; a palavra “crise” aparece em (3) e (5), logo seu suporte é 2; a palavra “de” ocorre em todos os documentos, exceto em (4) e (5), assim seu suporte é 3; a palavra “europeia” ocorre em (1), (3) e (4), logo seu suporte é 3. Todas as outras palavras ocorrem apenas em um único documento. Logo se for definido o limiar de suporte \emph{l} = 2, teremos como conjuntos de itens frequentes os conjuntos \{Grécia\}, \{crise\}, \{de\} e \{europeia\}. Além disso, as duplas \{Grécia, europeia\}, \{Grécia, de\} e \{europeia, de\} ocorrem em 2 documentos, logo também são conjuntos de itens frequentes.
 
 No caso do algoritmo FIHC, conjuntos de itens frequentes são também denominados de conjuntos globais de itens frequentes, e suporte é denominado de \textit{global support}.
 
@@ -316,8 +314,8 @@ Além disso, \textit{cluster support} de um item em $C$ é definido como a porce
 
 Tf-idf é uma medida estatística usada para avaliar o quão importante uma palavra é para um documento em relação a uma coleção de documentos. (wikipedia)  A ideia é que se uma palavra é muito comum em diferentes documentos da coleção, então provavelmente ela tem pouca relevância, como por exemplo, a conjunção aditiva “e”. A importância aumenta proporcionalmente ao número de vezes que uma palavra aparece no documento, mas é compensado pela frequência da palavra no corpus. O tf-idf é dado pelo produto de duas medidas: a frequência do termo e a frequência inversa do documento, dado por:
 
-\begin{equation} tf-idf(t, d) = tf(t, d) \times \log \frac{N} {df(t)} \end{equation}
-onde $tf(t,d)$ é a razão entre o número de vezes que o termo $t$ aparece no documento $d$ e a quantidade de termos em $d$; $N$ é a quantidade de documentos na coleção e $df(t)$ é a quantidade de documentos da coleção que possui o termo $t$. Existem diversas variantes dessa medida como visto em \cite{Manning09}.
+\begin{equation} \mbox{tf-idf}(t, d) = \mbox{tf}(t, d) \times \log \frac{N} {\mbox{df}(t)} \end{equation}
+onde $\mbox{tf}(t,d)$ é a razão entre o número de vezes que o termo $t$ aparece no documento $d$ e a quantidade de termos em $d$; $N$ é a quantidade de documentos na coleção e $\mbox{df}(t)$ é a quantidade de documentos da coleção que possui o termo $t$. Existem diversas variantes dessa medida como visto em \cite{Manning09}.
 
 \subsection {Construção dos grupos}
 \label {sec:construcao_grupos}
@@ -439,7 +437,7 @@ C(universo, inteligência)	& artigo.1, artigo.4 e artigo.9 & (universo/cs = 100\
 \subsection {Criação da árvore de grupos}
 \label {sec:criacao_arvore_grupos}
 
-Uma vez computado os grupos iniciais, podemos visualizar cada um deles como um tópico ou subtópico na coleção de documentos. Agora é necessário criar a árvore, colocando os tópicos mais generalistas no topo e os mais específicos abaixo. Essa árvore tem como objetivos cria uma estrutura para a navegação entre os documentos e também facilitar a poda dos grupos muito específicos.
+Uma vez computado os grupos iniciais, podemos visualizar cada um deles como um tópico ou subtópico na coleção de documentos. Agora é necessário criar a árvore, colocando os tópicos mais generalistas no topo e os mais específicos abaixo. Essa árvore tem como objetivos criar uma estrutura para a navegação entre os documentos e também facilitar a poda dos grupos muito específicos.
 
 Os grupos são inicialmente aninhados na árvore de acordo com a quantidade de itens em seu conjunto global gerador. Dessa forma, aqueles que possuem somente um item, estão no primeiro nível da árvore, e assim por diante. A raiz (nível 0) da árvore é por definição um grupo vazio e sem nenhum item em seu conjunto global de itens frequentes. Como dito no início desse capítulo, o FIHC utiliza a abordagem aglomerativa para a criação da hierarquia, ou seja, para cada grupo C no nível \emph{k} é escolhido um pai dentre os potenciais grupos do nível \emph{k-1}, cujo o conjunto global seja subconjunto dos conjuntos globais de itens frequentes de C. Se houver mais de um potencial pai no nível \emph{k-1}, então é escolhido aquele grupo que maximiza a medida \emph{Score}, similar ao processo descrito na seção \ref{sec:disjuncao_grupos_sobrepostos}. Isso é melhor detalhado em \cite{Ester03}.
 
@@ -453,10 +451,10 @@ A medida de similaridade utilizada no algoritmo FIHC utiliza a ideia de tratar u
 onde a similaridade $Sim$ de $C_{a}$ para $C_{b}$ é dado como:
 
 \begin{equation}
-  Sim(C_{a} \gets C_{b}) = \frac{ Score(C_{a} \gets doc(C_{b})) }{ \sum_{x}tf-idf(x,doc(C_{b})) + \sum_{x'}tf-idf(x',doc(C_{b})) } + 1
+  Sim(C_{a} \gets C_{b}) = \frac{ Score(C_{a} \gets doc(C_{b})) }{ \sum_{x}\mbox{tf-idf}(x,doc(C_{b})) + \sum_{x'}\mbox{tf-idf}(x',doc(C_{b})) } + 1
 \end{equation}
 
-Em $Sim(C_{i} \gets C_{j})$, a medida $Score$ é a mesma discutida na seção anterior, porém a única diferença é que o documento $doc(C_{j})$ utilizado no cálculo é um documento conceitual, construído a partir da combinação de todos os documentos da subárvore de $C_{j}$, e $tf-idf(x, doc(C_{b}))$ e $tfidf(x’, doc(C_{b}))$ são, respectivamente, as medidas tf-idf dos itens $x$ e $x’$ em $doc(C_{j})$.
+Em $Sim(C_{i} \gets C_{j})$, a medida $Score$ é a mesma discutida na seção anterior, porém a única diferença é que o documento $doc(C_{j})$ utilizado no cálculo é um documento conceitual, construído a partir da combinação de todos os documentos da subárvore de $C_{j}$, e $\mbox{tf-idf}(x, doc(C_{b}))$ e $\mbox{tf-idf}(x’, doc(C_{b}))$ são, respectivamente, as medidas tf-idf dos itens $x$ e $x’$ em $doc(C_{j})$.
 
 \subsection {Rotulagem do grupo}
 \label {sec:rotulagem_grupo}
@@ -485,7 +483,7 @@ Já o sistema tem como objetivo apresentar o agrupamento dos artigos jornalísti
     \label{fig:arquitetura_biblioteca}
 \end{figure}
 
-A biblioteca detecta e trata artigos em inglês e português, porém permite a extensão de outros idiomas, bastando escolher um algoritmo para tokenização e criar uma lista de \textit{stopwords} específicos do idioma. Além disso, a biblioteca é modular, permitindo a troca dos algoritmos utilizados em cada processo de forma simples e sem a necessidade de uma mudança geral no sistema.
+A biblioteca detecta e trata artigos em português, inglês e espanhol, porém permite a extensão de outros idiomas, bastando escolher um algoritmo para tokenização e criar uma lista de \textit{stopwords} específicos do idioma. Além disso, a biblioteca é modular, permitindo a troca dos algoritmos utilizados em cada processo de forma simples e sem a necessidade de uma mudança geral no sistema.
 
 Os processos de detecção de idioma, tokenização, remoção dos \textit{stopwords} e \textit{stemming} utilizam técnicas e algoritmos já bem conhecidos e empregados na área de reconhecimento de padrões. 
 
@@ -735,7 +733,7 @@ Conjunto de itens & \textit{Global support} \\ \hline
 \{mercado, crise, universo, Grécia, inteligência\}	& 0\% \\
 \hline
 \caption{Relação completa dos conjuntos de itens da coleção de documentos da tabela \ref{table:exemplo_docs}}
-\label{table:colecao_artigos}
+\label{table:colecao_completa_conjutos_itens_frequentes}
 \end{longtable}
 
 \newpage

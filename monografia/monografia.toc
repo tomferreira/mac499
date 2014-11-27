@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {3.2}O que \IeC {\'e} \textit {cluster frequent item} e \textit {cluster support}}{18}
 \contentsline {subsection}{\numberline {3.3}O que \IeC {\'e} tf-idf}{18}
 \contentsline {subsection}{\numberline {3.4}Constru\IeC {\c c}\IeC {\~a}o dos grupos}{19}
-\contentsline {subsubsection}{\numberline {3.4.1}Disjun\IeC {\c c}\IeC {\~a}o dos grupos sobrepostos}{19}
+\contentsline {subsubsection}{\numberline {3.4.1}Disjun\IeC {\c c}\IeC {\~a}o dos grupos sobrepostos}{20}
 \contentsline {subsection}{\numberline {3.5}Cria\IeC {\c c}\IeC {\~a}o da \IeC {\'a}rvore de grupos}{21}
 \contentsline {subsection}{\numberline {3.6}Rotulagem do grupo}{23}
 \contentsline {section}{\numberline {4}Arquitetura da biblioteca e sistema hVINA}{24}
