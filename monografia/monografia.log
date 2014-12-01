@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  1 DEC 2014 09:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  1 DEC 2014 19:08
 entering extended mode
 **C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
 (C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
@@ -525,138 +525,138 @@ LaTeX Font Info:    ... okay on input line 20.
 \everyMPtoPDFconversion=\toks29
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (C:\Users\CirilloR\Documents\FACULDADE\TCC\mac499\monografia\monografia.toc
-[3])
+[2])
 \tf@toc=\write3
- [4]
-Overfull \hbox (24.86917pt too wide) in paragraph at lines 46--47
+ [3]
+Overfull \hbox (24.86917pt too wide) in paragraph at lines 41--42
 []\T1/cmr/m/n/12 Ao con-trá-rio da clas-si-fi-ca-ção su-per-vi-si-o-nada, a cla
 s-si-fi-ca-ção não-supervisionada
  []
 
-[5]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 62.
+[4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 53.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
 
-<images/resultado.png, id=24, 754.82pt x 451.6875pt>
+<images/resultado.png, id=21, 754.82pt x 451.6875pt>
 File: images/resultado.png Graphic file (type png)
 
 <use images/resultado.png>
-Package pdftex.def Info: images/resultado.png used on input line 70.
+Package pdftex.def Info: images/resultado.png used on input line 61.
 (pdftex.def)             Requested size: 377.40909pt x 225.84319pt.
- [6 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/resulta
-do.png>] [7] [8]
-Overfull \hbox (2.48447pt too wide) in paragraph at lines 101--102
+ [5 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/resulta
+do.png>] [6] [7]
+Overfull \hbox (2.48447pt too wide) in paragraph at lines 92--93
 \T1/cmr/m/n/12 ção su-per-vi-si-o-nada de ape-nas clas-si-fi-ca-ção e a clas-si
 -fi-ca-ção não-supervisionada
  []
 
-[9] <images/k_means_algorithm.png, id=41, 579.66562pt x 550.30594pt>
+[8] <images/k_means_algorithm.png, id=38, 579.66562pt x 550.30594pt>
 File: images/k_means_algorithm.png Graphic file (type png)
 
 <use images/k_means_algorithm.png>
-Package pdftex.def Info: images/k_means_algorithm.png used on input line 149.
+Package pdftex.def Info: images/k_means_algorithm.png used on input line 140.
 (pdftex.def)             Requested size: 376.77818pt x 357.69463pt.
- [10]
-<images/cluster_1.png, id=45, 515.11595pt x 196.05159pt>
+ [9]
+<images/cluster_1.png, id=42, 515.11595pt x 196.05159pt>
 File: images/cluster_1.png Graphic file (type png)
 
 <use images/cluster_1.png>
-Package pdftex.def Info: images/cluster_1.png used on input line 159.
+Package pdftex.def Info: images/cluster_1.png used on input line 150.
 (pdftex.def)             Requested size: 412.0933pt x 156.84148pt.
 
-Overfull \hbox (22.0933pt too wide) in paragraph at lines 159--160
+Overfull \hbox (22.0933pt too wide) in paragraph at lines 150--151
  [] 
  []
 
-[11 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/k_means
-_algorithm.png>] [12 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monograf
+[10 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/k_means
+_algorithm.png>] [11 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monograf
 ia/images/cluster_1.png>]
-<images/hierarchical_algorithm.png, id=54, 772.8875pt x 220.825pt>
+<images/hierarchical_algorithm.png, id=51, 772.8875pt x 220.825pt>
 File: images/hierarchical_algorithm.png Graphic file (type png)
 
 <use images/hierarchical_algorithm.png>
 Package pdftex.def Info: images/hierarchical_algorithm.png used on input line 1
-82.
+73.
 (pdftex.def)             Requested size: 386.4428pt x 110.41222pt.
 
-Underfull \hbox (badness 3525) in paragraph at lines 198--198
+Underfull \hbox (badness 3525) in paragraph at lines 189--189
 []\T1/cmr/m/n/12 Documentos si-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
 []\T1/cmr/m/n/12 Verdadeiro po-si-tivo
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 198--198
+Underfull \hbox (badness 2189) in paragraph at lines 189--189
 []\T1/cmr/m/n/12 Falso ne-ga-tivo (FN)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 []\T1/cmr/m/n/12 Verdadeiro ne-ga-tivo
  []
 
-[13 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hierarc
-hical_algorithm.png>] [14] [15] [16] [17] [18]
+[12 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hierarc
+hical_algorithm.png>] [13] [14] [15] [16] [17]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19]
+[18]
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 381.
-
-
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 381.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 372.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 381.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 372.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 381.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 372.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 381.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 372.
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 388--388
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 372.
+
+
+Underfull \hbox (badness 3209) in paragraph at lines 379--379
 []\T1/cmr/m/n/12 (mercado/cs = 100%),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--388
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/cmr/m/n/12 (Gré-cia/cs = 75%),
  []
 
 
-Underfull \hbox (badness 3690) in paragraph at lines 390--390
+Underfull \hbox (badness 3690) in paragraph at lines 381--381
 []\T1/cmr/m/n/12 (universo/cs = 100%),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--391
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
 []\T1/cmr/m/n/12 (Grécia/cs = 100%),
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 393--393
+Underfull \hbox (badness 3209) in paragraph at lines 384--384
 []\T1/cmr/m/n/12 (mercado/cs = 100%),
  []
 
 
-Underfull \hbox (badness 3690) in paragraph at lines 394--395
+Underfull \hbox (badness 3690) in paragraph at lines 385--386
 []\T1/cmr/m/n/12 (universo/cs = 100%),
  []
 
 
-Overfull \hbox (12.89003pt too wide) in paragraph at lines 385--397
+Overfull \hbox (12.89003pt too wide) in paragraph at lines 376--388
  [][] 
  []
 
@@ -664,202 +664,202 @@ Overfull \hbox (12.89003pt too wide) in paragraph at lines 385--397
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 401.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 392.
 
-[20]
+[19]
 
-LaTeX Warning: Command \' invalid in math mode on input line 411.
-
-Missing character: There is no é in font cmr12!
-
-LaTeX Warning: Command \' invalid in math mode on input line 413.
+LaTeX Warning: Command \' invalid in math mode on input line 402.
 
 Missing character: There is no é in font cmr12!
 
-Underfull \hbox (badness 3209) in paragraph at lines 424--424
+LaTeX Warning: Command \' invalid in math mode on input line 404.
+
+Missing character: There is no é in font cmr12!
+
+Underfull \hbox (badness 3209) in paragraph at lines 415--415
 []\T1/cmr/m/n/12 (mercado/cs = 100%),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--424
+Underfull \hbox (badness 10000) in paragraph at lines 415--415
 \T1/cmr/m/n/12 (Gré-cia/cs = 75%),
  []
 
 
-Underfull \hbox (badness 3690) in paragraph at lines 426--426
+Underfull \hbox (badness 3690) in paragraph at lines 417--417
 []\T1/cmr/m/n/12 (universo/cs = 100%),
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 429--429
+Underfull \hbox (badness 3209) in paragraph at lines 420--420
 []\T1/cmr/m/n/12 (mercado/cs = 100%),
  []
 
 
-Underfull \hbox (badness 3690) in paragraph at lines 430--431
+Underfull \hbox (badness 3690) in paragraph at lines 421--422
 []\T1/cmr/m/n/12 (universo/cs = 100%),
  []
 
 
-Overfull \hbox (12.89003pt too wide) in paragraph at lines 421--433
+Overfull \hbox (12.89003pt too wide) in paragraph at lines 412--424
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21] [22]
+[20] [21]
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 457.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 448.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 457.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 448.
 
-[23] <images/arquitetura.png, id=101, 1017.8025pt x 176.66pt>
+[22] <images/arquitetura.png, id=98, 1017.8025pt x 176.66pt>
 File: images/arquitetura.png Graphic file (type png)
 
 <use images/arquitetura.png>
-Package pdftex.def Info: images/arquitetura.png used on input line 480.
+Package pdftex.def Info: images/arquitetura.png used on input line 471.
 (pdftex.def)             Requested size: 356.23622pt x 61.83192pt.
- [24 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/arquit
+ [23 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/arquit
 etura.png>]
-<images/n_grama.png, id=106, 1056.94875pt x 550.055pt>
+<images/n_grama.png, id=103, 1056.94875pt x 550.055pt>
 File: images/n_grama.png Graphic file (type png)
 
 <use images/n_grama.png>
-Package pdftex.def Info: images/n_grama.png used on input line 504.
+Package pdftex.def Info: images/n_grama.png used on input line 495.
 (pdftex.def)             Requested size: 422.772pt x 220.0181pt.
 
-Overfull \hbox (32.772pt too wide) in paragraph at lines 504--505
+Overfull \hbox (32.772pt too wide) in paragraph at lines 495--496
  [] 
  []
 
-[25 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/n_grama
-.png>] <images/tokenizacao.png, id=112, 654.445pt x 275.0275pt>
+[24 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/n_grama
+.png>] <images/tokenizacao.png, id=108, 654.445pt x 275.0275pt>
 File: images/tokenizacao.png Graphic file (type png)
 
 <use images/tokenizacao.png>
-Package pdftex.def Info: images/tokenizacao.png used on input line 517.
+Package pdftex.def Info: images/tokenizacao.png used on input line 508.
 (pdftex.def)             Requested size: 392.67003pt x 165.01776pt.
 
-Overfull \hbox (2.67003pt too wide) in paragraph at lines 517--518
+Overfull \hbox (2.67003pt too wide) in paragraph at lines 508--509
  [] 
  []
 
-[26 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/tokeniz
-acao.png>] <images/limpeza.png, id=117, 654.445pt x 275.0275pt>
+[25 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/tokeniz
+acao.png>] <images/limpeza.png, id=114, 654.445pt x 275.0275pt>
 File: images/limpeza.png Graphic file (type png)
 
 <use images/limpeza.png>
-Package pdftex.def Info: images/limpeza.png used on input line 538.
+Package pdftex.def Info: images/limpeza.png used on input line 529.
 (pdftex.def)             Requested size: 392.67003pt x 165.01776pt.
 
-Overfull \hbox (2.67003pt too wide) in paragraph at lines 538--539
+Overfull \hbox (2.67003pt too wide) in paragraph at lines 529--530
  [] 
  []
 
-[27 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/limpeza
-.png>] <images/RSLP.png, id=122, 667.49374pt x 595.22375pt>
+[26 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/limpeza
+.png>] <images/RSLP.png, id=119, 667.49374pt x 595.22375pt>
 File: images/RSLP.png Graphic file (type png)
 
 <use images/RSLP.png>
-Package pdftex.def Info: images/RSLP.png used on input line 573.
+Package pdftex.def Info: images/RSLP.png used on input line 564.
 (pdftex.def)             Requested size: 333.74606pt x 297.61115pt.
- [28] [29 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/R
+ [27] [28 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/R
 SLP.png>]
-<images/hvina_inicial.png, id=130, 1157.32375pt x 848.16875pt>
+<images/hvina_inicial.png, id=127, 1157.32375pt x 848.16875pt>
 File: images/hvina_inicial.png Graphic file (type png)
 
 <use images/hvina_inicial.png>
-Package pdftex.def Info: images/hvina_inicial.png used on input line 601.
+Package pdftex.def Info: images/hvina_inicial.png used on input line 592.
 (pdftex.def)             Requested size: 347.1998pt x 254.45258pt.
 
-<images/hvina_configuracao.png, id=131, 813.0375pt x 429.605pt>
+<images/hvina_configuracao.png, id=128, 813.0375pt x 429.605pt>
 File: images/hvina_configuracao.png Graphic file (type png)
 
 <use images/hvina_configuracao.png>
-Package pdftex.def Info: images/hvina_configuracao.png used on input line 611.
+Package pdftex.def Info: images/hvina_configuracao.png used on input line 602.
 (pdftex.def)             Requested size: 365.8635pt x 193.32045pt.
- [30 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hvina_
+ [29 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hvina_
 inicial.png>]
-<images/hvina_clustering.png, id=136, 1027.84pt x 747.79375pt>
+<images/hvina_clustering.png, id=133, 1027.84pt x 747.79375pt>
 File: images/hvina_clustering.png Graphic file (type png)
 
 <use images/hvina_clustering.png>
-Package pdftex.def Info: images/hvina_clustering.png used on input line 619.
+Package pdftex.def Info: images/hvina_clustering.png used on input line 610.
 (pdftex.def)             Requested size: 359.74939pt x 261.73172pt.
- [31 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hvina_
+ [30 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/hvina_
 configuracao.png> <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/
 images/hvina_clustering.png>]
-<images/exemplo_biblioteca.png, id=143, 654.445pt x 166.6225pt>
+<images/exemplo_biblioteca.png, id=139, 654.445pt x 166.6225pt>
 File: images/exemplo_biblioteca.png Graphic file (type png)
 
 <use images/exemplo_biblioteca.png>
-Package pdftex.def Info: images/exemplo_biblioteca.png used on input line 639.
+Package pdftex.def Info: images/exemplo_biblioteca.png used on input line 630.
 (pdftex.def)             Requested size: 392.67003pt x 99.97426pt.
 
-Overfull \hbox (2.67003pt too wide) in paragraph at lines 639--640
+Overfull \hbox (2.67003pt too wide) in paragraph at lines 630--631
  [] 
  []
 
-<images/exemplo_artigo.png, id=144, 654.445pt x 166.6225pt>
+<images/exemplo_artigo.png, id=140, 654.445pt x 166.6225pt>
 File: images/exemplo_artigo.png Graphic file (type png)
 
 <use images/exemplo_artigo.png>
-Package pdftex.def Info: images/exemplo_artigo.png used on input line 649.
+Package pdftex.def Info: images/exemplo_artigo.png used on input line 640.
 (pdftex.def)             Requested size: 392.67003pt x 99.97426pt.
 
-Overfull \hbox (2.67003pt too wide) in paragraph at lines 649--650
+Overfull \hbox (2.67003pt too wide) in paragraph at lines 640--641
  [] 
  []
 
-[32 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/exemplo
+[31 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/exemplo
 _biblioteca.png>]
-Overfull \hbox (44.86592pt too wide) in paragraph at lines 655--656
+Overfull \hbox (44.86592pt too wide) in paragraph at lines 646--647
 \T1/cmr/m/n/12 bas-tando criar uma classe que de-verá her-dar a classe Clus-te-
 ring::Fihc::OutputManager
  []
 
-<images/exemplo_formatacao.png, id=149, 654.445pt x 192.72pt>
+<images/exemplo_formatacao.png, id=146, 654.445pt x 192.72pt>
 File: images/exemplo_formatacao.png Graphic file (type png)
 
 <use images/exemplo_formatacao.png>
-Package pdftex.def Info: images/exemplo_formatacao.png used on input line 659.
+Package pdftex.def Info: images/exemplo_formatacao.png used on input line 650.
 (pdftex.def)             Requested size: 392.67003pt x 115.63287pt.
 
-Overfull \hbox (2.67003pt too wide) in paragraph at lines 659--660
+Overfull \hbox (2.67003pt too wide) in paragraph at lines 650--651
  [] 
  []
 
-[33 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/exemplo
+[32 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/exemplo
 _artigo.png> <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/image
-s/exemplo_formatacao.png>] [34] [35] [36]
-Underfull \vbox (badness 10000) detected at line 770
+s/exemplo_formatacao.png>] [33] [34] [35]
+Underfull \vbox (badness 10000) detected at line 761
  []
 
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 793--794
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
 []\T1/cmr/m/n/12 http://redarterj.wordpress.com/2009/10/15/a-primeira-bibliotec
 a-do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 863--864
+Underfull \hbox (badness 10000) in paragraph at lines 854--855
 []\T1/cmr/m/n/12 http://www.dormantroot.com/2014/02/my-experiment-with-
  []
 
-[38]
-Underfull \hbox (badness 1137) in paragraph at lines 869--871
+[37]
+Underfull \hbox (badness 1137) in paragraph at lines 860--862
 []\T1/cmr/m/n/12 Web 2.0 Expo NY: Clay Shirky. It's Not In-for-ma-tion Over-loa
 d.
  []
 
-[39]
+[38]
 (C:\Users\CirilloR\Documents\FACULDADE\TCC\mac499\monografia\monografia.aux) ) 
 Here is how much of TeX's memory you used:
  3695 strings out of 493921
  48509 string characters out of 3144867
- 112866 words of memory out of 3000000
+ 112864 words of memory out of 3000000
  6897 multiletter control sequences out of 15000+200000
  17492 words of font info for 43 fonts, out of 3000000 for 9000
  855 hyphenation exceptions out of 8191
@@ -885,9 +885,9 @@ sfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmsy8.pfb>
-Output written on monografia.pdf (39 pages, 802600 bytes).
+Output written on monografia.pdf (38 pages, 801738 bytes).
 PDF statistics:
- 618 PDF objects out of 1000 (max. 8388607)
+ 614 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
