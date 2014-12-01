@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  1 DEC 2014 08:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  1 DEC 2014 09:45
 entering extended mode
 **C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
 (C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
@@ -543,19 +543,14 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
 
-<images/resultado.png, id=24, 792.9625pt x 451.6875pt>
+<images/resultado.png, id=24, 754.82pt x 451.6875pt>
 File: images/resultado.png Graphic file (type png)
 
 <use images/resultado.png>
 Package pdftex.def Info: images/resultado.png used on input line 70.
-(pdftex.def)             Requested size: 396.48027pt x 225.84319pt.
-
-Overfull \hbox (6.48027pt too wide) in paragraph at lines 70--71
- [] 
- []
-
-[6 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/resultad
-o.png>] [7] [8]
+(pdftex.def)             Requested size: 377.40909pt x 225.84319pt.
+ [6 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/resulta
+do.png>] [7] [8]
 Overfull \hbox (2.48447pt too wide) in paragraph at lines 101--102
 \T1/cmr/m/n/12 ção su-per-vi-si-o-nada de ape-nas clas-si-fi-ca-ção e a clas-si
 -fi-ca-ção não-supervisionada
@@ -839,27 +834,33 @@ Overfull \hbox (2.67003pt too wide) in paragraph at lines 659--660
 [33 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/exemplo
 _artigo.png> <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/image
 s/exemplo_formatacao.png>] [34] [35] [36]
-Underfull \vbox (badness 10000) detected at line 772
+Underfull \vbox (badness 10000) detected at line 770
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 795--796
+Underfull \hbox (badness 10000) in paragraph at lines 793--794
 []\T1/cmr/m/n/12 http://redarterj.wordpress.com/2009/10/15/a-primeira-bibliotec
 a-do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 865--866
+Underfull \hbox (badness 10000) in paragraph at lines 863--864
 []\T1/cmr/m/n/12 http://www.dormantroot.com/2014/02/my-experiment-with-
  []
 
-[38] [39]
+[38]
+Underfull \hbox (badness 1137) in paragraph at lines 869--871
+[]\T1/cmr/m/n/12 Web 2.0 Expo NY: Clay Shirky. It's Not In-for-ma-tion Over-loa
+d.
+ []
+
+[39]
 (C:\Users\CirilloR\Documents\FACULDADE\TCC\mac499\monografia\monografia.aux) ) 
 Here is how much of TeX's memory you used:
- 3694 strings out of 493921
- 48501 string characters out of 3144867
- 112861 words of memory out of 3000000
- 6896 multiletter control sequences out of 15000+200000
+ 3695 strings out of 493921
+ 48509 string characters out of 3144867
+ 112866 words of memory out of 3000000
+ 6897 multiletter control sequences out of 15000+200000
  17492 words of font info for 43 fonts, out of 3000000 for 9000
  855 hyphenation exceptions out of 8191
  27i,17n,24p,1062b,300s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -884,7 +885,7 @@ sfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmsy8.pfb>
-Output written on monografia.pdf (39 pages, 796056 bytes).
+Output written on monografia.pdf (39 pages, 802573 bytes).
 PDF statistics:
  618 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
