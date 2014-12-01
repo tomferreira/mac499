@@ -676,21 +676,72 @@ O sistema foi desenvolvido em Ruby juntamente com o \emph{framework} Rails, e se
 \section {Conclusão}
 \label {sec:conclusao}
 
-Esse trabalho discutiu a análise de agrupamento de documentos textuais aplicado em coleções de artigos jornalísticos, além de estudar algumas classes de algoritmos que podem ser usadas para tal propósito.
+Esse trabalho discutiu a análise de agrupamento de documentos textuais com ênfase em coleções de artigos jornalísticos, além de estudar algumas classes de algoritmos que podem ser usadas para tal propósito.
 
-O objetivo principal era fazer essa análise a partir da criação de uma biblioteca que abrangesse todas as etapas de uma solução para agrupamento de artigos, desde o pré-processamento da coleção até a execução do algoritmo de agrupamento em si, tendo como requisito o fato de que não fosse necessário nenhum conhecimento prévio da coleção.
+O objetivo principal foi fazer essa análise a partir da criação de uma biblioteca que abrangesse todas as etapas de uma solução para agrupamento, desde o pré-processamento da coleção até a execução do algoritmo de agrupamento em si, tendo como requisito o fato de que não fosse necessário nenhum conhecimento prévio da coleção por parte do usuário.
 
-Inicialmente foi implementado na biblioteca o algoritmo de agrupamento \emph{Frequent Itemset-based Hierarchical Clustering} (FIHC), visto que o agrupamento hierárquico é uma forma mais natural para a navagação nos grupos (tópicos) e permite reconhecer relações implícitas entre esses grupos.
+Inicialmente foi implementado na biblioteca o algoritmo de agrupamento \textit{Frequent Itemset-based Hierarchical Clustering} (FIHC), visto que o agrupamento hierárquico é uma forma mais natural para a navegação nos grupos (tópicos) e permite reconhecer relações implícitas entre esses grupos de maneira muito mais simples.
 
-Além da biblioteca, foi desenvolvido o sistema \emph{Hirarchical Viewer of News Articles} (hVINA) para ser uma interface gráfica da biblioteca, permitindo a escolha da coleção e a visualização do agrupamento resultante de forma intuitiva aos usuários finais.
+Além da biblioteca, foi desenvolvido também o sistema \textit{Hierarchical Viewer of News Articles} (hVINA) para ser uma interface gráfica dela, permitindo a escolha da coleção e a visualização do agrupamento resultante de forma muito mais intuitiva aos usuários finais.
 
-O resultado obtido pela biblioteca em conjunto com o sistema hVINA demostra a viabilidade de uma solução que tenha boa usabilidade e seja amigável a qualquer usuário, onde não haja a necessidade de treinamento do algoritmo e a sua configuração seja quase zero.
+O resultado obtido pela biblioteca em conjunto com o sistema hVINA demostra a viabilidade de uma solução que tenha boa usabilidade e seja amigável a qualquer usuário - mesmo aqueles não técnicos, onde não haja a necessidade de treinamento do algoritmo e que sua configuração seja quase zero.
 
 \subsection {Considerações finais}
 \label {sec:consideracoes_finais}
 
-\subsection {Trabalhos futuros}
+Segundo o professor Clay Shirky, de NYC, o problema da \textit{overdose} de informação, da qual estamos sujeitos diariamente, está no fato que não sabermos filtrar o que é importante para nós [?]. Logo, uma possível solução é justamente criar mecanismos automáticos que possam organizar essas informações de modo a nos ajudar a decidir o que é importante ou não para nós.
+
+Agrupar grande quantidade de artigos de forma que os grupos sejam intuitivos ao usuário, isto é, que possuam rótulos significativos, não é uma tarefa fácil, visto que a diversidade de tópicos possíveis é imensa. A solução apresentada neste trabalho é somente uma das possíveis abordagens, e novas tentativas de resolver esse problema devem também ser empenhadas com outras técnicas.
+
+\subsection {Análise subjetiva}
+\label {sec:analise_subjetiva}
+
+\subsubsection {Desafios e frustrações encontradas}
+\label {sec:desafios_frustracoes_encontradas}
+
+Durante o início do desenvolvimento do trabalho, houveram diversos desafios quanto à definição do que seria feito. A área de reconhecimento de padrão é, em particular, muito empolgante e com imensas aplicações práticas. Porém, encontrar algum problema que fosse, ao mesmo tempo, capaz de ser debruçado e “solucionado” em apenas 1 ano (menos ainda se considerarmos que tive que realizar diversas tarefas não propriamente ditas de análise ou desenvolvimento) e também útil e relevante, não foi simples.
+
+%%[Desde o início já tinha a intenção de realizar algo mais prático no meu trabalho.]
+
+Uma vez fechado o escopo - e dado um título mais detalhado do meu trabalho, as demais tarefas começaram a caminhar bem. 
+
+Conciliar esse trabalho com outras matérias do curso e demandas de outra ordem, como emprego e vida pessoal, não foi nada simples. Mas agora no final vejo que assim como o conhecimento técnico adquirido na área de reconhecimento de padrão, adquiri também um grande amadurecimento quanto à organização de todas essas tarefas.
+
+Já nas questões técnicas, houveram algumas frustrações durante o transcorrer do trabalho, como a falta de material acadêmico mais farto de algoritmos que tratasse em específico de agrupamento de documentos textuais.
+
+Infelizmente só foi implementado um único algoritmo de agrupamento - o FIHC. Outros algoritmos estavam em vista, porém alguns problemas na implementação do FIHC adiaram as demais implementações.
+
+O maior problema técnico do projeto no entanto é o desempenho do algoritmo FIHC, que ainda precisaria de muito trabalho para chegar a um tempo aceitável (quase tempo real).
+
+\subsubsection {Disciplinas relevantes para o trabalho}
+\label {sec:disciplinas relevantes para o trabalho}
+
+As disciplinas mais relevantes durante o desenvolvimento deste trabalho foram:
+\begin{enumerate}
+    \item \textbf{Armazenamento e Recuperação de Informação (MAC0333):} Essa disciplina introduziu os principais conceitos da área de recuperação de informação, como tf-idf e medida F.
+
+    \item \textbf{Engenharia de software (MAC0332):} Durante todo o processo de desenvolvimento e gerenciamento das atividades envolvidas no processo de criação da biblioteca e do sistema foram empregados técnicas apresentadas nesta disciplina.
+
+    \item \textbf{Programação orientada a objeto (MAC0441) e Laboratório de programação II (MAC0242):} Tanto a biblioteca quanto o sistema utilizam o paradigma de programação orientada à objeto. Em especial foi em Laboratório de programação que pela primeira vez tive em contato com o desenvolvimento de um grande projeto de software.
+
+    \item \textbf{Estrutura de dados (MAC0323):} Muitas das estruturas de dados do algoritmos de agrupamento foram baseados ou emprestados dos conceitos apresentado nesta disciplina.
+
+    \item \textbf{Introdução à computação (MAC0110) e Princípios de Desenvolvimento de Algoritmos (MAC0122):} Essas disciplinas foram a base necessária para um bom aprendizado de todo o conceito teórico e todas as outras disciplinas.
+\end {enumerate}
+
+\subsubsection {Trabalhos futuros}
 \label {sec:trabalhos_futuros}
+
+Melhorar o desempenho do algoritmo de agrupamento FIHC é um trabalho que pode ser continuado, e técnicas como a programação distribuída podem contribuir para essa melhoria.
+
+Além disso, implementar a detecção de outros idiomas na biblioteca é algo que naturalmente precisará ser feito. E novos gráficos para a visualização desses grupos podem ser utilizados para complementar o já existente, enriquecendo ainda mais a experiência do usuário com o sistema.
+
+Outra possibilidade é integrar a biblioteca ao projeto DocumentCloud (http://www.documentcloud.org/public/search/).
+
+\subsubsection {Agradecimentos}
+\label {sec:agradecimentos}
+
+Agradeço a todos os professores do curso de Ciências da Computação, em especial ao Alair Pereira do Lago que muito me ajudou durante o desenvolvimento desse trabalho, fazendo sempre comentários muito valiosos para mim. Por fim, agradeço aos meus pais e minha irmã por todo apoio e paciência durante o ano todo.
 
 \newpage
 

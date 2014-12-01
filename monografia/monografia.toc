@@ -36,5 +36,9 @@
 \contentsline {subsection}{\numberline {5.2}O sistema hVINA}{33}
 \contentsline {section}{\numberline {6}Conclus\IeC {\~a}o}{34}
 \contentsline {subsection}{\numberline {6.1}Considera\IeC {\c c}\IeC {\~o}es finais}{34}
-\contentsline {subsection}{\numberline {6.2}Trabalhos futuros}{34}
-\contentsline {section}{\numberline {7}Anexo A}{35}
+\contentsline {subsection}{\numberline {6.2}An\IeC {\'a}lise subjetiva}{35}
+\contentsline {subsubsection}{\numberline {6.2.1}Desafios e frustra\IeC {\c c}\IeC {\~o}es encontradas}{35}
+\contentsline {subsubsection}{\numberline {6.2.2}Disciplinas relevantes para o trabalho}{35}
+\contentsline {subsubsection}{\numberline {6.2.3}Trabalhos futuros}{36}
+\contentsline {subsubsection}{\numberline {6.2.4}Agradecimentos}{36}
+\contentsline {section}{\numberline {7}Anexo A}{37}
