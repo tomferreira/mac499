@@ -85,7 +85,7 @@ Segundo Theodoridis e Koutroumbas  \cite{Koutroumbas06}, reconhecimento de padr�
 
 Na área de reconhecimento de padrão os algoritmos utilizam técnicas de aprendizagem computacional para a realização de alguma tarefa e eles são geralmente classificados de acordo a necessidade de intervenção humana durante alguma fase de aprendizagem do algoritmo. São elas: aprendizagem supervisionada,  aprendizagem não-supervisionada e aprendizagem semi-supervisionada.
 
-A classificação supervisionada consiste na utilização de um conjunto de dados previamente classificados (ou anotados), que servirá na construção de um modelo para a classificação de novos objetos. Ou seja, algoritmos que utilizam esse conjunto de dados fazem uso de um conhecimento a priori, originado de uma fonte externa. Esse conjunto de dados inicial é denominado de conjunto de treinamento (\textit{training set}). Porém, em muitos casos a criação de um conjunto de treinamento é inviável devido à natureza do problema [pegar exemplos: não se conhece previamente todas as classes]. Para esses tipos, é então empregado a classificação não-supervisionada, que não faz uso de um conjunto de treinamento, pois o próprio algoritmo busca descobrir similaridades intrínsecas nos objetos e agrupa aqueles objetos mais similares. \cite{Koutroumbas06, Jain99, Manning09}
+A classificação supervisionada consiste na utilização de um conjunto de dados previamente classificados (ou anotados), que servirá na construção de um modelo para a classificação de novos objetos. Ou seja, algoritmos que utilizam esse conjunto de dados fazem uso de um conhecimento a priori, originado de uma fonte externa. Esse conjunto de dados inicial é denominado de conjunto de treinamento (\textit{training set}). Porém, em muitos casos a criação de um conjunto de treinamento é inviável devido à natureza do problema. Para esses tipos, é então empregado a classificação não-supervisionada, que não faz uso de um conjunto de treinamento, pois o próprio algoritmo busca descobrir similaridades intrínsecas nos objetos e agrupa aqueles objetos mais similares. \cite{Koutroumbas06, Jain99, Manning09}
 
 Por fim, a classificação semi-supervisiona emprega técnicas da classificação supervisionada e não-supervisionada, geralmente com um conjunto pequeno de treinamento.
 
@@ -143,7 +143,7 @@ Há duas propriedades importantes do \textit{k-means}:
     \label{fig:passos_kmeans}
 \end{figure}
 
-Um cuidado especial na utilização desse algoritmo é na escolha do número de grupos desejado. Uma escolha inadequada poderá resultar em um mau agrupamento, unindo duas classes naturais em um único grupo ou dividindo uma classe natural em dois grupos, porém algumas técnicas tem sido desenvolvidas para resolver esse problema \cite{Jain99, Manning09}. (colocar mais referências a artigos para solução desse problema) Um exemplo de problema que pode ocorrer está ilustrado pela figura \ref{fig:problema_kmeans}.
+Um cuidado especial na utilização desse algoritmo é na escolha do número de grupos desejado. Uma escolha inadequada poderá resultar em um mau agrupamento, unindo duas classes naturais em um único grupo ou dividindo uma classe natural em dois grupos, porém algumas técnicas tem sido desenvolvidas para resolver esse problema \cite{Jain99, Manning09}. Um exemplo de problema que pode ocorrer está ilustrado pela figura \ref{fig:problema_kmeans}.
 
 \begin{figure}[H]
     \begin{center}
@@ -303,7 +303,7 @@ Além disso, \textit{cluster support} de um item em $C$ é definido como a porce
 \subsection {O que é tf-idf}
 \label {sec:tf_idf}
 
-Tf-idf é uma medida estatística usada para avaliar o quão importante uma palavra é para um documento em relação a uma coleção de documentos. (wikipedia)  A ideia é que se uma palavra é muito comum em diferentes documentos da coleção, então provavelmente ela tem pouca relevância, como por exemplo, a conjunção aditiva “e”. A importância aumenta proporcionalmente ao número de vezes que uma palavra aparece no documento, mas é compensado pela frequência da palavra no corpus. O tf-idf é dado pelo produto de duas medidas: a frequência do termo e a frequência inversa do documento, dado por:
+Tf-idf é uma medida estatística usada para avaliar o quão importante uma palavra é para um documento em relação a uma coleção de documentos. A ideia é que se uma palavra é muito comum em diferentes documentos da coleção, então provavelmente ela tem pouca relevância, como por exemplo, a conjunção aditiva “e”. A importância aumenta proporcionalmente ao número de vezes que uma palavra aparece no documento, mas é compensado pela frequência da palavra no corpus. O tf-idf é dado pelo produto de duas medidas: a frequência do termo e a frequência inversa do documento, dado por:
 
 \begin{equation} \mbox{tf-idf}(t, d) = \mbox{tf}(t, d) \times \log \frac{N} {\mbox{df}(t)} \end{equation}
 onde $\mbox{tf}(t,d)$ é a razão entre o número de vezes que o termo $t$ aparece no documento $d$ e a quantidade de termos em $d$; $N$ é a quantidade de documentos na coleção e $\mbox{df}(t)$ é a quantidade de documentos da coleção que possui o termo $t$. Existem diversas variantes dessa medida como visto em \cite{Manning09}.
