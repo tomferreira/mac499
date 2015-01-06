@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  1 DEC 2014 19:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  6 JAN 2015 16:49
 entering extended mode
 **C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
 (C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
@@ -550,13 +550,13 @@ File: images/resultado.png Graphic file (type png)
 Package pdftex.def Info: images/resultado.png used on input line 61.
 (pdftex.def)             Requested size: 377.40909pt x 225.84319pt.
  [5 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/resulta
-do.png>] [6] [7]
+do.png>] [6]
 Overfull \hbox (2.48447pt too wide) in paragraph at lines 92--93
 \T1/cmr/m/n/12 ção su-per-vi-si-o-nada de ape-nas clas-si-fi-ca-ção e a clas-si
 -fi-ca-ção não-supervisionada
  []
 
-[8] <images/k_means_algorithm.png, id=38, 579.66562pt x 550.30594pt>
+[7] [8] <images/k_means_algorithm.png, id=38, 579.66562pt x 550.30594pt>
 File: images/k_means_algorithm.png Graphic file (type png)
 
 <use images/k_means_algorithm.png>
@@ -667,15 +667,6 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 392.
 
 [19]
-
-LaTeX Warning: Command \' invalid in math mode on input line 402.
-
-Missing character: There is no é in font cmr12!
-
-LaTeX Warning: Command \' invalid in math mode on input line 404.
-
-Missing character: There is no é in font cmr12!
-
 Underfull \hbox (badness 3209) in paragraph at lines 415--415
 []\T1/cmr/m/n/12 (mercado/cs = 100%),
  []
@@ -885,7 +876,7 @@ sfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmsy8.pfb>
-Output written on monografia.pdf (38 pages, 801738 bytes).
+Output written on monografia.pdf (38 pages, 801968 bytes).
 PDF statistics:
  614 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

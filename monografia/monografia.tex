@@ -73,7 +73,7 @@ Na seção \ref{sec:fundamentos} é apresentado os fundamentos da área de recon
 \newpage
 \section {Fundamentos}
 \label {sec:fundamentos}
-Antes de apresentar e discutir sobre a biblioteca desenvolvida e o sistema proposto, será apresentado alguns conceitos básicos necessários para a compreensão do conteúdo e dos resultados obtidos.
+Antes de apresentar e discutir sobre a biblioteca desenvolvida e o sistema proposto, serão apresentados alguns conceitos básicos necessários para a compreensão do conteúdo e dos resultados obtidos.
 
 \subsection{Reconhecimento de padrão}
 \label{sec:reconhecimento_padrao}
@@ -99,7 +99,7 @@ No contexto de reconhecimento de padrão, é comum chamar a classificação supe
 \subsection{Análise de agrupamento}
 \label{sec:analise_agrupamento}
 
-Análise de agrupamento é uma classificação de padrão que emprega o processo de aprendizagem não-supervisionada e tem como objetivo o particionamento de objetos em grupos cujo membros sejam similares entre si e diferentes dos membros de outros grupos \cite{Jain99}. Porém, também tem os objetivos secundários de evitar grupos muito pequenos ou muito grandes e encontrar grupos que façam sentido ao usuário. Segundo Theodoridis e Koutroumbas \cite{Koutroumbas06}, a análise de agrupamento é largamente utilizada na resolução de diversos problemas, e pode ser encontrada em outras áreas por nomenclaturas diferentes, como taxonomia numérica em biologia, e tipologia na área das ciências sociais.
+Análise de agrupamento é uma classificação de padrão que emprega o processo de aprendizagem não-supervisionada e tem como objetivo o particionamento de objetos em grupos cujos membros sejam similares entre si e diferentes dos membros de outros grupos \cite{Jain99}. Porém, também tem os objetivos secundários de evitar grupos muito pequenos ou muito grandes e encontrar grupos que façam sentido ao usuário. Segundo Theodoridis e Koutroumbas \cite{Koutroumbas06}, a análise de agrupamento é largamente utilizada na resolução de diversos problemas, e pode ser encontrada em outras áreas por nomenclaturas diferentes, como taxonomia numérica em biologia, e tipologia na área das ciências sociais.
 
 Um grande problema enfrentado na análise de agrupamento é a dimensionalidade ou variáveis dos dados envolvidos, sejam eles observações de estrelas no céu, observações de organismos vivos na natureza ou documentos textuais disponíveis na internet, e uma técnica bastante utiliza para tentar solucionar tal problema é a redução dimensional através da extração ou seleção de características, que envolve em sintetizar os dados em características mais relevantes para o problema principal, tentando minimizar a perda de informação.
 
@@ -202,7 +202,7 @@ Já a cobertura mede a fração de documentos que foram classificados corretamen
 
 \begin{equation} R = \frac{TP} {TP + FN} \end{equation}
 
-Por exemplo, dado o conjunto de documentos \{1, 2, 3, 4, 5, 6\}, onde $N_{1}$ = \{1, 3, 5\} fazem parte de uma classe natural, ou seja, são similares; e $N_{2}$ = \{2, 4, 6\} fazem parte de outra classe natural. Dado um grupo C = \{1, 3, 4, 5\} a precisão de C em relação a $N_{1}$ é P = 3/4 e a cobertura é R = 3/3 = 1, ou seja, nem todos os documentos de C são similares entre si, apesar de que todos os documentos de $N_{1}$ foram agrupados corretamente em C.
+Por exemplo, seja dado o conjunto de documentos \{1, 2, 3, 4, 5, 6\}, onde $N_{1}$ = \{1, 3, 5\} fazem parte de uma classe natural, ou seja, são similares; e $N_{2}$ = \{2, 4, 6\} fazem parte de outra classe natural. Dado um grupo C = \{1, 3, 4, 5\} a precisão de C em relação a $N_{1}$ é P = 3/4 e a cobertura é R = 3/3 = 1, ou seja, nem todos os documentos de C são similares entre si, apesar de que todos os documentos de $N_{1}$ foram agrupados corretamente em C.
 
 Porém, a utilização de duas medidas para avaliação e comparação de algoritmos torna difícil determinar se um algoritmo é superior a outro ou não. Pois é melhor um algoritmo com alta precisão e baixa cobertura, ou vice-versa? A resposta para essa pergunta depende do contexto onde é aplicado o agrupamento. Segundo Manning et al, na maioria das vezes é mais aceitável o erro de tipo I, pois separar documentos similares em grupos distintos é geralmente pior do que juntar documentos não similares num mesmo grupo \cite{Ester03}.
 
@@ -399,9 +399,9 @@ $Score(C(mercado) \gets artigo.3) = 1 * 1 + 4 * 0,5 + 3 * 0,75 = 5,25$
 
 $Score(C(crise) \gets artigo.3) = 1 * 0,5 + 4 * 1 - 3 * 0,3 = 3,6$
 
-$Score(C(Grécia) \gets artigo.3) = 1 * 1 + 3 * 1 - 4 * 0,4 = 2,4$
+$Score(C(Gr\acute{e}cia) \gets artigo.3) = 1 * 1 + 3 * 1 - 4 * 0,4 = 2,4$
 
-$Score(C(mercado, Grécia) \gets artigo.3) = 1 * 1 + 3 * 1 - 4 * 0,4 = 2,4$
+$Score(C(mercado, Gr\acute{e}cia) \gets artigo.3) = 1 * 1 + 3 * 1 - 4 * 0,4 = 2,4$
 
 \end{flushleft}
 
@@ -450,7 +450,7 @@ Em $Sim(C_{i} \gets C_{j})$, a medida $Score$ é a mesma discutida na seção an
 \subsection {Rotulagem do grupo}
 \label {sec:rotulagem_grupo}
 
-Uma etapa importante no processo de agrupamento é a de rotulagem dos grupos, pois para um usuário entenda o resultado do algoritmo e o utilize sem dificuldades é necessário que a rotulagem seja legível e faça sentido a ele. 
+Uma etapa importante no processo de agrupamento é a de rotulagem dos grupos, pois para que um usuário entenda o resultado do algoritmo e o utilize sem dificuldades é necessário que a rotulagem seja legível e faça sentido a ele. 
 
 No caso do FIHC, a própria abordagem de criação dos grupos a partir dos conjuntos globais de itens frequentes da coleção e posterior escolha dos \textit{cluster frequent items} torna natural pensar que esses conjuntos de palavras também são bons candidatos para dar nome aos próprios grupos. 
 
@@ -464,7 +464,7 @@ No caso do FIHC, a própria abordagem de criação dos grupos a partir dos conju
 
 A biblioteca proposta neste trabalho tem como objetivo tratar todo os passos de uma solução para agrupamento, desde o pré-processamento dos documentos até a implementação do algoritmo de agrupamento de fato. Inicialmente foi implementado o algoritmo FIHC, porém sua arquitetura é modular e permite a substituição por outros algoritmos.
 
-Já o sistema tem como objetivo apresentar o agrupamento dos artigos jornalísticos que forma simples e intuitiva para os usuários, onde as configurações dos parâmetros do algoritmo FIHC seja pouco necessária por eles, uma vez que a crescente utilização da internet como meio de divulgação de artigos pelos jornais e revistas torna necessário um mecanismo automático e não-supervisionado para extração e organização do conhecimento, buscando encontrar entre os artigos relacionamentos a princípio escondidos. A figura \ref{fig:arquitetura_biblioteca} mostra o processo para o agrupamento dos artigos.
+Já o sistema tem como objetivo apresentar o agrupamento dos artigos jornalísticos de forma simples e intuitiva para os usuários, onde as configurações dos parâmetros do algoritmo FIHC seja pouco necessária por eles, uma vez que a crescente utilização da internet como meio de divulgação de artigos pelos jornais e revistas torna necessário um mecanismo automático e não-supervisionado para extração e organização do conhecimento, buscando encontrar entre os artigos relacionamentos a princípio escondidos. A figura \ref{fig:arquitetura_biblioteca} mostra o processo para o agrupamento dos artigos.
 
 \begin{figure}[h]
     \begin{center}
@@ -474,7 +474,7 @@ Já o sistema tem como objetivo apresentar o agrupamento dos artigos jornalísti
     \label{fig:arquitetura_biblioteca}
 \end{figure}
 
-A biblioteca detecta e trata artigos em português, inglês e espanhol, porém permite a extensão de outros idiomas, bastando escolher um algoritmo para tokenização e criar uma lista de \textit{stopwords} específicos do idioma. Além disso, a biblioteca é modular, permitindo a troca dos algoritmos utilizados em cada processo de forma simples e sem a necessidade de uma mudança geral no sistema.
+A biblioteca detecta e trata artigos em português, inglês e espanhol, porém permite a extensão para outros idiomas, bastando escolher um algoritmo para tokenização e criar uma lista de \textit{stopwords} específicos do idioma. Além disso, a biblioteca é modular, permitindo a troca dos algoritmos utilizados em cada processo de forma simples e sem a necessidade de uma mudança geral no sistema.
 
 Os processos de detecção de idioma, tokenização, remoção dos \textit{stopwords} e \textit{stemming} utilizam técnicas e algoritmos já bem conhecidos e empregados na área de reconhecimento de padrões. 
 
@@ -511,7 +511,7 @@ Como um dos pontos centrais do algoritmo FIHC é a utilização dos conjuntos de
     \label{fig:tokenizacao}
 \end{figure}
 
-Um bom algoritmo para extração dos tokens deve levar em consideração o idioma do texto, pois em geral o processo de tokenização é difícil, devido a construções de palavras de podem surgir durante o processo, como as contrações de palavras inglesas, como \textit{“we’ve many time (...)”}, ou as palavras compostas em português como “latino-americano”. 
+Um bom algoritmo para extração dos tokens deve levar em consideração o idioma do texto, pois em geral o processo de tokenização é difícil, devido a construções de palavras que podem surgir durante o processo, como as contrações de palavras inglesas, como \textit{“we’ve many time (...)”}, ou as palavras compostas em português como “latino-americano”. 
 
 O algoritmo de tokenização implementado inicialmente na biblioteca é o \textit{Treebank tokenizer} \cite{treebank}, porém a extensão para outros algoritmos de tokenização é possível devido à modularidade da biblioteca.
 
@@ -656,7 +656,7 @@ A formatação do resultado do agrupamento também pode ser estendida, bastando 
 \subsection {O sistema hVINA}
 \label {sec:o_sistema_hvina}
 
-Apesar do intuito inicial do sistema hVINA era ser um protótipo para a demonstração prática da biblioteca desenvolvida, ele é totalmente funcional e pode ter mais funcionalidade acrescentadas. 
+Apesar do intuito inicial do sistema hVINA ser um protótipo para a demonstração prática da biblioteca desenvolvida, ele é totalmente funcional e pode ter mais funcionalidades acrescentadas. 
 
 O sistema foi desenvolvido em Ruby juntamente com o \emph{framework} Rails, e seu código-fonte também está disponível no repositório Github, no endereço https://github.com/tomferreira/hVINA.
 
@@ -680,7 +680,7 @@ O resultado obtido pela biblioteca em conjunto com o sistema hVINA demostra a vi
 \subsection {Considerações finais}
 \label {sec:consideracoes_finais}
 
-Segundo o professor Clay Shirky, da New York University, o problema da \textit{overdose} de informação, da qual estamos sujeitos diariamente, está no fato que não sabermos filtrar o que é importante para nós \cite{shirky}. Logo, uma possível solução é justamente criar mecanismos automáticos que possam organizar essas informações de modo a nos ajudar a decidir o que é importante ou não para nós.
+Segundo o professor Clay Shirky, da New York University, o problema da \textit{overdose} de informação, da qual estamos sujeitos diariamente, está no fato de não sabermos filtrar o que é importante para nós \cite{shirky}. Logo, uma possível solução é justamente criar mecanismos automáticos que possam organizar essas informações de modo a nos ajudar a decidir o que é importante ou não para nós.
 
 Agrupar grande quantidade de artigos de forma que os grupos sejam intuitivos ao usuário, isto é, que possuam rótulos significativos, não é uma tarefa fácil, visto que a diversidade de tópicos possíveis é imensa. A solução apresentada neste trabalho é somente uma das possíveis abordagens, e novas tentativas de resolver esse problema devem também ser empenhadas com outras técnicas.
 
