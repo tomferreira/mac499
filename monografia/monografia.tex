@@ -196,11 +196,11 @@ Documentos não similares	&  Falso positivo (FP) ou Erro tipo I & Verdadeiro neg
 
 Duas medidas importantes na área de reconhecimento de padrão e também na estatística, são a precisão e cobertura do resultado observado. A precisão mede a fração de documentos que estão classificados corretamente no grupo e é dado pela seguinte fórmula:
 
-\begin{equation} P = \frac{TP} {TP + FP} \end{equation}
+\begin{equation} P = \frac{VP} {VP + FP} \end{equation}
 
 Já a cobertura mede a fração de documentos que foram classificados corretamente dentre os documentos similares e é dado pela fórmula:
 
-\begin{equation} R = \frac{TP} {TP + FN} \end{equation}
+\begin{equation} R = \frac{VP} {VP + FN} \end{equation}
 
 Por exemplo, seja dado o conjunto de documentos \{1, 2, 3, 4, 5, 6\}, onde $N_{1}$ = \{1, 3, 5\} fazem parte de uma classe natural, ou seja, são similares; e $N_{2}$ = \{2, 4, 6\} fazem parte de outra classe natural. Dado um grupo C = \{1, 3, 4, 5\} a precisão de C em relação a $N_{1}$ é P = 3/4 e a cobertura é R = 3/3 = 1, ou seja, nem todos os documentos de C são similares entre si, apesar de que todos os documentos de $N_{1}$ foram agrupados corretamente em C.
 
@@ -660,7 +660,51 @@ Apesar do intuito inicial do sistema hVINA ser um protótipo para a demonstraç�
 
 O sistema foi desenvolvido em Ruby juntamente com o \emph{framework} Rails, e seu código-fonte também está disponível no repositório Github, no endereço https://github.com/tomferreira/hVINA.
 
-%Falar mais
+\newpage
+
+\subsection {Testes}
+\label {sec:testes}
+
+Nesta seção, são analisados e avaliados os resultados obtidos em cada etapa da biblioteca de agrupamento de artigos jornalísticos.
+
+Para avaliar a eficiência da biblioteca, foi utilizado um conjunto de 413 artigos do escritor e jornalista José de Paiva Netto \cite{paivanetto}, todos escritos em português.
+
+Foram avaliados o tempo médio de execução em cada etapa e a quantidade de tokens encontrados. Como parâmetros do algoritmo FIHC foram utilizados os seguintes valores sugeridos pelos próprios autores do algoritmo \cite{Ester03} e que também são usados por padrão no sistema hVINA: \textit{global support} = 0,25; \textit{cluster support} = 0,3 e \textit{k}-grupos = 30.
+
+O resultado da tabela \ref{table:experimento} mostra o tempo médio a partir de 10 (dez) execuções\footnote[1]{Os testes foram feitos com o Ruby MRI 2.2.0 e Suse Linux 11 quad-core de 3,2 GHz.} da biblioteca, tendo como entrada o conjunto de artigos descrito acima.
+
+\setlength{\tabcolsep}{.2em}
+\begin{table}[h]
+\centering
+\begin{tabular} {ccccccc}
+\hline
+& Deteção & Tokenização & Limpeza & \textit{Stemming} & Agrupamento & Total \\
+\hline
+Tempo médio & 6,57 & 0,56 & 2,65 & 7,61 & 84,17 & 101,57 \\
+Desvio padrão & 0,55 & 0,01 & 0,07 & 0,32 & 1,61 & 1,15 \\
+\hline
+\end{tabular}
+\caption{Tempo médio de execução, em segundos, de cada etapa da biblioteca.}
+\label{table:experimento}
+\end{table}
+
+Esse resultado revela que o maior tempo de processamento gasto pela biblioteca está no agrupamento propriamente dito, sendo cerca de 83\% do tempo total.
+
+As etapas de tokenização e limpeza são mostradas na tabela \ref{table:experimento_tokens}, que apresenta a quantidade de tokens encontrados pelo algoritmo de tokenização e, desse conjunto, a quantidade removida na etapa de limpeza (remoção dos \textit{stopwords}). A coluna de redução representa proporcionalmente a quantidade de tokens restantes em relação ao conjunto inicial encontrado.
+
+\begin{table}[h]
+\centering
+\begin{tabular} {ccccccc}
+\hline
+& Encontrados & Removidos & Restantes & Redução \\
+\hline
+Tokens &  337.706 &  201.098 &  136.608 & 59,5 \%  \\
+Tokens distintos &  29.773 & 5.614 &  24.159 & 18,8 \% \\
+\hline
+\end{tabular}
+\caption{Resultados das etapas de tokenização e limpeza.}
+\label{table:experimento_tokens}
+\end{table}
 
 \newpage
 
@@ -668,6 +712,8 @@ O sistema foi desenvolvido em Ruby juntamente com o \emph{framework} Rails, e se
 \label {sec:conclusao}
 
 Esse trabalho discutiu a análise de agrupamento de documentos textuais com ênfase em coleções de artigos jornalísticos, além de estudar algumas classes de algoritmos que podem ser usadas para tal propósito.
+
+O resultado observado nos testes, demonstra que ainda é necessário melhorar a eficiência de tempo da biblioteca, principalmente na etapa de agrupamento em si (algoritmo FIHC).
 
 O objetivo principal foi fazer essa análise a partir da criação de uma biblioteca que abrangesse todas as etapas de uma solução para agrupamento, desde o pré-processamento da coleção até a execução do algoritmo de agrupamento em si, tendo como requisito o fato de que não fosse necessário nenhum conhecimento prévio da coleção por parte do usuário.
 
@@ -852,6 +898,9 @@ Conjunto de itens & \textit{Global support} \\ \hline
 
 \bibitem{experiment_clustering}
     http://www.dormantroot.com/2014/02/my-experiment-with-clustering.html
+
+\bibitem{paivanetto}
+    http://www.paivanetto.com.br/index.php/pt/artigos
 
 \bibitem{rails}
     http://rubyonrails.org/
