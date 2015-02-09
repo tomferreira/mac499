@@ -303,7 +303,7 @@ Além disso, \textit{cluster support} de um item em $C$ é definido como a porce
 \subsection {O que é tf-idf}
 \label {sec:tf_idf}
 
-Tf-idf é uma medida estatística usada para avaliar o quão importante uma palavra é para um documento em relação a uma coleção de documentos. A ideia é que se uma palavra é muito comum em diferentes documentos da coleção, então provavelmente ela tem pouca relevância, como por exemplo, a conjunção aditiva “e”. A importância aumenta proporcionalmente ao número de vezes que uma palavra aparece no documento, mas é compensado pela frequência da palavra no corpus. O tf-idf é dado pelo produto de duas medidas: a frequência do termo e a frequência inversa do documento, dado por:
+Tf-idf é uma medida estatística usada para avaliar o quão importante uma palavra é para um documento em relação a uma coleção de documentos \cite{Rajaraman11}. A ideia é que se uma palavra é muito comum em diferentes documentos da coleção, então provavelmente ela tem pouca relevância, como por exemplo, a conjunção aditiva “e”. A importância aumenta proporcionalmente ao número de vezes que uma palavra aparece no documento, mas é compensado pela frequência da palavra no corpus. O tf-idf é dado pelo produto de duas medidas: a frequência do termo e a frequência inversa do documento, dado por:
 
 \begin{equation} \mbox{tf-idf}(t, d) = \mbox{tf}(t, d) \times \log \frac{N} {\mbox{df}(t)} \end{equation}
 onde $\mbox{tf}(t,d)$ é a razão entre o número de vezes que o termo $t$ aparece no documento $d$ e a quantidade de termos em $d$; $N$ é a quantidade de documentos na coleção e $\mbox{df}(t)$ é a quantidade de documentos da coleção que possui o termo $t$. Existem diversas variantes dessa medida como visto em \cite{Manning09}.
@@ -311,9 +311,9 @@ onde $\mbox{tf}(t,d)$ é a razão entre o número de vezes que o termo $t$ apare
 \subsection {Construção dos grupos}
 \label {sec:construcao_grupos}
 
-Apresentado alguns conceitos relacionados ao FIHC, vamos ao algoritmo propriamente dito. Como já mencionado, o primeiro passo do algoritmo é construir os grupos, e isso é feito em duas etapas. Primeiramente, os grupos iniciais são construídos a partir dos conjuntos globais de itens frequentes extraídos da coleção pelo algoritmo Apriori e então é feito o processo de disjunção desses grupos para que ao final, um documento pertença somente a um único grupo.
+Apresentado alguns conceitos relacionados ao FIHC, vamos ao algoritmo propriamente dito. Como já mencionado, o primeiro passo do algoritmo é construir os grupos, e isso é feito em duas etapas. Primeiramente, os grupos iniciais são construídos a partir dos conjuntos globais de itens frequentes extraídos da coleção pelo algoritmo Apriori e então é feito o processo de disjunção desses grupos para que, ao final, um documento pertença somente a um único grupo.
 
-Na criação dos grupos iniciais, para cada conjunto global de itens frequentes é criado um grupo que inicialmente incluirá todos os documentos que contêm o conjunto de itens em seu corpo. Logo, podemos considerar que cada grupo possuirá um conjunto de itens frequentes gerador. 
+Na criação dos grupos iniciais, para cada conjunto global de itens frequentes é criado um grupo que inicialmente incluirá todos os documentos que contêm em seu corpo esse conjunto. A esse conjunto de itens frequentes é dado o nome de conjunto de itens frequentes gerador do grupo.
 
 Note que esses grupos podem não ser disjuntos, pois um documento pode conter vários conjuntos de itens frequentes.
 
@@ -667,6 +667,9 @@ O sistema foi desenvolvido em Ruby juntamente com o \emph{framework} Rails, e se
 
 Nesta seção, são analisados e avaliados os resultados obtidos em cada etapa da biblioteca de agrupamento de artigos jornalísticos.
 
+\subsubsection {Tempo de processamento}
+\label {sec:testes_tempo_processamento}
+
 Para avaliar a eficiência da biblioteca, foi utilizado um conjunto de 413 artigos do escritor e jornalista José de Paiva Netto \cite{paivanetto}, todos escritos em português.
 
 Foram avaliados o tempo médio de execução em cada etapa e a quantidade de tokens encontrados. Como parâmetros do algoritmo FIHC foram utilizados os seguintes valores sugeridos pelos próprios autores do algoritmo \cite{Ester03} e que também são usados por padrão no sistema hVINA: \textit{global support} = 0,25; \textit{cluster support} = 0,3 e \textit{k}-grupos = 30.
@@ -689,6 +692,9 @@ Desvio padrão & 0,55 & 0,01 & 0,07 & 0,32 & 1,61 & 1,15 \\
 \end{table}
 
 Esse resultado revela que o maior tempo de processamento gasto pela biblioteca está no agrupamento propriamente dito, sendo cerca de 83\% do tempo total.
+
+\subsubsection {Tokenização e limpeza}
+\label {sec:testes_tokenizacao_limpeza}
 
 As etapas de tokenização e limpeza são mostradas na tabela \ref{table:experimento_tokens}, que apresenta a quantidade de tokens encontrados pelo algoritmo de tokenização e, desse conjunto, a quantidade removida na etapa de limpeza (remoção dos \textit{stopwords}). A coluna de redução representa proporcionalmente a quantidade de tokens restantes em relação ao conjunto inicial encontrado.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  7 FEB 2015 15:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.25)  9 FEB 2015 19:55
 entering extended mode
 **C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
 (C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/monografia.tex
@@ -825,27 +825,30 @@ Overfull \hbox (2.67003pt too wide) in paragraph at lines 650--651
 [32 <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/images/exemplo
 _artigo.png> <C:/Users/CirilloR/Documents/FACULDADE/TCC/mac499/monografia/image
 s/exemplo_formatacao.png>]
-Overfull \hbox (17.24287pt too wide) in paragraph at lines 679--687
+Overfull \hbox (17.24287pt too wide) in paragraph at lines 682--690
  [][] 
  []
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [33] [34] [35] [36]
-Underfull \vbox (badness 10000) detected at line 809
+Underfull \vbox (badness 10000) detected at line 813
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 832--833
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 []\T1/cmr/m/n/12 http://redarterj.wordpress.com/2009/10/15/a-primeira-bibliotec
 a-do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 902--903
+Underfull \hbox (badness 10000) in paragraph at lines 906--907
 []\T1/cmr/m/n/12 http://www.dormantroot.com/2014/02/my-experiment-with-
  []
 
 [38]
-Underfull \hbox (badness 1137) in paragraph at lines 911--913
+Underfull \hbox (badness 1137) in paragraph at lines 915--917
 []\T1/cmr/m/n/12 Web 2.0 Expo NY: Clay Shirky. It's Not In-for-ma-tion Over-loa
 d.
  []
@@ -853,10 +856,10 @@ d.
 [39]
 (C:\Users\CirilloR\Documents\FACULDADE\TCC\mac499\monografia\monografia.aux) ) 
 Here is how much of TeX's memory you used:
- 3702 strings out of 493921
- 48612 string characters out of 3144867
- 112898 words of memory out of 3000000
- 6903 multiletter control sequences out of 15000+200000
+ 3704 strings out of 493921
+ 48676 string characters out of 3144867
+ 112924 words of memory out of 3000000
+ 6905 multiletter control sequences out of 15000+200000
  18487 words of font info for 45 fonts, out of 3000000 for 9000
  855 hyphenation exceptions out of 8191
  27i,17n,24p,1062b,300s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -883,9 +886,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on monografia.pdf (39 pages, 830598 bytes).
+Output written on monografia.pdf (39 pages, 831223 bytes).
 PDF statistics:
- 656 PDF objects out of 1000 (max. 8388607)
+ 657 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
